@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env*.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Raw source photos/video shared for the fleet listings. The processed,
+# web-ready versions actually used by the site live in /public and are
+# tracked normally — this folder is just the originals, and at ~20MB of
+# unoptimised JPG/MP4 it has no reason to live in the deploy repo.
+Fleet and Products/
+
+# Local Claude Code tooling, not needed for deployment.
+.claude/

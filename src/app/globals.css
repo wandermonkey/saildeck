@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Saildeck design system — v2
+
+   Light, clean and photo-led, following the reference cruise site: white
+   cards on a soft grey ground, deep navy for structure, and the crimson from
+   the Saildeck logo as the single action colour. Teal appears only on small
+   accents so the crimson always wins the eye.
+   ========================================================================== */
+
+@theme {
+  /* Brand — taken from the Saildeck logo */
+  --color-crimson: #a80b28;
+  --color-crimson-dark: #85061f;
+  --color-crimson-soft: #fdf2f4;
+
+  /* Structure */
+  --color-navy: #0a2a43;
+  --color-navy-deep: #061c2e;
+  --color-navy-soft: #14415f;
+
+  /* Accent, used sparingly */
+  --color-teal: #2aa8a8;
+  --color-teal-soft: #eefafa;
+
+  /* Surfaces */
+  --color-canvas: #ffffff;
+  --color-surface: #f4f7f9;
+  --color-surface-2: #eaf0f4;
+  --color-line: #e3eaef;
+
+  /* Text */
+  --color-ink: #17242f;
+  --color-muted: #5c6e7c;
+  --color-faint: #8b9aa6;
+
+  /* Type */
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --radius-xl2: 1.25rem;
+
+  --shadow-card: 0 1px 2px rgba(10, 42, 67, 0.04), 0 8px 24px -12px rgba(10, 42, 67, 0.15);
+  --shadow-card-hover: 0 2px 4px rgba(10, 42, 67, 0.06), 0 20px 40px -16px rgba(10, 42, 67, 0.25);
+  --shadow-float: 0 12px 40px -12px rgba(10, 42, 67, 0.28);
+}
+
+:root {
+  color-scheme: light;
+  --nav-h: 76px;
+  --topbar-h: 38px;
+}
+
+/* These MUST live in @layer base. Tailwind v4 puts utilities in a cascade
+   layer, and unlayered CSS beats every layer — so an unlayered `h1 { color }`
+   silently wins over `text-white` on a heading and makes it disappear against
+   a dark hero. */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-crimson);
+    color: #fff;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--color-navy);
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  /* Visible focus ring — required for accessibility, checked by Lighthouse. */
+  :focus-visible {
+    outline: 2px solid var(--color-crimson);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------------------- */
+
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 78rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) { padding-inline: 2rem; }
+}
+
+/* The small uppercase kicker above a section heading. */
+@utility eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-crimson);
+}
+
+@utility card {
+  background: var(--color-canvas);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl2);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.35s var(--ease-out-expo), transform 0.35s var(--ease-out-expo);
+}
+
+@utility card-hover {
+  &:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+}
+
+/* Hairline grid used behind dark bands. Decorative. */
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Hides a horizontally scrolling track's scrollbar without disabling scroll —
+   used by the photo carousels, which stay swipeable on touch. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal.
+
+   Content is ALWAYS visible unless the Reveal component explicitly arms it at
+   runtime. Never hide `[data-reveal]` from a stylesheet — doing so makes the
+   whole page depend on hydration succeeding, and a single client-side error
+   then blanks a site whose HTML was perfectly fine.
+   -------------------------------------------------------------------------- */
+
+[data-reveal].reveal-armed {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease-out-expo),
+    transform 0.7s var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].reveal-armed.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal].reveal-armed { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Keyframes
+   -------------------------------------------------------------------------- */
+
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-8px) }
+  to { opacity: 1; transform: none }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0) }
+  to { transform: translateX(-50%) }
+}
+
+.animate-menu { animation: fade-in-down 0.22s var(--ease-out-expo) both }
+.animate-marquee { animation: marquee 40s linear infinite }
