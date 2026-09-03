@@ -34,6 +34,12 @@ const nextConfig: NextConfig = {
         destination: "/fleet/princess-61-luxury-motor-yacht-mumbai",
         permanent: true,
       },
+      // Elysian Tide was renamed to Tara Sailing Catamaran Mumbai.
+      {
+        source: "/fleet/elysian-tide",
+        destination: "/fleet/tara-sailing-catamaran-mumbai",
+        permanent: true,
+      },
     ];
   },
   async headers() {

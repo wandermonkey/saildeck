@@ -319,8 +319,8 @@ export const yachts: Yacht[] = [
     featured: true,
   },
   {
-    slug: "elysian-tide",
-    name: "Elysian Tide",
+    slug: "tara-sailing-catamaran-mumbai",
+    name: "Tara Sailing Catamaran Mumbai",
     tagline: "Built for groups who would rather be in the water than on it.",
     pricePerHour: 14000,
     guests: 15,
@@ -332,14 +332,14 @@ export const yachts: Yacht[] = [
     highlights: ["Jet skis and kayaks", "Wide swim platform", "Shaded lounge"],
     amenities: ["Jet skis", "Kayaks", "Swim platform", "Shaded lounge", "Bluetooth sound", "Snorkel gear"],
     gallery: [
-      { src: "https://images.unsplash.com/photo-1414437384035-787b9df782d7?auto=format&fit=crop&w=1800&q=80", alt: "Elysian Tide catamaran under sail at sunset" },
+      { src: "https://images.unsplash.com/photo-1414437384035-787b9df782d7?auto=format&fit=crop&w=1800&q=80", alt: "Tara sailing catamaran under sail at sunset" },
       { src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=80", alt: "Catamaran at anchor off a tropical island" },
       { src: "https://images.unsplash.com/photo-1598448154313-6e7789856d06?auto=format&fit=crop&w=1800&q=80", alt: "Interior seating aboard the catamaran" },
       { src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1800&q=80", alt: "Clear water and beach at the anchorage" },
     ],
     videos: [],
     description: [
-      "The **Elysian Tide** is a 55-foot power catamaran chartered by the hour out of **Goa**, built for groups who would rather be in the water than on it. She carries up to **15 guests** with a licensed captain and crew, and comes with jet skis, kayaks and snorkel gear on board.",
+      "The **Tara Sailing Catamaran Mumbai** is a 55-foot catamaran chartered by the hour, built for groups who would rather be in the water than on it. She carries up to **15 guests** with a licensed captain and crew, and comes with jet skis, kayaks and snorkel gear on board.",
       "The twin-hull layout gives a wide, stable deck with almost no roll at anchor, and a swim platform that runs the width of the stern — the whole group can be in the water at once rather than queuing off a single ladder. A shaded lounge amidships gives guests somewhere out of the sun between swims.",
       "The regular choice for a **Grande Island charter** with a snorkelling stop, or any full-day booking where the water toys matter more than the sundeck. Every charter includes the captain and crew, fuel for the standard route, life jackets for every guest and the sound system. Message us on WhatsApp with your date and group size for a firm all-in price.",
     ],
@@ -352,12 +352,12 @@ export const yachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 28000 },
-      { start: "5:00 PM", end: "7:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 38000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 34000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 10000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 10000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
+      { start: "5:00 PM", end: "7:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
     ],
     pricingExtras: [
       "Additional hour — ₹13,000",
@@ -368,10 +368,10 @@ export const yachts: Yacht[] = [
     pricingNote: "Special permissions are required for overnight sailing.",
     faqs: [
       {
-        q: "How much does it cost to charter the Elysian Tide?",
-        a: "Two-hour slots run from ₹22,000 to ₹38,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
+        q: "How much does it cost to charter Tara?",
+        a: "Two-hour slots run from ₹10,000 to ₹25,000 depending on the time of day, with the 5–7pm sunset slot priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
       },
-      ...standardFaqs("Elysian Tide", 15),
+      ...standardFaqs("Tara Sailing Catamaran Mumbai", 15),
     ],
   },
   {
