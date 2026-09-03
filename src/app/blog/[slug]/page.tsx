@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { Pill, SectionTitle } from "@/components/ui";
 import { CheckIcon, ArrowIcon } from "@/components/icons";
+import { RichText } from "@/components/RichText";
 
 import { posts, getPost, formatPostDate } from "@/data/blog";
 import { buildMetadata, breadcrumbSchema, articleSchema } from "@/lib/seo";
@@ -40,7 +41,13 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     { name: post.title, path: `/blog/${post.slug}` },
   ];
 
-  const more = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  // Same-category posts first, so "keep reading" is actually related — with
+  // 30+ posts a plain array-order slice would mostly show unrelated topics.
+  const others = posts.filter((p) => p.slug !== post.slug);
+  const more = [
+    ...others.filter((p) => p.category === post.category),
+    ...others.filter((p) => p.category !== post.category),
+  ].slice(0, 3);
 
   return (
     <>
@@ -100,8 +107,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               <section className={i > 0 ? "mt-10" : ""}>
                 {block.heading && <h2 className="text-2xl md:text-[1.7rem]">{block.heading}</h2>}
                 {block.paras.map((p, j) => (
-                  <p key={j} className={`leading-[1.75] text-muted ${block.heading && j === 0 ? "mt-4" : "mt-4"}`}>
-                    {p}
+                  <p key={j} className="mt-4 leading-[1.75] text-muted">
+                    <RichText text={p} />
                   </p>
                 ))}
                 {block.bullets && (
@@ -111,7 +118,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                         <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-teal-soft text-teal">
                           <CheckIcon className="h-3 w-3" />
                         </span>
-                        <span className="leading-relaxed">{b}</span>
+                        <span className="leading-relaxed"><RichText text={b} /></span>
                       </li>
                     ))}
                   </ul>

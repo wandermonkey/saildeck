@@ -1,16 +1,23 @@
+import Link from "next/link";
 import { Fragment } from "react";
 
 /**
- * Renders plain text with `**bold**` markers turned into <strong>.
+ * Renders plain text with two lightweight markers turned into real elements:
  *
- * Used for the long-form boat descriptions so the handful of SEO-relevant
- * phrases (the model name, "yacht charter in Mumbai", the occasion keywords)
- * can be visually emphasised without writing JSX by hand for every paragraph
- * in the data file. Keep it to a few phrases per paragraph — bolding
- * everything reads as spam to both readers and Google.
+ *  - `**bold**`      → <strong> — for the handful of SEO-relevant phrases
+ *  - `[text](/path)` → an internal <Link>, or an external <a> if the URL
+ *                       starts with `http`
+ *
+ * This lets data files (yacht descriptions, blog posts) carry emphasis and
+ * internal links as plain strings instead of JSX, which is what makes it
+ * practical to write dozens of long-form pages as data rather than components.
+ * Keep it sparing — a paragraph that is half bold or all links reads as spam
+ * to both readers and Google.
  */
 export function RichText({ text }: { text: string }) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  const pattern = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
+  const parts = text.split(pattern);
+
   return (
     <>
       {parts.map((part, i) => {
@@ -21,6 +28,23 @@ export function RichText({ text }: { text: string }) {
             </strong>
           );
         }
+
+        const linkMatch = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(part);
+        if (linkMatch) {
+          const [, label, href] = linkMatch;
+          const external = /^https?:\/\//.test(href);
+          const className = "font-medium text-crimson underline decoration-crimson/30 underline-offset-2 hover:decoration-crimson";
+          return external ? (
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className={className}>
+              {label}
+            </a>
+          ) : (
+            <Link key={i} href={href} className={className}>
+              {label}
+            </Link>
+          );
+        }
+
         return <Fragment key={i}>{part}</Fragment>;
       })}
     </>
