@@ -286,20 +286,6 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
             </div>
             )}
 
-            {yacht.specs && yacht.specs.length > 0 && (
-              <>
-                <h3 className="mt-10 font-display text-xl">Specifications</h3>
-                <dl className="mt-4 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
-                  {yacht.specs.map((s) => (
-                    <div key={s.label} className="grid grid-cols-[9rem_1fr] gap-4 px-5 py-3 text-sm sm:grid-cols-[11rem_1fr]">
-                      <dt className="text-faint">{s.label}</dt>
-                      <dd className="font-medium text-navy">{s.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </>
-            )}
-
             {yacht.pricingSlots && yacht.pricingSlots.length > 0 && (
               <div id="pricing" className="scroll-mt-28">
                 <h3 className="mt-10 font-display text-xl">Pricing &amp; slots</h3>
@@ -332,6 +318,24 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
                 <li>· Weather cancellations called by the coast guard are rescheduled free.</li>
               </ul>
             </div>
+
+            {yacht.specs && yacht.specs.length > 0 && (
+              <>
+                {/* Plain label/value text lines rather than a table — a fixed
+                    two-column table forced a horizontal scroll on phones with
+                    long values (e.g. "Commercial passenger licence"). Each
+                    line wraps on its own now, so nothing is ever cropped. */}
+                <h3 className="mt-10 font-display text-xl">Specifications</h3>
+                <dl className="mt-4 divide-y divide-line text-sm">
+                  {yacht.specs.map((s) => (
+                    <div key={s.label} className="py-3">
+                      <dt className="text-faint">{s.label}</dt>
+                      <dd className="mt-0.5 font-medium text-navy">{s.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </>
+            )}
           </Reveal>
 
           <Reveal delay={120} className="lg:sticky lg:top-28">

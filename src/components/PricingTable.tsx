@@ -9,12 +9,10 @@ import { inr } from "@/data/yachts";
  * schedule exactly as the operator supplies it, plus optional add-on charges
  * and a small-print note (e.g. permission requirements for an overnight sail).
  *
- * This used to be an HTML <table> with a fixed min-width, scrolling
- * horizontally inside its own container on narrow screens. In practice that
- * still read as broken on a phone — a table cropped mid-row with no visible
- * scroll affordance, per user feedback. A stacked row-per-slot list has no
- * minimum width at all, so it reflows naturally at every screen size instead
- * of needing to scroll.
+ * This used to be an HTML <table>, then a boxed card list — both still read
+ * as "a table" on a phone. Plain text lines (time range + price on one line,
+ * the sailing/anchorage detail underneath) have no minimum width and no
+ * columns to crop, so they reflow naturally at every screen size.
  */
 export function PricingTable({
   slots,
@@ -29,20 +27,16 @@ export function PricingTable({
 
   return (
     <div className="mt-4">
-      <ul className="divide-y divide-line rounded-2xl border border-line bg-white">
+      <ul className="divide-y divide-line text-sm">
         {slots.map((s, i) => (
-          <li key={i} className="flex items-center justify-between gap-4 px-5 py-4">
-            <div className="min-w-0">
-              <p className="font-medium text-navy">
-                {s.start} <span className="text-faint">–</span> {s.end}
-              </p>
-              <p className="mt-0.5 text-sm text-muted">
-                {s.sailing}
-                {s.anchorage && <> · {s.anchorage}</>}
-              </p>
-            </div>
-            <p className="shrink-0 whitespace-nowrap font-display text-lg font-semibold text-crimson">
-              {inr(s.amount)}
+          <li key={i} className="py-3">
+            <p className="font-medium text-navy">
+              {s.start} – {s.end} <span className="text-faint">–</span>{" "}
+              <span className="font-display font-semibold text-crimson">{inr(s.amount)}</span>
+            </p>
+            <p className="mt-0.5 text-muted">
+              {s.sailing}
+              {s.anchorage && <> · {s.anchorage}</>}
             </p>
           </li>
         ))}
