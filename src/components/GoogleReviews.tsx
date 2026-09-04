@@ -63,8 +63,14 @@ export function GoogleReviews({ data }: { data: ReviewsResult }) {
           </Reveal>
 
           {/* Horizontal scroller so the block stays one row tall on desktop and
-              swipes on mobile, matching the reference layout. */}
-          <Reveal delay={120}>
+              swipes on mobile, matching the reference layout.
+
+              min-w-0 on this Reveal is load-bearing: it is a grid item, and
+              grid items default to min-width:auto, which sizes the track to
+              fit the scroller's full unscrolled content instead of letting
+              overflow-x-auto clip it — the classic "grid blowout" bug. Without
+              it this pushed the whole page over 1600px wide on a 375px phone. */}
+          <Reveal delay={120} className="min-w-0">
             <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-2 lg:mx-0 lg:px-0">
               {reviews.map((r, i) => (
                 <article

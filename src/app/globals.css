@@ -95,6 +95,22 @@
     outline-offset: 3px;
     border-radius: 4px;
   }
+
+  /* Grid and flex items default to min-width:auto, which means a child with
+     wide intrinsic content (a table, a row of fixed-width cards, long
+     unbreakable text) refuses to shrink below that content's width — even
+     inside an `overflow-x-auto` wrapper one level down, and even though the
+     grid/flex track itself is perfectly happy to be narrower. The track
+     grows to fit instead, which on a two-column `lg:grid-cols-[...]` layout
+     that collapses to one column on mobile silently pushes the ENTIRE PAGE
+     wider than the viewport. This bit the pricing table and the Google
+     reviews carousel in testing; rather than hunt down every future
+     occurrence, every grid/flex child gets min-width:0 by default here.
+     Individual components can override with min-w-min or min-w-fit if a
+     child genuinely must not shrink below its content. */
+  .grid > *, .flex > * {
+    min-width: 0;
+  }
 }
 
 /* --------------------------------------------------------------------------
