@@ -139,12 +139,17 @@ ${form.message ? `Notes: ${form.message}` : ""}`;
         </p>
       )}
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+      {/* Always stacked, never side by side. This form sits in sidebars as
+          narrow as ~23rem, and a viewport-based `sm:flex-row` switched the
+          buttons to a row once the *window* passed 640px regardless of how
+          narrow the sidebar itself was — cramming "Send enquiry" and
+          "WhatsApp instead" into a strip too tight for either label. */}
+      <div className="mt-6 flex flex-col gap-2.5">
         <button
           type="submit"
           disabled={status === "sending"}
           data-cta="form-submit"
-          className="flex-1 rounded-full bg-crimson px-8 py-3.5 font-medium text-white transition-all hover:-translate-y-0.5 hover:bg-crimson-dark disabled:opacity-60"
+          className="w-full rounded-full bg-crimson px-6 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-crimson-dark disabled:opacity-60"
         >
           {status === "sending" ? "Sending..." : "Send enquiry"}
         </button>
@@ -153,9 +158,9 @@ ${form.message ? `Notes: ${form.message}` : ""}`;
           target="_blank"
           rel="noopener noreferrer"
           data-cta="form-whatsapp"
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 font-semibold text-[#04210f] transition-all hover:-translate-y-0.5"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-[#04210f] transition-all hover:-translate-y-0.5"
         >
-          <WhatsAppIcon className="h-5 w-5" />
+          <WhatsAppIcon className="h-4 w-4" />
           WhatsApp instead
         </a>
       </div>
