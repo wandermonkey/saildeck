@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { yachts } from "@/data/yachts";
 import { destinations } from "@/data/destinations";
 import { speedboatRoutes } from "@/data/speedboats";
+import { products } from "@/data/products";
 import { managementServices, sailingSchoolPages, yachtSalesPages } from "@/data/pages";
 import { posts } from "@/data/blog";
 import { site } from "@/lib/site";
@@ -35,6 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     entry("/fleet", 0.9, "weekly"),
     ...yachts.map((y) => entry(`/fleet/${y.slug}`, 0.85)),
+
+    entry("/products", 0.9, "weekly"),
+    ...products.map((p) => entry(`/products/${p.slug}`, 0.85)),
 
     entry("/destinations", 0.8, "weekly"),
     entry("/destinations/navi-mumbai", 0.85, "weekly"),

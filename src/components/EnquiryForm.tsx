@@ -96,6 +96,7 @@ ${form.message ? `Notes: ${form.message}` : ""}`;
         <Field label="What do you need?">
           <select value={form.service} onChange={set("service")} className={input}>
             <option>Yacht charter</option>
+            <option>Experience or event</option>
             <option>Speedboat transfer</option>
             <option>Buy a yacht or boat</option>
             <option>Sell my yacht</option>

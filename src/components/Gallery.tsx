@@ -16,7 +16,21 @@ type Shot = { src: string; alt: string };
  * Deliberately no dark overlay on the images — on a charter site the photo is
  * the product, and scrims were making the boats hard to see.
  */
-export function Gallery({ shots, priority = false }: { shots: Shot[]; priority?: boolean }) {
+export function Gallery({
+  shots,
+  priority = false,
+  aspectClass = "aspect-[16/10]",
+}: {
+  shots: Shot[];
+  priority?: boolean;
+  /**
+   * Frame shape for the slides. The 16:10 default suits the product pages,
+   * where the gallery sits in a column beside the booking card. A full-width
+   * banner needs to be wider than that or it runs a thousand pixels tall, so
+   * those pass their own responsive ratio.
+   */
+  aspectClass?: string;
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const [lightbox, setLightbox] = useState(false);
@@ -80,7 +94,7 @@ export function Gallery({ shots, priority = false }: { shots: Shot[]; priority?:
           aria-label="Photo gallery"
         >
           {shots.map((shot, i) => (
-            <div key={shot.src + i} className="relative aspect-[16/10] w-full shrink-0 snap-center bg-surface">
+            <div key={shot.src + i} className={`relative ${aspectClass} w-full shrink-0 snap-center bg-surface`}>
               <Image
                 src={shot.src}
                 alt={shot.alt}

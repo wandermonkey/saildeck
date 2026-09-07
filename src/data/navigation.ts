@@ -24,6 +24,27 @@ export const navigation: NavNode[] = [
 
   { label: "Fleet", href: "/fleet", blurb: "Yachts and boats for charter" },
 
+  /* Experiences sit under /products rather than /experiences because the
+     section is meant to hold packages and events too, not just charters. */
+  {
+    label: "Products",
+    href: "/products",
+    blurb: "Experiences and events",
+    children: [
+      { label: "Dinner on a Yacht", href: "/products/dinner-on-a-yacht" },
+      { label: "Yacht Date", href: "/products/yacht-date" },
+      { label: "Proposal on a Yacht", href: "/products/proposal-on-a-yacht" },
+      { label: "Wedding Photoshoot", href: "/products/wedding-photoshoot-on-a-yacht" },
+      { label: "Sunset Cruise", href: "/products/sunset-cruise" },
+      { label: "Morning Sunrise Cruise", href: "/products/sunrise-cruise" },
+      { label: "Birthday on a Yacht", href: "/products/birthday-on-a-yacht" },
+      { label: "Mumbai Darshan by Cruise", href: "/products/mumbai-darshan-by-cruise" },
+      { label: "Film Shooting on a Yacht", href: "/products/film-shooting-on-a-yacht" },
+      { label: "Influencer Collaborations", href: "/products/influencer-collaborations" },
+      { label: "Yacht Photographers", href: "/products/yacht-photographers" },
+    ],
+  },
+
   {
     label: "Speedboats",
     href: "/speedboats",
