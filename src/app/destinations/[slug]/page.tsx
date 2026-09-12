@@ -38,9 +38,15 @@ export default async function DestinationPage({ params }: { params: Promise<{ sl
   const d = getDestination(slug);
   if (!d) notFound();
 
-  // "Rest of India" has no home fleet, so fall back to showing the whole fleet.
-  const fleet = d.slug === "rest-of-india" ? yachts.slice(0, 6) : yachtsInDestination(d.slug);
-  const cheapest = fleet.length ? Math.min(...fleet.map((y) => y.pricePerHour)) : 11900;
+  // Fall back to showing the whole fleet for any destination with no boats
+  // currently based there — "Rest of India" always hits this, and any other
+  // market falls into it too the moment its last local boat is reassigned
+  // (as happened when Tara moved from Goa to Mumbai). Checking fleet.length
+  // rather than naming "rest-of-india" specifically means a destination page
+  // can never silently render an empty grid just because the roster changed.
+  const localFleet = yachtsInDestination(d.slug);
+  const fleet = localFleet.length ? localFleet : yachts.slice(0, 6);
+  const cheapest = Math.min(...fleet.map((y) => y.pricePerHour));
 
   const breadcrumb = [
     { name: "Home", path: "/" },

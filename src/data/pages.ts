@@ -25,7 +25,21 @@ export type ContentPage = {
   imageAlt: string;
   /** Small stat strip under the hero. */
   facts?: { label: string; value: string }[];
-  sections: { heading: string; body: string; bullets?: string[] }[];
+  sections: {
+    heading: string;
+    /**
+     * One paragraph, or several for a section that needs to go deep (a
+     * comparison, the financial mechanics). Each entry renders as its own
+     * <p>. Supports the same `**bold**` and `[text](/path)` markers as blog
+     * copy (see RichText.tsx) — use the link syntax to point at a relevant
+     * post in /blog rather than leaving a claim unsupported.
+     */
+    body: string | string[];
+    /** Same markdown-lite syntax as `body`. */
+    bullets?: string[];
+    /** Optional supporting photo, shown under this section's copy. */
+    image?: { src: string; alt: string; caption?: string };
+  }[];
   faqs: { q: string; a: string }[];
 };
 
@@ -163,23 +177,26 @@ export const managementServices: ContentPage[] = [
     eyebrow: "Management",
     title: "Yacht",
     accent: "timeshare",
-    seoTitle: "Yacht Timeshare & Fractional Ownership in India",
+    seoTitle: "Yacht Timeshare & Fractional Ownership in India — Mumbai & Goa",
     seoDescription:
-      "Fractional yacht ownership and timeshare in Mumbai and Goa. Guaranteed days on the water, shared running costs, managed crew and maintenance — ownership without the overhead.",
+      "Fractional yacht ownership and yacht club membership in Mumbai and Goa. Own a real share, get a guaranteed 12–90 days a year, and let us run the crew, berth, insurance and monsoon layup.",
     intro:
-      "Most privately owned yachts in India sail fewer than twenty days a year while costing their owner every day of it. Fractional ownership fixes the arithmetic: you buy a share, you get a guaranteed allocation of days, and the running costs divide by the number of owners.",
+      "Most privately owned yachts in India sail fewer than twenty days a year while costing their owner every day of it. Fractional ownership and timeshare exist to fix that arithmetic — a group of owners share one vessel, each gets a guaranteed allocation of days, and the fixed costs of running a boat divide by however many people are holding a share.",
     image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1800&q=80",
     imageAlt: "Motor yacht at anchor in a calm bay",
     facts: [
-      { label: "Shares", value: "1/4 to 1/8" },
-      { label: "Days a year", value: "12 to 40" },
-      { label: "Term", value: "3–5 years" },
+      { label: "Shares", value: "1/16 to 1/4" },
+      { label: "Days a year", value: "12 to 90" },
+      { label: "Co-owners", value: "Up to 16" },
       { label: "Includes", value: "Crew & upkeep" },
     ],
     sections: [
       {
         heading: "How it works",
-        body: "You buy a defined share of a specific vessel held in a co-ownership structure. Your share entitles you to a fixed number of days per year, booked through a rolling calendar that rotates weekends and holidays fairly between owners.",
+        body: [
+          "You buy a defined share of a specific vessel, held through a co-ownership structure — typically the boat sits inside its own company, with each owner holding equity in proportion to their share. That share entitles you to a fixed number of days a year, booked through a rolling calendar that rotates weekends, long weekends and the peak December–January window fairly between owners so the same person is never last in line twice running.",
+          "Everything that keeps the boat legal, insured and seaworthy is handled by us under one annual management fee — berthing, insurance, crew, cleaning, routine maintenance, and the [monsoon layup and recommissioning](/blog/monsoon-season-yachting-india) that every boat on this coast needs whether it sails or not. You turn up, the boat is fuelled, crewed and ready, and you settle only the fuel and catering for that trip.",
+        ],
         bullets: [
           "Berthing, insurance and mooring included in the annual fee",
           "Crew, cleaning and routine maintenance handled by us",
@@ -187,28 +204,102 @@ export const managementServices: ContentPage[] = [
           "Monsoon layup and recommissioning managed for you",
           "Exit route at the end of term through resale of your share",
         ],
+        image: {
+          src: "https://images.unsplash.com/photo-1574850802664-10ad30c3ed80?auto=format&fit=crop&w=1600&q=80",
+          alt: "Boats moored along a marina pontoon",
+          caption: "The share buys you a fixed slot in the calendar, not a specific weekend — the rotation is what keeps it fair.",
+        },
+      },
+      {
+        heading: "Timeshare or fractional ownership — they are not the same thing",
+        body: [
+          "The two words get used interchangeably and that causes real confusion when people compare offers. In a pure timeshare or club-membership model, you buy a right to use a boat for a set number of weeks — no title, no equity, and usually no stake in what the vessel is worth when the programme ends. It is the cheaper way in, and it suits someone who wants guaranteed access without ever thinking about the asset again.",
+          "Fractional ownership is a different instrument: you hold actual legal title to a percentage of the vessel, alongside the same guaranteed usage rights. When the boat is eventually sold — typically at the end of a five-to-seven-year term — you recover your share of the proceeds rather than simply walking away. It costs more upfront for exactly that reason.",
+          "We structure Saildeck arrangements as fractional ownership by default, because an Indian-registered vessel with clear title among co-owners avoids the ambiguity that a pure usage-rights contract can create if a dispute ever reaches a court here. A club-membership structure is available on request for anyone who genuinely just wants the days and none of the asset.",
+        ],
+      },
+      {
+        heading: "How the numbers actually compare",
+        body: [
+          "A full 45–65ft motor yacht bought outright in India commonly costs its owner somewhere around ten percent of the vessel's value every year in berthing, insurance, crew and upkeep — the full breakdown is in [our guide to the real cost of owning a yacht in India](/blog/true-cost-of-owning-a-yacht-in-india) — and that bill arrives whether the boat leaves the dock twice or fifty times. A 1/8th share on the same class of boat puts a fraction of that capital down and divides the running cost eight ways, for a guaranteed allocation that, at two to three outings a month, comfortably covers how most owners actually use a boat.",
+          "Chartering sits at the other end: no capital at all, and [what a straight hourly or per-slot charter costs](/blog/what-it-costs-to-rent-a-yacht-in-mumbai) works out cheaper than any ownership structure below roughly ten to fifteen days a year. Past that usage, a share starts winning on cost per day, and it also buys you something chartering cannot — the same boat, held for you, rather than whatever is available on the fleet that weekend.",
+        ],
+      },
+      {
+        heading: "Share sizes and what each one buys",
+        body: "Shares run from 1/16th up to 1/4 of a vessel, with a hard cap on the number of co-owners on any one boat so the calendar never gets too crowded to actually deliver guaranteed days.",
+        bullets: [
+          "1/16th share — around 12 guaranteed days a year, boat capped at 16 owners",
+          "1/8th share — around 25 guaranteed days a year, the most common allocation",
+          "1/4 share — up to 90 days a year, typically held by two to four owners",
+          "Multiple shares can be combined on one vessel for a larger allocation",
+          "Unused weeks can be released into the calendar for other owners to book",
+        ],
+      },
+      {
+        heading: "Choosing a boat for shared ownership",
+        body: [
+          "The boat matters more in a shared structure than in solo ownership, because it has to satisfy several owners' idea of a good weekend rather than just one. Whether that means [a motor yacht or a sailing catamaran](/blog/motor-yacht-or-sailing-yacht) usually comes down to how the group plans to use it — motor yachts suit short high-guest-count outings, catamarans suit longer trips and owners who want to helm the boat themselves between charters.",
+          "Every vessel we bring into a fractional structure goes through [an independent marine survey](/blog/yacht-survey-guide) before the syndicate is formed, and we walk buyers through [new against a used boat](/blog/new-vs-used-yacht-india) on cost, depreciation and how long the programme is likely to run. If the vessel is a new import rather than an existing Indian-flagged boat, [import duty and GST](/blog/yacht-import-duty-taxes-india) get added to the entry price before shares are priced — we do that arithmetic up front so nobody discovers it after signing.",
+        ],
+      },
+      {
+        heading: "What is included in the annual fee, and what is not",
+        body: "One fixed management fee, agreed before you buy in, covers everything that keeps the boat legal and ready. It does not cover what you personally consume on board.",
+        bullets: [
+          "Included — berthing, insurance, licensed crew, routine servicing",
+          "Included — a season-by-season maintenance schedule, handled for you",
+          "Included — monsoon haul-out, storage and recommissioning",
+          "Not included — fuel, priced on actual use per trip",
+          "Not included — catering, drinks and any add-on decoration",
+        ],
       },
       {
         heading: "Who it suits",
-        body: "People who want a specific boat available on their own dates without the cost and administration of sole ownership — and who use a boat perhaps two or three times a month in season. Below that, chartering is honestly cheaper. Above it, buying outright starts to make sense.",
+        body: "People who want a specific boat available on their own dates without the cost and administration of sole ownership — and who use a boat perhaps two or three times a month in season. Below that, [chartering by the day or the hour](/blog/how-to-rent-a-yacht-in-india) is honestly cheaper and involves zero admin. Above it, buying outright starts to make more sense than sharing.",
       },
       {
         heading: "What you actually pay",
-        body: "A capital amount for the share, then a fixed annual operating contribution covering berth, insurance, crew and scheduled maintenance. Fuel is billed on use. There are no surprise assessments — unplanned repairs come out of a reserve fund we build into the annual figure.",
+        body: "A capital amount for the share, then a fixed annual operating contribution covering berth, insurance, crew and scheduled maintenance. Fuel is billed on use. There are no surprise assessments — unplanned repairs come out of a reserve fund we build into the annual figure from day one, so a gearbox failure in year three is not a bill that lands on whoever happens to be using the boat that week.",
+      },
+      {
+        heading: "Exit and resale",
+        body: "A share is an asset, not a subscription you simply let lapse. When you are ready to leave the syndicate — at the end of the agreed term, or earlier if your circumstances change — your share is sold the same way we handle [any yacht sale](/blog/how-to-sell-a-yacht-in-india): valued against current market comparables, marketed to our buyer network, with the remaining owners given first right of refusal before it goes outside the group.",
+        image: {
+          src: "https://images.unsplash.com/photo-1638262052640-82e94d64664a?auto=format&fit=crop&w=1600&q=80",
+          alt: "Two people shaking hands over a table, closing a deal",
+          caption: "Shares are transferable at any point — most owners exit through a sale to an incoming buyer, not by waiting out the full term.",
+        },
       },
     ],
     faqs: [
       {
         q: "Is yacht timeshare the same as fractional ownership?",
-        a: "Broadly, yes — in our structure you own a legal share of the vessel rather than just a right to use it, which means you also share in the resale value at the end of the term.",
+        a: "No, though the terms are often used loosely. Timeshare buys you the right to use a boat for a set number of weeks with no ownership stake. Fractional ownership buys you actual legal title to a share of the vessel alongside the same usage rights, so you also share in the resale value at the end of the term. We default new clients into fractional ownership for exactly that reason, but a pure timeshare structure is available on request.",
       },
       {
         q: "What if two owners want the same weekend?",
         a: "The booking calendar rotates priority. Peak dates like New Year and long weekends are allocated in a fixed rotation agreed at the start, so nobody gets the same holiday twice in a row while another owner never gets it.",
       },
       {
+        q: "How many other owners will I be sharing the boat with?",
+        a: "Between four and sixteen, depending on the share size you buy. A 1/4 share typically sits alongside two to three other owners; a 1/16th share sits in a syndicate of up to sixteen. We cap the owner count on every vessel so the guaranteed-days promise is always deliverable.",
+      },
+      {
         q: "Can I charter out my unused days?",
         a: "Yes, and many owners do. We will place your unused allocation into the charter fleet and pass through the revenue less operating costs and commission.",
+      },
+      {
+        q: "Who actually operates the boat — do I need a licence?",
+        a: "Every Saildeck fractional vessel comes with a licensed captain and crew as standard, so no owner needs a licence to use their allocation. Owners who hold the relevant certification can request bareboat access on specific vessels, agreed separately at the time shares are issued.",
+      },
+      {
+        q: "What happens if the boat needs a major repair?",
+        a: "Scheduled maintenance and routine wear are already priced into your annual fee. Larger unplanned repairs draw from the reserve fund every syndicate carries from the outset, topped up through the annual fee rather than billed as a surprise one-off assessment.",
+      },
+      {
+        q: "Can I buy more than one share on the same boat?",
+        a: "Yes, subject to the vessel's owner cap. Combining shares is the usual route to a larger allocation without moving to full outright ownership.",
       },
       {
         q: "How do I exit?",

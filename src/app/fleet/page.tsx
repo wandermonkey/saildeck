@@ -12,10 +12,20 @@ import { yachts, inr } from "@/data/yachts";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+// Derived from the live listing rather than hardcoded, so the hero, the stat
+// strip and this metadata can never drift out of sync with yachts.ts the way
+// a fixed "nine boats" / "from ₹11,900" pair did the last time boats were
+// added or removed.
+const cheapestPerBoat = yachts.map((y) =>
+  y.pricingSlots?.length ? Math.min(...y.pricingSlots.map((s) => s.amount)) : y.pricePerHour
+);
+const fleetFrom = Math.min(...cheapestPerBoat);
+const guestCounts = yachts.map((y) => y.guests);
+const guestRange = `${Math.min(...guestCounts)} – ${Math.max(...guestCounts)} guests`;
+
 export const metadata: Metadata = buildMetadata({
   title: "Our Fleet — Yachts & Boats for Charter in Mumbai, Navi Mumbai & Goa",
-  description:
-    "Browse the Saildeck fleet: nine yachts and catamarans for private charter in Mumbai, Navi Mumbai and Goa, from ₹11,900 per hour with captain and crew included.",
+  description: `Browse the Saildeck fleet: ${yachts.length} yachts and catamarans for private charter in Mumbai, Navi Mumbai and Goa, from ${inr(fleetFrom)} with captain and crew included.`,
   path: "/fleet",
 });
 
@@ -65,7 +75,7 @@ export default function FleetPage() {
       <PageHero
         breadcrumb={breadcrumb}
         eyebrow="The fleet"
-        title="Nine boats,"
+        title={`${yachts.length} boats,`}
         accent="one standard"
         sub="Every boat here is one we run ourselves or know first-hand. Prices are per hour and include the captain, crew and fuel for the standard route."
         image="https://images.unsplash.com/photo-1727174674169-c2f484052437?auto=format&fit=crop&w=2000&q=80"
@@ -73,8 +83,8 @@ export default function FleetPage() {
         compact
         facts={[
           { label: "Boats", value: `${yachts.length}` },
-          { label: "From", value: `${inr(11900)}/hr` },
-          { label: "Capacity", value: "10 – 30 guests" },
+          { label: "From", value: inr(fleetFrom) },
+          { label: "Capacity", value: guestRange },
           { label: "Ports", value: "Mumbai · Goa · Navi Mumbai" },
         ]}
       />

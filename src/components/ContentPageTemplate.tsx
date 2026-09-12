@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "./PageHero";
 import { CtaBand } from "./CtaBand";
@@ -5,6 +6,7 @@ import { EnquiryForm } from "./EnquiryForm";
 import { Faq } from "./Faq";
 import { JsonLd } from "./JsonLd";
 import { Reveal } from "./Reveal";
+import { RichText } from "./RichText";
 import { SectionTitle } from "./ui";
 import { CheckIcon, ArrowIcon } from "./icons";
 import type { ContentPage } from "@/data/pages";
@@ -56,27 +58,56 @@ export function ContentPageTemplate({
       <section className="py-14 md:py-20">
         <div className="container-x grid gap-12 lg:grid-cols-[1fr_23rem] lg:items-start lg:gap-16">
           <div className="min-w-0">
-            {page.sections.map((s, i) => (
-              <Reveal key={s.heading} delay={i * 60}>
-                <div className={i > 0 ? "mt-12" : ""}>
-                  <h2 className="text-2xl md:text-[1.75rem]">{s.heading}</h2>
-                  <p className="mt-4 leading-relaxed text-muted">{s.body}</p>
+            {page.sections.map((s, i) => {
+              // A section's body is usually one paragraph, but a page that
+              // needs to go deep (comparisons, financials, mechanics) can
+              // pass an array instead — each entry becomes its own <p>.
+              const paragraphs = Array.isArray(s.body) ? s.body : [s.body];
 
-                  {s.bullets && (
-                    <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                      {s.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-3 text-sm text-muted">
-                          <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-teal-soft text-teal">
-                            <CheckIcon className="h-3 w-3" />
-                          </span>
-                          {b}
-                        </li>
+              return (
+                <Reveal key={s.heading} delay={i * 60}>
+                  <div className={i > 0 ? "mt-12" : ""}>
+                    <h2 className="text-2xl md:text-[1.75rem]">{s.heading}</h2>
+
+                    <div className="mt-4 space-y-4 leading-relaxed text-muted">
+                      {paragraphs.map((p, pi) => (
+                        <p key={pi}><RichText text={p} /></p>
                       ))}
-                    </ul>
-                  )}
-                </div>
-              </Reveal>
-            ))}
+                    </div>
+
+                    {s.bullets && (
+                      <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                        {s.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-3 text-sm text-muted">
+                            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-teal-soft text-teal">
+                              <CheckIcon className="h-3 w-3" />
+                            </span>
+                            <RichText text={b} />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {s.image && (
+                      <figure className="mt-7">
+                        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-surface">
+                          <Image
+                            src={s.image.src}
+                            alt={s.image.alt}
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 60vw"
+                            className="object-cover"
+                          />
+                        </div>
+                        {s.image.caption && (
+                          <figcaption className="mt-2.5 text-xs text-faint">{s.image.caption}</figcaption>
+                        )}
+                      </figure>
+                    )}
+                  </div>
+                </Reveal>
+              );
+            })}
 
             <Reveal>
               <div className="mt-14">

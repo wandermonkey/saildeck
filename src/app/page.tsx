@@ -33,10 +33,15 @@ export const metadata: Metadata = buildMetadata({
   path: "/",
 });
 
+// Derived from the live fleet — see fleet/page.tsx for why this is computed
+// rather than a number typed into the FAQ answer below.
+const homeCheapestPerHour = Math.min(...yachts.map((y) => y.pricePerHour));
+const homePriciestPerHour = Math.max(...yachts.map((y) => y.pricePerHour));
+
 const homeFaqs = [
   {
     q: "How much does it cost to rent a yacht in Mumbai?",
-    a: "Saildeck yachts in Mumbai start at ₹11,900 per hour and run to ₹33,000 per hour for the flagship. That is per boat, not per person — the captain, crew, fuel for the standard route and life jackets are all included. Catering, decoration and water sports are quoted separately.",
+    a: `Saildeck yachts in Mumbai start at ${inr(homeCheapestPerHour)} per hour and run to ${inr(homePriciestPerHour)} per hour for the flagship. That is per boat, not per person — the captain, crew, fuel for the standard route and life jackets are all included. Catering, decoration and water sports are quoted separately.`,
   },
   {
     q: "How do I book a yacht with Saildeck?",

@@ -47,22 +47,22 @@ export const destinations: Destination[] = [
       "October to May. The southwest monsoon closes coastal charter operations from June to September, so plan around it.",
     facts: [
       { label: "Season", value: "Oct – May" },
-      { label: "From", value: "₹11,900/hr" },
+      { label: "From", value: "₹2,000/hr" },
       { label: "Main jetty", value: "Gateway of India" },
-      { label: "Group size", value: "2 – 30 guests" },
+      { label: "Group size", value: "2 – 32 guests" },
     ],
     faqs: [
       {
         q: "How much does it cost to rent a yacht in Mumbai?",
-        a: "Saildeck yachts in Mumbai start at ₹11,900 per hour and run to ₹33,000 per hour for the flagship. The rate includes captain, crew, fuel for the standard route and life jackets. Catering, decoration and water sports are quoted on top.",
+        a: "Saildeck boats in Mumbai start at ₹2,000 per hour for a private sailboat and run to ₹33,000 per hour for the flagship motor yacht. Rates include captain or skipper, crew, fuel or transfer for the standard route and life jackets. Catering, decoration and water sports are quoted on top.",
       },
       {
         q: "Where do Mumbai yacht charters depart from?",
-        a: "Almost all departures are from the Gateway of India in Colaba, with Bandra available for some boats. You board a ferry at the jetty which takes about ten minutes to reach the yacht at anchor.",
+        a: "Almost all departures are from the Gateway of India in Colaba, with Bandra available for some boats. You board a ferry or motorboat at the jetty which takes about ten to fifteen minutes to reach the vessel at anchor.",
       },
       {
         q: "How many people can join a yacht in Mumbai?",
-        a: "Our Mumbai fleet ranges from 10 guests up to 30. Capacity is fixed by each vessel's coast guard licence and cannot be exceeded, so tell us your group size when you enquire.",
+        a: "Our Mumbai fleet ranges from a 5-guest private sailboat up to a 32-guest motor yacht. Capacity is fixed by each vessel's coast guard licence and cannot be exceeded, so tell us your group size when you enquire.",
       },
       {
         q: "Can we bring our own food and alcohol on board?",
@@ -75,7 +75,7 @@ export const destinations: Destination[] = [
     ],
     image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1800&q=80",
     imageAlt: "The Gateway of India at dusk with boats on the harbour",
-    fleetNote: "Six yachts and three speedboats based at the Gateway of India.",
+    fleetNote: "Four yachts and three speedboats based at the Gateway of India.",
   },
   {
     slug: "goa",
@@ -102,14 +102,14 @@ export const destinations: Destination[] = [
       "November to March is peak season with the calmest water. Charters pause during the monsoon from June to September.",
     facts: [
       { label: "Season", value: "Nov – Mar peak" },
-      { label: "From", value: "₹11,900/hr" },
+      { label: "From", value: "₹14,000/hr" },
       { label: "Main jetty", value: "Panjim, Mandovi" },
-      { label: "Group size", value: "2 – 20 guests" },
+      { label: "Group size", value: "2 – 15 guests" },
     ],
     faqs: [
       {
         q: "How much is a yacht in Goa per hour?",
-        a: "Goa yachts start around ₹11,900 per hour with captain and crew included. Most bookings carry a two or three hour minimum, and half-day island charters are quoted as a package.",
+        a: "Typically from around ₹14,000 per hour with captain and crew included, though Goa charters are currently arranged through vetted partner operators rather than a Saildeck-owned boat, so the exact rate depends on which vessel is available for your date. Most bookings carry a two or three hour minimum, and half-day island charters are quoted as a package.",
       },
       {
         q: "Will we see dolphins on a Goa yacht cruise?",
@@ -126,7 +126,7 @@ export const destinations: Destination[] = [
     ],
     image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1800&q=80",
     imageAlt: "A palm-lined Goa beach with clear water and moored boats",
-    fleetNote: "Five yachts and a catamaran operating from Panjim and Britona.",
+    fleetNote: "Arranged through vetted partner operators from Panjim and Britona.",
   },
   {
     slug: "navi-mumbai",

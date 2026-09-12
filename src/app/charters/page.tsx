@@ -17,10 +17,15 @@ import { charterOccasions } from "@/data/company";
 import { destinations } from "@/data/destinations";
 import { buildMetadata, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/seo";
 
+// Derived from the live fleet rather than hardcoded, so this page cannot
+// quote a rate for a boat that no longer exists — see fleet/page.tsx for the
+// same pattern and why it matters.
+const cheapestPerHour = Math.min(...yachts.map((y) => y.pricePerHour));
+const priciestPerHour = Math.max(...yachts.map((y) => y.pricePerHour));
+
 export const metadata: Metadata = buildMetadata({
   title: "Private Yacht Charters in India — Hourly Hire with Captain & Crew",
-  description:
-    "Private yacht charters in Mumbai, Navi Mumbai and Goa from ₹11,900 per hour. Sunset cruises, birthdays, proposals, corporate offsites and full-day island charters with captain and crew.",
+  description: `Private yacht charters in Mumbai, Navi Mumbai and Goa from ${inr(cheapestPerHour)} per hour. Sunset cruises, birthdays, proposals, corporate offsites and full-day island charters with captain and crew.`,
   path: "/charters",
 });
 
@@ -32,7 +37,7 @@ const breadcrumb = [
 const faqs = [
   {
     q: "How much does a private yacht charter cost in India?",
-    a: "Saildeck charters start at ₹11,900 per hour and run to ₹33,000 per hour for the flagship. That is per boat, not per person — the captain, crew, fuel for the standard route and life jackets are included.",
+    a: `Saildeck charters start at ${inr(cheapestPerHour)} per hour and run to ${inr(priciestPerHour)} per hour for the flagship. That is per boat, not per person — the captain, crew, fuel for the standard route and life jackets are included.`,
   },
   {
     q: "What is the minimum charter duration?",
@@ -92,7 +97,7 @@ export default function ChartersPage() {
             description:
               "Private yacht charters in Mumbai, Navi Mumbai and Goa with licensed captain and crew, hired by the hour.",
             path: "/charters",
-            price: 11900,
+            price: cheapestPerHour,
             image: yachts[0].gallery[0].src,
           }),
         ]}
@@ -107,9 +112,9 @@ export default function ChartersPage() {
         image="https://images.unsplash.com/photo-1749183563789-ae17d4a952d2?auto=format&fit=crop&w=2000&q=80"
         imageAlt="Guests on the upper deck of a chartered yacht"
         facts={[
-          { label: "From", value: `${inr(11900)}/hr` },
+          { label: "From", value: `${inr(cheapestPerHour)}/hr` },
           { label: "Minimum", value: "1–2 hours" },
-          { label: "Guests", value: "2 – 30" },
+          { label: "Guests", value: "2 – 32" },
           { label: "Season", value: "Oct – May" },
         ]}
       />

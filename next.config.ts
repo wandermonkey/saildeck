@@ -40,6 +40,21 @@ const nextConfig: NextConfig = {
         destination: "/fleet/tara-sailing-catamaran-mumbai",
         permanent: true,
       },
+      // Six listings retired to make room for new boats, with no direct
+      // replacement — sent to the fleet listing rather than left as 404s so
+      // any inbound links or search results still land somewhere useful.
+      ...[
+        "vanguard-serenity",
+        "solstice-dream",
+        "triton-odyssey",
+        "mariners-haven",
+        "luminous-horizon",
+        "nautica-nova",
+      ].map((slug) => ({
+        source: `/fleet/${slug}`,
+        destination: "/fleet",
+        permanent: true,
+      })),
     ];
   },
   async headers() {
