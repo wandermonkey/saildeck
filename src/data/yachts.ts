@@ -292,62 +292,6 @@ export const yachts: Yacht[] = [
     ],
   },
   {
-    slug: "azure-horizon",
-    name: "Azure Horizon",
-    tagline: "Sunset cruises, done properly.",
-    pricePerHour: 14000,
-    guests: 16,
-    lengthFt: 58,
-    cabins: 2,
-    crew: 3,
-    destinations: ["mumbai"],
-    category: "Motor Yacht",
-    highlights: ["Open terrace", "Deck jacuzzi", "Premium bar"],
-    amenities: ["Jacuzzi", "Open terrace", "Premium bar", "Wi-Fi", "Sun beds", "Air conditioning"],
-    gallery: [
-      { src: "https://images.unsplash.com/photo-1628029338883-61644ec68475?auto=format&fit=crop&w=1800&q=80", alt: "Azure Horizon on open water as the sun sets" },
-      { src: "https://images.unsplash.com/photo-1598770722761-0cab70ffd2fb?auto=format&fit=crop&w=1800&q=80", alt: "View from the bow across the water at sunset" },
-      { src: "https://images.unsplash.com/photo-1697207342205-8b3a7d704e9a?auto=format&fit=crop&w=1800&q=80", alt: "Guest looking out of a large saloon window" },
-      { src: "https://images.unsplash.com/photo-1681331325415-a497fd712ee6?auto=format&fit=crop&w=1800&q=80", alt: "The yacht silhouetted against an evening sky" },
-    ],
-    videos: [],
-    description: [
-      "The **Azure Horizon** is a 58-foot motor yacht chartered by the hour from the **Gateway of India**, built for one job in particular: a proper **sunset cruise** in Mumbai. She carries up to **16 guests** with a licensed captain and crew.",
-      "The open terrace and deck jacuzzi sit up top with a clear run of sky to the west, and the premium bar stays open through the booking. Air conditioning below deck gives guests somewhere cool to step into between rounds on deck.",
-      "Booked most often for an evening on the water timed to golden hour, a small birthday group, or a couple wanting a quieter charter than the bigger boats in the fleet. Every charter includes the captain and crew, fuel for the standard route, life jackets for every guest and the sound system. Message us on WhatsApp with your date and group size for a firm all-in price.",
-    ],
-    specs: [
-      { label: "Type", value: "Motor yacht" },
-      { label: "Length overall", value: "58 ft" },
-      { label: "Layout", value: "2 cabins, 3 crew" },
-      { label: "Guest capacity", value: "16 guests" },
-      { label: "Home port", value: "Gateway of India, Mumbai" },
-      { label: "Registration", value: "Commercial passenger licence" },
-    ],
-    pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 28000 },
-      { start: "5:00 PM", end: "7:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 38000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 34000 },
-    ],
-    pricingExtras: [
-      "Additional hour — ₹13,000",
-      "Overnight anchorage (9 am to 7 am) — ₹85,000",
-      "Mumbai to Mandwa, return journey — ₹35,000",
-      "Photoshoot on board (per hour) — ₹16,000",
-    ],
-    pricingNote: "Special permissions are required for overnight sailing.",
-    faqs: [
-      {
-        q: "How much does it cost to charter the Azure Horizon?",
-        a: "Two-hour slots run from ₹22,000 to ₹38,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
-      },
-      ...standardFaqs("Azure Horizon", 16),
-    ],
-  },
-  {
     /* Saildeck's own boat. Gallery is the operator's real photography, used
        unedited. Facts below (capacity, transfer times, slot pricing) are
        reconciled from several Mumbai sailboat-charter operators offering the

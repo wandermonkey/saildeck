@@ -55,6 +55,13 @@ const nextConfig: NextConfig = {
         destination: "/fleet",
         permanent: true,
       })),
+      // Azure Horizon retired — real boats with genuine photography have
+      // since taken her place in the fleet.
+      {
+        source: "/fleet/azure-horizon",
+        destination: "/fleet",
+        permanent: true,
+      },
     ];
   },
   async headers() {

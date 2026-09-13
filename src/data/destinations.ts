@@ -75,7 +75,7 @@ export const destinations: Destination[] = [
     ],
     image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1800&q=80",
     imageAlt: "The Gateway of India at dusk with boats on the harbour",
-    fleetNote: "Eighteen yachts and three speedboats based at the Gateway of India.",
+    fleetNote: "Seventeen yachts and three speedboats based at the Gateway of India.",
   },
   {
     slug: "goa",
