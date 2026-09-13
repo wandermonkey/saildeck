@@ -18,6 +18,7 @@ export function PageHero({
   sub,
   image,
   imageAlt,
+  video,
   breadcrumb,
   facts,
   children,
@@ -29,6 +30,13 @@ export function PageHero({
   sub?: string;
   image: string;
   imageAlt: string;
+  /**
+   * Optional background video (mp4/webm URL) shown instead of the still
+   * image — muted, looping, autoplaying. `image` is still required and is
+   * used as the `poster` frame while the video loads and as the fallback
+   * on browsers that block autoplay.
+   */
+  video?: string;
   breadcrumb: { name: string; path: string }[];
   facts?: { label: string; value: string }[];
   children?: React.ReactNode;
@@ -36,8 +44,23 @@ export function PageHero({
 }) {
   return (
     <>
-      <section className={`relative flex items-end overflow-hidden ${compact ? "min-h-[46vh]" : "min-h-[58vh]"}`}>
-        <Image src={image} alt={imageAlt} fill priority quality={75} sizes="100vw" className="object-cover" />
+      {/* Sized to actually read as a banner — a page with one boat, one
+          service or one post deserves the same visual weight as the hub
+          page that linked to it, not a strip that only hints at the photo. */}
+      <section className={`relative flex items-end overflow-hidden ${compact ? "min-h-[54vh]" : "min-h-[62vh]"}`}>
+        {video ? (
+          <video
+            src={video}
+            poster={image}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <Image src={image} alt={imageAlt} fill priority quality={75} sizes="100vw" className="object-cover" />
+        )}
 
         {/* Light touch only: enough to seat the panel, not enough to hide the boat. */}
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/10 to-transparent" />

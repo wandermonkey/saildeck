@@ -52,7 +52,6 @@ export function ContentPageTemplate({
         image={page.image}
         imageAlt={page.imageAlt}
         facts={page.facts}
-        compact
       />
 
       {page.placards && page.placards.length > 0 && (

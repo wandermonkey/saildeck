@@ -95,9 +95,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
 
-        <div className="container-x max-w-4xl py-10">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-surface-2">
-            <Image src={post.image} alt={post.imageAlt} fill priority sizes="(max-width: 1024px) 100vw, 60rem" className="object-cover" />
+        {/* Full-width banner rather than a small image boxed into the reading
+            column — this is the reader's first real look at the story. */}
+        <div className="container-x py-8 md:py-10">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface-2 sm:aspect-[16/9] lg:aspect-[21/9]">
+            <Image src={post.image} alt={post.imageAlt} fill priority sizes="100vw" className="object-cover" />
           </div>
         </div>
 

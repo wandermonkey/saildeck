@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+import { PageHero } from "@/components/PageHero";
 import { Gallery } from "@/components/Gallery";
 import { VideoSection } from "@/components/VideoSection";
 import { PricingTable } from "@/components/PricingTable";
@@ -106,46 +107,34 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
     <>
       <JsonLd data={[breadcrumbSchema(breadcrumb), productSchema, faqSchema(yacht.faqs)]} />
 
-      {/* Breadcrumb + title, on white — the photography carries the page from
-          here, so there is no dark hero competing with it. */}
-      <div className="border-b border-line bg-white">
-        <div className="container-x py-6">
-          <nav aria-label="Breadcrumb">
-            <ol className="flex flex-wrap items-center gap-2 text-xs text-faint">
-              {breadcrumb.map((b, i) => (
-                <li key={b.path} className="flex items-center gap-2">
-                  {i > 0 && <span aria-hidden="true">/</span>}
-                  {i === breadcrumb.length - 1 ? (
-                    <span className="text-muted">{b.name}</span>
-                  ) : (
-                    <Link href={b.path} className="transition-colors hover:text-crimson">{b.name}</Link>
-                  )}
-                </li>
-              ))}
-            </ol>
-          </nav>
-
-          <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <Pill tone="crimson">{yacht.category}</Pill>
-                {places.map((p) => (
-                  <Pill key={p.slug}>{p.name}</Pill>
-                ))}
-              </div>
-              <h1 className="mt-3 text-3xl md:text-[2.6rem]">{yacht.name}</h1>
-              <p className="mt-2 max-w-2xl text-muted">{yacht.tagline}</p>
-            </div>
-
-            <div className="flex items-center gap-1.5 text-sm text-muted">
-              <span className="flex text-[#FBBC05]">
-                {[...Array(5)].map((_, i) => <StarIcon key={i} className="h-4 w-4" />)}
-              </span>
-              <span>{site.rating.value} · {site.rating.count} reviews</span>
-            </div>
-          </div>
+      {/* Full banner hero, same treatment as every other inner page —
+          the boat's own hero shot, not a plain white title bar. The
+          in-page Gallery below still carries full browsing of every shot. */}
+      <PageHero
+        breadcrumb={breadcrumb}
+        eyebrow={yacht.category}
+        title={yacht.name}
+        sub={yacht.tagline}
+        image={yacht.gallery[0].src}
+        imageAlt={yacht.gallery[0].alt}
+      >
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="flex items-center gap-1.5 text-sm text-white/85">
+            <span className="flex text-[#FBBC05]">
+              {[...Array(5)].map((_, i) => <StarIcon key={i} className="h-4 w-4" />)}
+            </span>
+            {site.rating.value} · {site.rating.count} reviews
+          </span>
+          {places.map((p) => (
+            <span
+              key={p.slug}
+              className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur"
+            >
+              {p.name}
+            </span>
+          ))}
         </div>
-      </div>
+      </PageHero>
 
       {/* ================= GALLERY + BOOKING ================= */}
       <section className="py-8 md:py-10">
