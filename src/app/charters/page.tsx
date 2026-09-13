@@ -114,7 +114,7 @@ export default function ChartersPage() {
         facts={[
           { label: "From", value: `${inr(cheapestPerHour)}/hr` },
           { label: "Minimum", value: "1–2 hours" },
-          { label: "Guests", value: "2 – 32" },
+          { label: "Guests", value: "2 – 35" },
           { label: "Season", value: "Oct – May" },
         ]}
       />

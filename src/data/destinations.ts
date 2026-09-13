@@ -49,7 +49,7 @@ export const destinations: Destination[] = [
       { label: "Season", value: "Oct – May" },
       { label: "From", value: "₹2,000/hr" },
       { label: "Main jetty", value: "Gateway of India" },
-      { label: "Group size", value: "2 – 32 guests" },
+      { label: "Group size", value: "2 – 35 guests" },
     ],
     faqs: [
       {
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
       },
       {
         q: "How many people can join a yacht in Mumbai?",
-        a: "Our Mumbai fleet ranges from a 5-guest private sailboat up to a 32-guest motor yacht. Capacity is fixed by each vessel's coast guard licence and cannot be exceeded, so tell us your group size when you enquire.",
+        a: "Our Mumbai fleet ranges from a 5-guest private sailboat up to a 35-guest luxury catamaran. Capacity is fixed by each vessel's coast guard licence and cannot be exceeded, so tell us your group size when you enquire.",
       },
       {
         q: "Can we bring our own food and alcohol on board?",
@@ -75,7 +75,7 @@ export const destinations: Destination[] = [
     ],
     image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1800&q=80",
     imageAlt: "The Gateway of India at dusk with boats on the harbour",
-    fleetNote: "Four yachts and three speedboats based at the Gateway of India.",
+    fleetNote: "Sixteen yachts and three speedboats based at the Gateway of India.",
   },
   {
     slug: "goa",
@@ -102,14 +102,14 @@ export const destinations: Destination[] = [
       "November to March is peak season with the calmest water. Charters pause during the monsoon from June to September.",
     facts: [
       { label: "Season", value: "Nov – Mar peak" },
-      { label: "From", value: "₹14,000/hr" },
+      { label: "From", value: "₹8,000/hr" },
       { label: "Main jetty", value: "Panjim, Mandovi" },
-      { label: "Group size", value: "2 – 15 guests" },
+      { label: "Group size", value: "2 – 18 guests" },
     ],
     faqs: [
       {
         q: "How much is a yacht in Goa per hour?",
-        a: "Typically from around ₹14,000 per hour with captain and crew included, though Goa charters are currently arranged through vetted partner operators rather than a Saildeck-owned boat, so the exact rate depends on which vessel is available for your date. Most bookings carry a two or three hour minimum, and half-day island charters are quoted as a package.",
+        a: "Goa charters start around ₹8,000 per hour with captain and crew included. Most bookings carry a two or three hour minimum, and half-day island charters are quoted as a package.",
       },
       {
         q: "Will we see dolphins on a Goa yacht cruise?",
@@ -126,7 +126,7 @@ export const destinations: Destination[] = [
     ],
     image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1800&q=80",
     imageAlt: "A palm-lined Goa beach with clear water and moored boats",
-    fleetNote: "Arranged through vetted partner operators from Panjim and Britona.",
+    fleetNote: "Three motor yachts based on the Mandovi.",
   },
   {
     slug: "navi-mumbai",
