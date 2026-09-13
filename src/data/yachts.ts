@@ -1639,6 +1639,155 @@ export const yachts: Yacht[] = [
       },
     ],
   },
+  {
+    /* Saildeck's own boat. Three of the four photos here are a professional
+       styled shoot rather than an on-charter phone photo — used with the
+       operator's confirmation that Saildeck holds the rights to them.
+       Because the backdrop in those shots isn't Mumbai, the alt text and
+       copy describe the boat itself rather than claiming a location the
+       images don't show. Confirm exact length, cabin count and registration
+       before this goes live. */
+    slug: "blue-whale-18-pax-motor-yacht-mumbai",
+    name: "Blue Whale",
+    tagline: "A flybridge motor yacht for up to 18 guests, with a proper oval-berth cabin below.",
+    pricePerHour: 15000,
+    guests: 18,
+    lengthFt: 42,
+    cabins: 1,
+    crew: 3,
+    destinations: ["mumbai"],
+    category: "Motor Yacht",
+    highlights: ["Flybridge motor yacht", "Up to 18 guests", "Leather saloon with a wet bar"],
+    amenities: [
+      "Leather saloon seating",
+      "Wet bar with fridge & microwave",
+      "Oval-berth cabin below deck",
+      "Life jackets for every guest",
+      "Upper helm & foredeck sun pad",
+      "Catering & decoration on request",
+    ],
+    gallery: [
+      { src: "/images/fleet/blue-whale/blue-whale-18-pax-motor-yacht-mumbai-side-profile.jpeg", alt: "Blue Whale's dark blue hull and flybridge at anchor" },
+      { src: "/images/fleet/blue-whale/blue-whale-motor-yacht-mumbai-saloon-interior.jpeg", alt: "The leather saloon with a wet bar, fridge and coffee table" },
+      { src: "/images/fleet/blue-whale/blue-whale-motor-yacht-mumbai-cabin-interior.jpeg", alt: "The below-deck cabin with an oval berth and nautical cushions" },
+      { src: "/images/fleet/blue-whale/blue-whale-motor-yacht-mumbai-aft-deck-sunset.jpeg", alt: "The foredeck sun pad viewed from the flybridge at sunset" },
+    ],
+    videos: [],
+    description: [
+      "**Blue Whale** is a flybridge motor yacht carrying up to **18 guests** from the **Gateway of India** in Colaba. Her dark blue hull is easy to pick out at anchor, and below deck she has a genuine cabin with an oval berth rather than a bare cuddy — a real point of difference at this end of our fleet.",
+      "The saloon is finished in leather with a wet bar, fridge and microwave, which makes her a comfortable pick for a **[corporate outing](/blog/corporate-yacht-charters-india)** or a longer celebration that needs somewhere proper to sit between stretches on deck. At 18 guests, see our **[guide to group size and boat size](/blog/group-size-boat-size-guide)** if you're weighing her against a smaller or larger boat.",
+      "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering or decoration quote.",
+    ],
+    specs: [
+      { label: "Type", value: "Flybridge motor yacht" },
+      { label: "Length overall", value: "~42 ft" },
+      { label: "Layout", value: "Leather saloon, oval-berth cabin" },
+      { label: "Guest capacity", value: "18 guests" },
+      { label: "Home port", value: "Gateway of India, Mumbai" },
+      { label: "Registration", value: "Commercial passenger licence" },
+    ],
+    pricingSlots: [
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 17000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
+    ],
+    pricingExtras: [
+      "Additional hour — ₹9,500",
+      "Overnight anchorage (9 am to 7 am) — ₹85,000",
+      "Gateway of India to Mandwa, return journey — ₹36,000",
+      "Catering (per guest) — from ₹800",
+    ],
+    pricingNote: "Special permissions are required for overnight sailing.",
+    faqs: [
+      {
+        q: "How much does it cost to charter Blue Whale?",
+        a: "Two-hour slots run from ₹15,000 to ₹20,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and catering are all quoted separately.",
+      },
+      ...standardFaqs("Blue Whale", 18),
+      {
+        q: "Does Blue Whale have a real cabin, not just a cuddy?",
+        a: "Yes — a below-deck cabin with an oval berth, one of the more comfortable layouts in our fleet at this size.",
+      },
+    ],
+  },
+  {
+    /* Saildeck's own boat, a Majesty 44. This folder also contained two files
+       still carrying a visible third-party "Oystera" watermark — excluded
+       even after the operator confirmed rights to the rest of the set, since
+       those two specific files clearly hadn't actually been cleaned.
+       Everything below is genuine, unwatermarked photography, used unedited.
+       Confirm exact guest capacity and registration before this goes live. */
+    slug: "l3-yacht-majesty-44-mumbai",
+    name: "L3",
+    tagline: "A Majesty 44 motor yacht with two real cabins, including a marble-finished master.",
+    pricePerHour: 17000,
+    guests: 14,
+    lengthFt: 44,
+    cabins: 2,
+    crew: 3,
+    destinations: ["mumbai"],
+    category: "Motor Yacht",
+    highlights: ["Majesty 44 motor yacht", "Two cabins, including a marble master", "Foredeck lounge seating"],
+    amenities: [
+      "Master cabin with ensuite",
+      "Second guest cabin",
+      "Lower saloon seating",
+      "Foredeck lounge",
+      "Life jackets for every guest",
+      "Catering & decoration on request",
+    ],
+    gallery: [
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-side-profile-gateway.jpeg", alt: "L3's black hull viewed from alongside with the Gateway of India and Taj Mahal Palace behind" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-stern-swim-platform.jpeg", alt: "L3's stern and teak swim platform at anchor" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-foredeck-lounge.png", alt: "The foredeck lounge seating with the city skyline behind" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-foredeck-sunset.jpeg", alt: "The foredeck lounge at sunset with the harbour behind" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-saloon-steps.jpeg", alt: "The lower saloon seating and teak steps down from the foredeck" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-helm-captain.png", alt: "The captain at the helm with the harbour behind" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-guest-cabin-berth.png", alt: "The second guest cabin with a made-up berth" },
+      { src: "/images/fleet/l3-yacht/l3-yacht-majesty-44-mumbai-master-cabin-bed.jpeg", alt: "The master cabin with a made-up bed and mirrored panelling" },
+    ],
+    videos: [],
+    description: [
+      "**L3** is a Majesty 44 motor yacht carrying up to **14 guests** from the **Gateway of India** in Colaba, with two genuine cabins below deck — a master with an ensuite and a second guest cabin — rather than the single berth most boats her size carry.",
+      "The lower saloon and foredeck lounge give the group somewhere to sit whether the sun is out or not, and the layout below deck makes her one of the more comfortable choices in our fleet for a longer charter or a group that wants privacy to change and rest. This makes her a strong pick for [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) charter with a **[corporate group](/blog/corporate-yacht-charters-india)** or a celebration that runs past the usual two-hour slot.",
+      "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering or decoration quote.",
+    ],
+    specs: [
+      { label: "Builder", value: "Majesty (Gulf Craft)" },
+      { label: "Length overall", value: "44 ft" },
+      { label: "Layout", value: "Master cabin & ensuite, second guest cabin, saloon" },
+      { label: "Guest capacity", value: "14 guests" },
+      { label: "Home port", value: "Gateway of India, Mumbai" },
+      { label: "Registration", value: "Commercial passenger licence" },
+    ],
+    pricingSlots: [
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 17000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 17000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 19000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+    ],
+    pricingExtras: [
+      "Additional hour — ₹10,000",
+      "Overnight anchorage (9 am to 7 am) — ₹95,000",
+      "Gateway of India to Mandwa, return journey — ₹40,000",
+      "Catering (per guest) — from ₹900",
+    ],
+    pricingNote: "Special permissions are required for overnight sailing.",
+    faqs: [
+      {
+        q: "How much does it cost to charter L3?",
+        a: "Two-hour slots run from ₹17,000 to ₹22,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and catering are all quoted separately.",
+      },
+      ...standardFaqs("L3", 14),
+      {
+        q: "Does L3 have two real cabins?",
+        a: "Yes — a master cabin with an ensuite bathroom and a second guest cabin, both with made-up beds rather than bare berths. She's one of the more comfortable boats in our fleet for a longer charter.",
+      },
+    ],
+  },
 ];
 
 export const getYacht = (slug: string) => yachts.find((y) => y.slug === slug);
