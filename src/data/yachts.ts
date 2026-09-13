@@ -789,7 +789,12 @@ export const yachts: Yacht[] = [
        styled promotional shoot (same boat, same teak deck and "Flo"
        nameplate confirmed against the customer photos) — both are real
        photography of this vessel, used unedited. Confirm exact registration
-       before this goes live. */
+       before this goes live.
+       Note: the hero shot's filename reads "Flo 33 ft" while she has always
+       been listed here as 31ft (matching the source folder name and every
+       other spec reference below) — flagged for the owner to confirm rather
+       than silently changed; lengthFt/tagline/specs left at 31ft pending
+       that confirmation. */
     slug: "flo-31-foot-sailing-yacht-mumbai",
     name: "Flo",
     tagline: "A 31-foot Jeanneau sailing yacht for up to 8 guests, popular for proposals and birthdays.",
@@ -810,16 +815,17 @@ export const yachts: Yacht[] = [
       "Open bow & cockpit seating",
     ],
     gallery: [
-      { src: "/images/fleet/flo-31-foot/flo-31-foot-sailing-yacht-mumbai-under-sail.jpg", alt: "Flo under sail with her nameplate visible on the bow" },
-      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-cabin-interior.jpg", alt: "A father and son seated at the bow with the Jeanneau sail cover visible" },
-      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-guests-underway.jpg", alt: "A group of guests seated along the deck as Flo gets under way" },
+      { src: "/images/fleet/flo-31-foot/flo-33-foot-sailing-yacht-mumbai-hero.jpg", alt: "Flo decked out in red balloons at anchor, her nameplate visible on the bow" },
       { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-couple-guitar.jpg", alt: "A couple relaxing on deck, one playing guitar, under sail" },
       { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-couple-bow.jpg", alt: "A couple posed at the bow with the Mumbai coastline behind" },
-      { src: "/images/fleet/flo-31-foot/flo-31-foot-sailing-yacht-mumbai-bow-couple.jpg", alt: "A guest standing at the bow rail against a clear sky" },
-      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-flowers-cabin.jpg", alt: "A guest holding a flower bouquet in the below-deck saloon" },
-      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-proposal-decor.jpg", alt: "A rose-petal proposal message laid out on the saloon table" },
-      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-birthday-decor.jpg", alt: "Balloons and a happy birthday banner decorating the saloon" },
-      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-birthday-cake-petals.jpg", alt: "A birthday cake set on a heart of rose petals in the saloon" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-guest-at-mast.jpg", alt: "A guest posed at the mast with the sail rigged behind her" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-mother-child-sailing.jpg", alt: "A mother and child at the helm together as Flo gets under way" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-guests-group-sailing.jpg", alt: "A group of guests seated along the deck and bow as Flo sails past passing ships" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-proposal-champagne-roses.jpg", alt: "A rose bouquet and champagne set out on the saloon table for a proposal" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-proposal-valentine-decor.jpg", alt: "A rose-petal \"Love\" message and Valentine signage laid out in the saloon" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-rose-petal-heart-cabin.jpg", alt: "A heart traced in rose petals on the forward cabin berth" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-bachelorette-party.jpg", alt: "A bachelorette group on deck with a bride-to-be sash and photo-booth props" },
+      { src: "/images/fleet/flo-31-foot/flo-sailing-yacht-mumbai-birthday-balloons-cake.jpg", alt: "A birthday cake set on a heart of rose petals with balloons and a Happy Birthday banner" },
     ],
     videos: [],
     description: [
