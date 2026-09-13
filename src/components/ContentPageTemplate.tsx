@@ -55,9 +55,62 @@ export function ContentPageTemplate({
         compact
       />
 
+      {page.placards && page.placards.length > 0 && (
+        <section className="border-b border-line bg-surface py-14 md:py-20">
+          <div className="container-x">
+            <Reveal>
+              <SectionTitle
+                align="center"
+                eyebrow={page.placardsIntro?.eyebrow ?? "What's covered"}
+                title={page.placardsIntro?.title ?? "What we cover"}
+                accent={page.placardsIntro?.accent}
+                sub={page.placardsIntro?.sub}
+              />
+            </Reveal>
+            <div className="mt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {page.placards.map((pl, i) => (
+                <Reveal key={pl.id} delay={(i % 4) * 70}>
+                  <a
+                    href={`#${pl.id}`}
+                    className="card card-hover group flex h-full flex-col overflow-hidden"
+                    data-cta="management-placard"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden bg-surface-2">
+                      <Image
+                        src={pl.image}
+                        alt={pl.imageAlt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        priority={i < 4}
+                        className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="font-display text-lg leading-tight transition-colors group-hover:text-crimson">
+                        {pl.title}
+                      </h3>
+                      <p className="mt-2 line-clamp-4 flex-1 text-sm leading-relaxed text-muted">{pl.description}</p>
+                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-crimson transition-all group-hover:gap-3">
+                        Know more <ArrowIcon className="h-3.5 w-3.5" />
+                      </span>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-14 md:py-20">
-        <div className="container-x grid gap-12 lg:grid-cols-[1fr_23rem] lg:items-start lg:gap-16">
-          <div className="min-w-0">
+        <div
+          className={
+            page.hideEnquireForm
+              ? "container-x"
+              : "container-x grid gap-12 lg:grid-cols-[1fr_23rem] lg:items-start lg:gap-16"
+          }
+        >
+          <div className={page.hideEnquireForm ? "mx-auto max-w-3xl min-w-0" : "min-w-0"}>
             {page.sections.map((s, i) => {
               // A section's body is usually one paragraph, but a page that
               // needs to go deep (comparisons, financials, mechanics) can
@@ -66,7 +119,7 @@ export function ContentPageTemplate({
 
               return (
                 <Reveal key={s.heading} delay={i * 60}>
-                  <div className={i > 0 ? "mt-12" : ""}>
+                  <div id={s.id} className={`${i > 0 ? "mt-12" : ""} ${s.id ? "scroll-mt-28" : ""}`}>
                     <h2 className="text-2xl md:text-[1.75rem]">{s.heading}</h2>
 
                     <div className="mt-4 space-y-4 leading-relaxed text-muted">
@@ -119,12 +172,14 @@ export function ContentPageTemplate({
             </Reveal>
           </div>
 
-          <Reveal delay={120} className="lg:sticky lg:top-28">
-            <div id="enquire" className="scroll-mt-28">
-              <h2 className="mb-4 font-display text-xl">Talk to us about this</h2>
-              <EnquiryForm preset={mapService(page)} compact />
-            </div>
-          </Reveal>
+          {!page.hideEnquireForm && (
+            <Reveal delay={120} className="lg:sticky lg:top-28">
+              <div id="enquire" className="scroll-mt-28">
+                <h2 className="mb-4 font-display text-xl">Talk to us about this</h2>
+                <EnquiryForm preset={mapService(page)} compact />
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 

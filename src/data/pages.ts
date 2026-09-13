@@ -25,7 +25,32 @@ export type ContentPage = {
   imageAlt: string;
   /** Small stat strip under the hero. */
   facts?: { label: string; value: string }[];
+  /**
+   * Optional placard grid rendered between the hero and the main sections —
+   * a tile per sub-service, each linking to an in-page anchor (its `id`)
+   * rather than a separate route until that route exists. Used by the yacht
+   * management page to cover every discipline Burgess-style without forcing
+   * a dozen thin pages into existence up front.
+   */
+  placards?: {
+    id: string;
+    title: string;
+    image: string;
+    imageAlt: string;
+    description: string;
+  }[];
+  /** Eyebrow/title/sub shown above the placard grid, if `placards` is set. */
+  placardsIntro?: { eyebrow: string; title: string; accent?: string; sub?: string };
+  /**
+   * Hides the sticky "Talk to us about this" enquiry-form sidebar next to
+   * the main content, switching to a full-width single column. Use for a
+   * page that already funnels enquiries through its placards/CTA band and
+   * doesn't need a second form competing for attention.
+   */
+  hideEnquireForm?: boolean;
   sections: {
+    /** Anchor id for a placard's "Know more" link to scroll to, e.g. "crew-management". */
+    id?: string;
     heading: string;
     /**
      * One paragraph, or several for a section that needs to go deep (a
@@ -313,58 +338,231 @@ export const managementServices: ContentPage[] = [
     eyebrow: "Management",
     title: "Yacht",
     accent: "management",
-    seoTitle: "Yacht Management Services in Mumbai & Goa — Crew, Compliance, Upkeep",
+    seoTitle: "Yacht Management Company in Mumbai & Goa — Crew, Technical, Safety, Accounting & Insurance",
     seoDescription:
-      "Full-service yacht management in India. Crew recruitment and payroll, statutory compliance, planned maintenance, berthing, insurance and charter revenue management.",
+      "Saildeck is a full-service yacht management company in India covering marine operations, technical management, accounting, safety & security, crew management, crew recruitment, procurement and insurance — Mumbai, Navi Mumbai and Goa.",
     intro:
-      "Owning a yacht in India is largely an administrative job punctuated by occasional sailing. We take the administration. You keep the sailing.",
-    image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Crew maintaining the deck of a motor yacht",
+      "Yacht ownership should be an unqualified pleasure. In India it rarely is, because a vessel here needs someone watching eight things at once — the crew's payroll, the engine's service interval, the Coast Guard's paperwork, the insurer's renewal date — every single week of the year. Saildeck's owner-services team is that someone. We run the full operational, technical, financial and compliance load of owning a yacht out of Mumbai, Navi Mumbai and Goa, so the only decision left to you is when you want to go sailing.",
+    image: "https://images.unsplash.com/photo-1562281302-809108fd533c?auto=format&fit=crop&w=1800&q=80",
+    imageAlt: "A private motor yacht berthed at a marina",
     facts: [
-      { label: "Cover", value: "365 days" },
-      { label: "Reporting", value: "Monthly" },
-      { label: "Crew", value: "Vetted & payrolled" },
+      { label: "Disciplines", value: "8, under one team" },
+      { label: "Cover", value: "365 days a year" },
+      { label: "Reporting", value: "Monthly statement" },
       { label: "Ports", value: "Mumbai, Goa, Navi Mumbai" },
+    ],
+    hideEnquireForm: true,
+    placardsIntro: {
+      eyebrow: "What's covered",
+      title: "Eight disciplines,",
+      accent: "one accountable team",
+      sub: "Most owners start with one or two of these and end up handing over all eight within a year, once they see what a week of self-managing a boat actually costs in time. Each is scoped and priced separately — take only what you need. Tap 'Know more' on any tile to jump straight to the detail.",
+    },
+    placards: [
+      {
+        id: "marine-operations",
+        title: "Marine Operations",
+        image: "https://images.unsplash.com/photo-1495657809423-db624a2298dc?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "Aerial view of a marina and harbour with boats berthed",
+        description: "A single point of contact for your captain — berthing, provisioning, fuel, charts and communications sorted before the boat ever needs them.",
+      },
+      {
+        id: "technical-management",
+        title: "Technical Management",
+        image: "https://images.unsplash.com/photo-1788108761794-bb16df229bf1?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "A marine engineer working on a boat engine on the dock",
+        description: "Planned maintenance, class and survey compliance, and a technical team on call for the day something needs an engineer rather than a guess.",
+      },
+      {
+        id: "accounting",
+        title: "Accounting",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "Financial performance graphs displayed on a laptop screen",
+        description: "A monthly statement you can actually read — real running costs, budget against actual, GST-compliant invoicing, nothing buried in a line item.",
+      },
+      {
+        id: "safety-and-security",
+        title: "Safety & Security",
+        image: "https://images.unsplash.com/photo-1632148731474-14aa7fb7a8ad?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "A life preserver mounted on a vessel with a large ship behind",
+        description: "Safety management, coastal security registration and statutory compliance held to the same standard whether you sail six days a year or sixty.",
+      },
+      {
+        id: "crew-management",
+        title: "Crew Management",
+        image: "https://images.unsplash.com/photo-1753526372680-7d368f2f068e?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "Crew members working together on the deck of a boat",
+        description: "Payroll, statutory compliance and welfare for your crew handled under one roof, so the liability of being their employer never lands on you.",
+      },
+      {
+        id: "crew-recruitment",
+        title: "Crew Recruitment",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "Two people shaking hands after an interview",
+        description: "Captains, engineers and deckhands sourced, certificate-checked and reference-checked from our own network before they ever meet your boat.",
+      },
+      {
+        id: "procurement",
+        title: "Procurement",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "Organised inventory boxes on warehouse shelving",
+        description: "Spares, equipment and consumables sourced at the right price and landed on time — without you chasing three vendors for one gasket.",
+      },
+      {
+        id: "insurance",
+        title: "Insurance",
+        image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=1400&q=80",
+        imageAlt: "A hand signing an insurance document",
+        description: "Hull, machinery and liability cover placed with insurers who understand Indian coastal risk, with claims handled on your behalf.",
+      },
     ],
     sections: [
       {
-        heading: "What management covers",
-        body: "A single point of accountability for everything that keeps a vessel legal, safe and ready to sail on the day you want it.",
+        id: "marine-operations",
+        heading: "Marine Operations",
+        body: [
+          "Your captain gets one number to call, not a rolodex. We coordinate everything that has to happen on shore before and after every trip — berthing and mooring across our home ports, provisioning runs, fuel supply, chart and navigation-equipment updates, and the running inventory of everything that should be on board and isn't.",
+          "We also carry the relationship with the harbour authorities so your captain doesn't have to rebuild it every season — Mumbai Port Trust and equivalent Navi Mumbai and Goa authorities, Coast Guard notices, customs for a vessel moving between states or returning from abroad.",
+        ],
         bullets: [
-          "Crew recruitment, vetting, payroll, leave and training records",
-          "Statutory compliance — registration, survey, insurance, coast guard requirements",
-          "Planned maintenance schedule with service history you can audit",
-          "Berthing, mooring management and shore-side logistics",
-          "Provisioning, fuelling and pre-departure readiness",
-          "Monsoon layup, antifouling and recommissioning",
-          "Optional charter placement and revenue accounting",
+          "Berthing and mooring coordination across Mumbai, Navi Mumbai and Goa",
+          "Provisioning and fuel supply arranged ahead of every departure",
+          "Liaison with port authorities, Coast Guard and customs",
+          "Chart, navigation-equipment and communications updates",
+          "Full onboard inventory tracked and replenished",
+          "One point of contact for your captain, day or night",
         ],
       },
       {
-        heading: "Reporting you can actually read",
-        body: "Every month you get a statement: hours run, work carried out, spend against budget, and anything upcoming. No line item appears without a prior approval above an agreed threshold.",
+        id: "technical-management",
+        heading: "Technical Management",
+        body: [
+          "A planned maintenance system tracked against manufacturer intervals rather than memory — so a service interval never gets discovered by something failing at sea. We schedule and attend annual and special surveys with the Indian Register of Shipping and Mercantile Marine Department, manage haul-out and antifouling at your home port or a yard we trust, and vet every contractor before they touch your boat.",
+          "A technical issue at anchor off Alibaug at 6pm on a Saturday is a different problem from the same issue in a workshop on Monday morning. Our technical desk is reachable outside office hours for exactly that reason, and every job — routine or urgent — goes into the same maintenance record so the boat's history is never scattered across three people's memories.",
+        ],
+        bullets: [
+          "Planned maintenance system tracked against manufacturer intervals",
+          "Annual and special survey scheduling with IRS / MMD",
+          "Haul-out, antifouling and dry-dock project management",
+          "Round-the-clock technical support for issues at sea",
+          "Vendor and contractor vetting and on-site oversight",
+          "Complete, auditable maintenance and service history",
+        ],
       },
       {
-        heading: "Charter offset",
-        body: "If you want the boat to earn while you are not using it, we will place it in the Saildeck charter fleet, handle bookings and crew, and account for revenue transparently. Commercial registration and insurance need to be right first — we will tell you honestly whether your vessel qualifies.",
+        id: "accounting",
+        heading: "Accounting",
+        body: "We run a dedicated account for every vessel we manage, with a monthly statement showing hours run, work carried out and spend against an agreed budget — the same statement, every month, so you can compare year on year rather than decode a fresh format each time. GST-compliant invoicing is standard, and nothing above your agreed threshold is spent without your sign-off first.",
+        bullets: [
+          "Monthly statement of hours run, work done and spend against budget",
+          "GST-compliant invoicing and documentation",
+          "Owner sign-off required above an agreed spending threshold",
+          "Annual budget built from real running-cost history, not estimates",
+          "Transparent charter-revenue accounting if the boat is chartered",
+          "Records available on request, not only at year end",
+        ],
+      },
+      {
+        id: "safety-and-security",
+        heading: "Safety & Security",
+        body: [
+          "A safety management system covering scheduled drills, pre-departure checklists and life-saving equipment audits, run to the same discipline commercial operators use even though most of the boats we manage are privately registered. Life jackets, life rafts and firefighting equipment are serviced on a tracked schedule, not when someone remembers.",
+          "Mumbai's coastal waters carry security protocols most owners never learn about until they're mid-application — Coast Guard and marine police registration, biometric identity cards for crew, and reporting requirements that apply whether the boat leaves the marina once a year or every weekend. We hold this paperwork current so a security check never becomes the reason a trip gets cancelled.",
+        ],
+        bullets: [
+          "Safety management system covering drills, checklists and equipment audits",
+          "Coastal security registration with Coast Guard and marine police",
+          "Life jackets, life rafts and firefighting gear serviced on schedule",
+          "Emergency response and evacuation planning for every vessel",
+          "Crew safety training and certification records kept current",
+          "Incident reporting and documentation handled on your behalf",
+        ],
+      },
+      {
+        id: "crew-management",
+        heading: "Crew Management",
+        body: "Crew can be employed directly by you with us administering payroll and compliance, or engaged through Saildeck entirely — most owners with any charter use choose the second, because it removes the employer's liability from their own name. Either way, PF, ESI and labour-law compliance, leave and rotation, training records and welfare standards are all managed centrally, with one line to us for anything crew-related rather than three separate departments to chase.",
+        bullets: [
+          "Crew employed and payrolled through Saildeck, or administered on your behalf",
+          "Statutory compliance — PF, ESI and applicable labour law",
+          "Leave, rotation and training records maintained centrally",
+          "Uniforms, welfare and onboard living standards set and checked",
+          "Regular performance reviews",
+          "One point of contact for any crew-related matter",
+        ],
+      },
+      {
+        id: "crew-recruitment",
+        heading: "Crew Recruitment",
+        body: "We source captains, engineers, deckhands and stewards from our own network across Mumbai and Goa rather than an open listing, and every candidate is certificate-checked, medically cleared and reference-checked before they're shortlisted to you. Skippers are matched to your specific vessel and how you actually use it — a family day-sailor and a charter-earning motor yacht want different temperaments at the helm — and we arrange a trial period before anything becomes permanent.",
+        bullets: [
+          "Candidates sourced from our own crew network, not a public listing",
+          "Certification, medical fitness and references checked before shortlisting",
+          "Skippers matched to your vessel and how you actually use it",
+          "Trial periods arranged before any permanent placement",
+          "Replacement crew sourced quickly if someone leaves",
+          "Ongoing training recommended as a crew member's role develops",
+        ],
+      },
+      {
+        id: "procurement",
+        heading: "Procurement",
+        body: "Fleet-wide purchasing volume gets you better rates on spares and consumables than a single owner sourcing alone, and a dedicated procurement desk means the three-vendor chase for one gasket is our problem, not yours. Parts that aren't stocked in India are handled through import logistics we already run for the fleet, with a quality check on anything before it's fitted — and an emergency-sourcing route when the boat genuinely needs to sail tomorrow.",
+        bullets: [
+          "Spares and consumables sourced from vetted local and international vendors",
+          "Import logistics handled for parts not available in India",
+          "Negotiated rates through fleet-wide purchasing volume",
+          "Quality checked before anything is fitted to your boat",
+          "Emergency sourcing when a part is needed to sail on schedule",
+          "Every purchase itemised on your monthly statement",
+        ],
+      },
+      {
+        id: "insurance",
+        heading: "Insurance",
+        body: "We place hull, machinery and liability cover with marine insurers who actually underwrite Indian coastal risk rather than treat it as an afterthought to a global policy, and add passenger liability where a vessel is registered for charter. Cover is reviewed annually as the boat's use or condition changes, renewals are tracked so nothing lapses unnoticed, and if you ever need to claim, we handle the negotiation rather than leaving you to do it alone at the worst possible moment.",
+        bullets: [
+          "Hull and machinery cover placed with insurers active in India",
+          "Third-party and passenger liability cover for charter-registered vessels",
+          "Annual risk review as the vessel's use or condition changes",
+          "Claims handled and negotiated on your behalf",
+          "Renewal tracking so cover never lapses unnoticed",
+          "Documentation kept audit-ready for survey and registration",
+        ],
       },
     ],
     faqs: [
       {
         q: "What does yacht management cost in India?",
-        a: "Management fees are usually quoted as a monthly retainer scaled to vessel size and crew count, separate from the actual running costs which are billed at cost. As a planning figure, total annual running costs on a private yacht tend to land near ten percent of the vessel's value.",
+        a: "Management fees are usually quoted as a monthly retainer scaled to vessel size, crew count and which of the eight disciplines you've asked us to run — separate from the actual running costs, which are billed at cost with full documentation. As a planning figure, total annual running costs on a private yacht tend to land near ten percent of the vessel's value; see our [guide to the real cost of owning a yacht in India](/blog/true-cost-of-owning-a-yacht-in-india) for the full breakdown.",
       },
       {
-        q: "Do you manage boats you did not sell?",
-        a: "Yes. Most of the vessels we manage were bought elsewhere. We start with a condition survey so both sides know what we are taking on.",
+        q: "Do I have to take all eight services, or can I pick just a few?",
+        a: "Pick what you need. Each discipline — marine operations, technical management, accounting, safety and security, crew management, crew recruitment, procurement and insurance — is scoped and priced on its own. Most owners start with technical management and crew, then add the rest once they see the time it saves.",
+      },
+      {
+        q: "Do you manage boats you did not sell or build?",
+        a: "Yes. Most vessels we manage were bought elsewhere. We start with a condition survey so both sides know exactly what's being taken on before anything is signed.",
       },
       {
         q: "Can you manage a yacht berthed outside Mumbai?",
-        a: "We manage vessels in Mumbai, Navi Mumbai and Goa directly. Elsewhere on the Indian coast we work through vetted local partners with our own supervision, and we will say so clearly rather than pretend to a presence we do not have.",
+        a: "We manage vessels in Mumbai, Navi Mumbai and Goa directly. Elsewhere on the Indian coast we work through vetted local partners with our own supervision, and we'll say so plainly rather than claim a presence we don't have.",
       },
       {
-        q: "Who employs the crew?",
-        a: "Crew can be employed by you with us administering payroll and compliance, or engaged through us entirely. Owners with charter use usually prefer the second, because it simplifies liability.",
+        q: "Who employs the crew — me or Saildeck?",
+        a: "Either. Crew can be employed by you with us administering payroll and statutory compliance, or engaged through us entirely. Owners with any charter use usually prefer the second option, because it simplifies employer liability.",
+      },
+      {
+        q: "Can the boat earn money while I'm not using it?",
+        a: "If you want that, we place the vessel in the Saildeck charter fleet, handle bookings and crew, and account for revenue transparently on your monthly statement. Commercial registration and insurance need to be right first — we'll tell you honestly whether your vessel currently qualifies.",
+      },
+      {
+        q: "What happens during the monsoon?",
+        a: "Monsoon layup, antifouling and recommissioning fall under technical management — every vessel we manage gets a haul-out and service plan for the closed season, so the boat is ready on day one of the next one rather than needing a scramble in October. See our [guide to monsoon season and yachting in India](/blog/monsoon-season-yachting-india) for what that involves.",
+      },
+      {
+        q: "How is my money and paperwork kept separate from other owners'?",
+        a: "Every vessel has its own account, its own monthly statement and its own document file — nothing is pooled across owners. You can ask to see the underlying invoices behind any line item at any time.",
       },
     ],
   },
