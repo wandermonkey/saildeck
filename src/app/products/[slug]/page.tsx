@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Gallery } from "@/components/Gallery";
 import { ProductCard } from "@/components/ProductCard";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { CtaBand } from "@/components/CtaBand";
+import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
+import { RichText } from "@/components/RichText";
 import { Button, SectionTitle, Pill } from "@/components/ui";
-import { ArrowIcon, WhatsAppIcon } from "@/components/icons";
+import { ArrowIcon, WhatsAppIcon, CheckIcon } from "@/components/icons";
 
 import { products, getProduct } from "@/data/products";
-import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -70,6 +73,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             path: `/products/${product.slug}`,
             image: product.gallery[0].src,
           }),
+          ...(product.faqs && product.faqs.length > 0 ? [faqSchema(product.faqs)] : []),
         ]}
       />
 
@@ -116,16 +120,46 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
 
-      {/* Banner carousel. One shot today, a full gallery when Saildeck's own
-          photography lands — the component grows arrows, a counter and a
-          thumbnail strip on its own as soon as there is more than one. */}
+      {/* Stat strip — only for pages that set `facts`, e.g. a price range
+          worth surfacing before the fold rather than buried in the copy. */}
+      {product.facts && product.facts.length > 0 && (
+        <div className="border-b border-line bg-surface">
+          <div className="container-x grid grid-cols-2 gap-6 py-6 sm:grid-cols-4">
+            {product.facts.map((f) => (
+              <div key={f.label}>
+                <div className="text-[11px] font-semibold uppercase tracking-wider text-faint">{f.label}</div>
+                <div className="mt-1 font-display text-lg font-semibold text-navy">{f.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Banner. A gallery of several curated same-ratio shots gets the
+          carousel, cropped to a consistent wide frame. A single real photo —
+          often portrait, never shot to a banner ratio — renders at its own
+          intrinsic size instead, so nothing is cropped off it. */}
       <section className="py-6 md:py-8">
         <div className="container-x">
-          <Gallery
-            shots={product.gallery}
-            priority
-            aspectClass="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]"
-          />
+          {product.gallery.length === 1 && product.gallery[0].width && product.gallery[0].height ? (
+            <div className="mx-auto overflow-hidden rounded-2xl bg-surface" style={{ maxWidth: product.gallery[0].width }}>
+              <Image
+                src={product.gallery[0].src}
+                alt={product.gallery[0].alt}
+                width={product.gallery[0].width}
+                height={product.gallery[0].height}
+                priority
+                sizes="(max-width: 1024px) 100vw, 60rem"
+                className="h-auto w-full"
+              />
+            </div>
+          ) : (
+            <Gallery
+              shots={product.gallery}
+              priority
+              aspectClass="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]"
+            />
+          )}
         </div>
       </section>
 
@@ -136,6 +170,114 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <SectionTitle eyebrow="The idea" title="About this" accent="experience" />
               <p className="mt-6 leading-relaxed text-muted">{product.intro}</p>
             </Reveal>
+
+            {/* Long-form detail — only pages with real search demand and a
+                lot to say (see products.ts) set `sections`. */}
+            {product.sections?.map((s, i) => {
+              const paragraphs = Array.isArray(s.body) ? s.body : [s.body];
+              return (
+                <Reveal key={s.heading} delay={100 + i * 40}>
+                  <div className="mt-12">
+                    <h2 className="text-2xl md:text-[1.75rem]">{s.heading}</h2>
+                    <div className="mt-4 space-y-4 leading-relaxed text-muted">
+                      {paragraphs.map((p, pi) => (
+                        <p key={pi}><RichText text={p} /></p>
+                      ))}
+                    </div>
+                    {s.bullets && (
+                      <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                        {s.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-3 text-sm text-muted">
+                            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-teal-soft text-teal">
+                              <CheckIcon className="h-3 w-3" />
+                            </span>
+                            <RichText text={b} />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {s.image && (
+                      <figure className="mt-7">
+                        {s.image.width && s.image.height ? (
+                          // Sized to the photo's own aspect ratio — nothing
+                          // cropped off a portrait or square shot to force it
+                          // into a fixed landscape frame.
+                          <div className="overflow-hidden rounded-2xl bg-surface" style={{ maxWidth: s.image.width }}>
+                            <Image
+                              src={s.image.src}
+                              alt={s.image.alt}
+                              width={s.image.width}
+                              height={s.image.height}
+                              sizes="(max-width: 1024px) 100vw, 60vw"
+                              className="h-auto w-full"
+                            />
+                          </div>
+                        ) : (
+                          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-surface">
+                            <Image
+                              src={s.image.src}
+                              alt={s.image.alt}
+                              fill
+                              sizes="(max-width: 1024px) 100vw, 60vw"
+                              className="object-cover"
+                            />
+                          </div>
+                        )}
+                        {s.image.caption && (
+                          <figcaption className="mt-2.5 text-xs text-faint">{s.image.caption}</figcaption>
+                        )}
+                      </figure>
+                    )}
+                  </div>
+                </Reveal>
+              );
+            })}
+
+            {/* Boat / price tiers — e.g. compact sail boats through luxury motor yachts. */}
+            {product.pricingTiers && product.pricingTiers.length > 0 && (
+              <Reveal delay={140}>
+                <div className="mt-12">
+                  <h2 className="text-2xl md:text-[1.75rem]">Boats and pricing</h2>
+                  <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                    {product.pricingTiers.map((t) => (
+                      <div key={t.label} className="rounded-2xl border border-line bg-white p-5">
+                        <h3 className="font-display text-base font-semibold text-navy">{t.label}</h3>
+                        <div className="mt-2">
+                          <span className="font-display text-xl font-semibold text-crimson">{t.price}</span>
+                          {t.unit && <span className="ml-1 text-xs text-muted">{t.unit}</span>}
+                        </div>
+                        <p className="mt-2.5 text-sm leading-relaxed text-muted">{t.description}</p>
+                        {t.bestFor && (
+                          <p className="mt-3 text-xs font-medium text-teal">Best for: {t.bestFor}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )}
+
+            {/* Add-on cards — decor, photography, catering, drone, etc. */}
+            {product.addOns && product.addOns.length > 0 && (
+              <Reveal delay={160}>
+                <div className="mt-12">
+                  <h2 className="text-2xl md:text-[1.75rem]">Add-ons</h2>
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                    {product.addOns.map((a) => (
+                      <div key={a.title} className="flex items-start justify-between gap-4 rounded-2xl border border-line bg-surface p-5">
+                        <div className="min-w-0">
+                          <h3 className="font-display text-sm font-semibold text-navy">{a.title}</h3>
+                          <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.description}</p>
+                        </div>
+                        <span className="shrink-0 rounded-full border border-crimson/25 bg-crimson-soft px-3 py-1 text-xs font-medium text-crimson">
+                          {a.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )}
 
             <Reveal delay={80}>
               <div className="mt-12">
@@ -173,14 +315,30 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <div className="mt-12 rounded-2xl border border-line bg-surface p-6 md:p-7">
                 <h2 className="font-display text-xl">Good to know</h2>
                 <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
-                  <li>· Charters are priced per boat, not per person — the rate is the same whether two or twenty travel.</li>
-                  <li>· Guest capacity is fixed by each vessel&apos;s licence and cannot be exceeded.</li>
-                  <li>· The season runs October to May; the southwest monsoon closes operations.</li>
-                  <li>· Weather cancellations called by the coast guard are rescheduled at no cost.</li>
-                  <li>· Decoration, catering, photography and permissions are quoted before any deposit.</li>
+                  {(product.goodToKnow ?? [
+                    "Charters are priced per boat, not per person — the rate is the same whether two or twenty travel.",
+                    "Guest capacity is fixed by each vessel's licence and cannot be exceeded.",
+                    "The season runs October to May; the southwest monsoon closes operations.",
+                    "Weather cancellations called by the coast guard are rescheduled at no cost.",
+                    "Decoration, catering, photography and permissions are quoted before any deposit.",
+                  ]).map((g) => (
+                    <li key={g}>· {g}</li>
+                  ))}
                 </ul>
               </div>
             </Reveal>
+
+            {/* Long FAQ — only pages that set `faqs` get this section. */}
+            {product.faqs && product.faqs.length > 0 && (
+              <Reveal delay={140}>
+                <div className="mt-14">
+                  <SectionTitle eyebrow="Questions" title="Frequently" accent="asked" />
+                  <div className="mt-6">
+                    <Faq faqs={product.faqs} />
+                  </div>
+                </div>
+              </Reveal>
+            )}
           </div>
 
           <Reveal delay={120} className="lg:sticky lg:top-28">
