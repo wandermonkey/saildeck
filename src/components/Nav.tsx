@@ -197,44 +197,15 @@ export function Nav() {
   );
 }
 
-/** Desktop dropdown. Two-level items get a wide panel with grouped columns. */
+/**
+ * Desktop dropdown. One consistent single-column panel for every menu,
+ * including one that has a grandchild (About Us → Sailing School → its
+ * courses) — that used to switch to a wide two-column grid instead, which
+ * looked lopsided with only three top-level items of very different
+ * heights. A grandchild now just renders as an indented sub-list under its
+ * parent link, in the same panel style as every other menu.
+ */
 function DropdownPanel({ item }: { item: NavNode }) {
-  const hasGrandchildren = item.children?.some((c) => c.children?.length);
-
-  if (hasGrandchildren) {
-    return (
-      <div className="w-[46rem] rounded-2xl border border-line bg-white p-3 shadow-[0_20px_50px_-20px_rgba(10,42,67,0.35)]">
-        <div className="grid grid-cols-2 gap-2">
-          {item.children!.map((child) => (
-            <div key={child.href} className="rounded-xl p-3">
-              <Link
-                href={child.href}
-                className="flex items-center justify-between text-sm font-semibold text-navy transition-colors hover:text-crimson"
-              >
-                {child.label}
-              </Link>
-              {child.blurb && <p className="mt-0.5 text-xs text-faint">{child.blurb}</p>}
-              {child.children && (
-                <ul className="mt-2.5 space-y-0.5 border-l border-line pl-3">
-                  {child.children.map((g) => (
-                    <li key={g.href}>
-                      <Link
-                        href={g.href}
-                        className="block rounded-md py-1 text-[0.82rem] text-muted transition-colors hover:text-crimson"
-                      >
-                        {g.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="w-72 rounded-2xl border border-line bg-white p-2 shadow-[0_20px_50px_-20px_rgba(10,42,67,0.35)]">
       <ul>
@@ -244,6 +215,20 @@ function DropdownPanel({ item }: { item: NavNode }) {
               <span className="block text-sm font-medium text-navy group-hover/item:text-crimson">{child.label}</span>
               {child.blurb && <span className="mt-0.5 block text-xs text-faint">{child.blurb}</span>}
             </Link>
+            {child.children && (
+              <ul className="mb-1.5 ml-3.5 space-y-0.5 border-l border-line pl-3">
+                {child.children.map((g) => (
+                  <li key={g.href}>
+                    <Link
+                      href={g.href}
+                      className="block rounded-md py-1.5 text-[0.82rem] text-muted transition-colors hover:text-crimson"
+                    >
+                      {g.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
