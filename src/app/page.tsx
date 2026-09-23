@@ -184,6 +184,20 @@ export default async function HomePage() {
               </Reveal>
             ))}
           </div>
+
+          {/* These six are a sample, not the whole fleet — this is the button
+              that tells people there's more to browse rather than assuming
+              they'll notice the small text link up in the section head. */}
+          <Reveal delay={200}>
+            <div className="mt-11 flex flex-col items-center gap-3 text-center">
+              <Button href="/fleet" size="lg" dataCta="fleet-view-all">
+                View all {yachts.length} boats <ArrowIcon className="h-4 w-4" />
+              </Button>
+              <p className="text-sm text-muted">
+                Sailing yachts, motor yachts, catamarans and speedboats across Mumbai, Navi Mumbai and Goa.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </Section>
 
