@@ -1839,6 +1839,102 @@ const newPosts: Post[] = [
       },
     ],
   },
+  {
+    slug: "how-to-become-a-yacht-charter-b2b-partner-in-india",
+    title: "How to become a yacht charter B2B partner in India",
+    excerpt:
+      "Travel agents, DMCs and event planners turn away a boat enquiry every week without realising it's a booking they could have earned a margin on. Here's exactly how Saildeck's agent program works, which boat to recommend for which client, and how to register.",
+    seoTitle: "Yacht Charter B2B Partner Program for Travel Agents — Saildeck Agent Rates",
+    seoDescription:
+      "How travel agents, DMCs and event planners earn margins structured up to 20% reselling Saildeck's 20-boat Mumbai and Goa fleet — how the program works, which boat to recommend for which client, and how to register.",
+    category: "Guides",
+    date: "2026-09-30",
+    readMins: 9,
+    image: "/images/fleet/tara-sailing-catamaran/tara-catamaran-7.jpg",
+    imageAlt: "Tara, a sailing catamaran, under way past the Middle Ground coastal battery with the Mumbai skyline behind",
+    body: [
+      {
+        paras: [
+          "Somewhere in your inbox or your WhatsApp right now is a client who asked you, almost in passing, whether you could arrange “something on a boat” for a trip to Mumbai or Goa. Most agents answer that message with a shrug, a Google search, or a referral to an operator they've never actually worked with — and hand over a booking, and a margin, that they were perfectly capable of earning themselves.",
+          "This is the guide to not doing that again. It covers exactly how Saildeck's [Agents & B2B Rates](/agents) program works, what it's actually worth to you in rupees rather than vague percentages, which boat in a 20-strong Mumbai and Goa fleet to recommend for which kind of client, and how long it takes to go from reading this to having net rates in hand.",
+        ],
+      },
+      {
+        heading: "The booking you're already losing",
+        paras: [
+          "It happens more often than most agents admit. A honeymoon itinerary that needs a sunset on the water. A destination wedding in Goa that wants a boat for the sangeet. A corporate client flying into Mumbai who asks, half-joking, if there's anything to do besides the usual dinner and a cab. Every one of those is a real booking, with a real margin attached, and every one of them currently goes to whichever operator's ad the client happens to click on — instead of through you.",
+          "The reason isn't that agents don't want the business. It's that most yacht operators sell direct-to-consumer only, with no structured wholesale rate, no dedicated contact, and no reason to treat an agent's enquiry differently from a random WhatsApp message. Saildeck built the opposite of that on purpose.",
+        ],
+      },
+      {
+        heading: "What the Saildeck partner program actually gives you",
+        paras: [
+          "Register once on the [Agents & B2B Rates page](/agents) and you get net rates across the entire fleet — sailing yachts, motor yachts, catamarans and speedboats, 20 boats between Mumbai, Navi Mumbai and Goa. The margin is structured up to 20% below the public retail price shown on saildeck.com, boat by boat, and it's yours to keep in full. We don't contact your client directly, and we don't undercut whatever price you've quoted them.",
+          "Every partner also gets a dedicated WhatsApp Business group shared between your team and ours — one thread for availability checks, quotes and confirmations, rather than a support ticket or a call centre queue. Message a date, a boat and a head count, and a firm net rate comes back the same day.",
+        ],
+        bullets: [
+          "Margins structured up to 20% below retail, on every boat in the fleet",
+          "No minimum booking volume and no exclusivity required to register",
+          "Net rates apply to yacht charters, speedboat transfers and experiences alike",
+          "You invoice your client directly; we invoice you at the net rate",
+          "A dedicated WhatsApp group for same-day quotes and confirmations",
+        ],
+      },
+      {
+        heading: "What the margin actually looks like in rupees",
+        paras: [
+          "Percentages are easy to skim past, so here's a concrete example. Take [Tara](/fleet/tara-sailing-catamaran-mumbai), Saildeck's 40-foot sailing catamaran — public retail runs to ₹14,000 an hour. A margin structured up to 20% into your net rate on a boat like that could put somewhere around ₹2,800 an hour back in your pocket, on a boat your client would have paid full published price for regardless of who booked it. Quote a three-hour charter at the rate your client would find on Google anyway, and that's a meaningful commission for sending one message into a WhatsApp group.",
+          "Exact net rates are confirmed once you actually register as a partner rather than published for every boat on a public page — competitors read the same pages agents do — but the mechanics are exactly this simple: a real discount off a real retail price, on a boat that's already selling at that price to everyone else.",
+        ],
+      },
+      {
+        heading: "Which boat to recommend, and when",
+        paras: [
+          "The fastest way to lose an agent client is to recommend the wrong boat for the occasion. Here's how we'd point you, use case by use case, across a fleet built specifically for these situations rather than a generic charter list.",
+        ],
+        bullets: [
+          "**Proposals and intimate couples' charters** — the [5 Pax Sailing Boat](/fleet/5-pax-sailing-boat-charter-mumbai) (from ₹2,000/hour, wind-powered, no engine noise) or [Flo](/fleet/flo-31-foot-sailing-yacht-mumbai), a 31-foot Jeanneau that's become a regular for exactly this — see our [proposal-on-a-yacht guide](/products/proposal-on-a-yacht) for the full package your client can add on top.",
+          "**Small group charters, birthdays and bachelor/bachelorette parties** — the [MAC 30](/fleet/mac-30-sailing-yacht-mumbai) (up to 10 guests) or [Nauti by Nature](/fleet/hanse-33-sailing-yacht-mumbai), a 33-foot Hanse with a real cabin below for when the group wants somewhere to retreat from the sun.",
+          "**Family day charters wanting more deck space** — [Nava](/fleet/nava-45-foot-sailing-yacht-mumbai), a 45-foot Jeanneau with a proper teak saloon, comfortably seats a mixed-age group for a half-day out.",
+          "**Larger groups, up to 25 guests** — the [Tara Sailing Catamaran](/fleet/tara-sailing-catamaran-mumbai), stable, spacious and one of the easiest boats to sell to a client who's never sailed before.",
+          "**Destination weddings and large-format events, up to 35 guests** — the [Lagoon 54](/fleet/lagoon-54-luxury-catamaran-mumbai), a 54-foot luxury sailing catamaran built for exactly this scale.",
+          "**VIP corporate entertainment and luxury clientele** — the [Princess 61](/fleet/princess-61-luxury-motor-yacht-mumbai), the flagship of the fleet, a British-built flybridge motor yacht based at the Gateway of India.",
+        ],
+      },
+      {
+        heading: "Beyond the margin — what registered partners actually get",
+        paras: [
+          "The net rate is the headline, but it isn't the only reason agents stay registered. A few things worth knowing before you sign up:",
+        ],
+        bullets: [
+          "**Free promotional sails** — a complimentary slot on the water for you or your team, so you're describing a charter you've actually experienced rather than reading a spec sheet to a client.",
+          "**Free photoshoots** — need fresh imagery for your own listings or socials? We'll arrange a shoot on board at no cost, so your marketing isn't running on someone else's stock photos.",
+          "**Reciprocal blog features and backlinks** — mention Saildeck on your own site and we'll return the favour with a feature on ours and a link back to you. This article is, in a very literal sense, that promise in action.",
+          "**No call centre** — every registered partner deals with the same small WhatsApp group, not a rotating support queue.",
+        ],
+      },
+      {
+        heading: "Mumbai or Goa — or both",
+        paras: [
+          "Most of the fleet is based in Mumbai, sailing from the Gateway of India in Colaba, with a smaller Goa fleet running from the Mandovi river and coastal jetties around Panjim and Vasco. If your client base leans toward one city, our [Mumbai](/destinations/mumbai) and [Goa](/destinations/goa) destination guides are worth reading before your first quote — timing, departure points and what actually sells differ between the two coasts.",
+          "Corporate clients tend to book through the [management and owner-services side](/management) too, if a repeat client is considering buying or chartering long-term rather than a one-off — worth knowing if an enquiry sounds like it could grow into something bigger than a single afternoon on the water.",
+        ],
+      },
+      {
+        heading: "How to register",
+        paras: [
+          "Registration takes four fields — name, phone, email and company — and no ongoing commitment. Head to the [Agents & B2B Rates page](/agents), fill in the form or message us directly, and we confirm your details and send your partner net rates and a WhatsApp group invite, usually the same business day. From there, every quote is just a message away.",
+          "If you'd rather skip the form entirely, [message us on WhatsApp](https://wa.me/918424848489?text=Hi%20Saildeck!%20I%20would%20like%20to%20register%20as%20an%20agent%20%2F%20B2B%20partner.) and we'll take it from there.",
+        ],
+      },
+      {
+        heading: "The bottom line",
+        paras: [
+          "Every yacht charter enquiry that lands on your desk and gets waved off to a Google search is a booking, a margin and a relationship handed to someone else. The fix isn't complicated — it's a rate card, a WhatsApp group and twenty boats you can already describe accurately because we just told you which one fits which client. The next time someone asks you for “something on the water,” you'll have an answer, and a commission, ready in the time it takes to send one message.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const posts: Post[] = [...existingPosts, ...newPosts].sort((a, b) =>

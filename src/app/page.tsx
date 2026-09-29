@@ -11,10 +11,10 @@ import { GoogleReviews } from "@/components/GoogleReviews";
 import { HeroVideo } from "@/components/HeroVideo";
 import { InstagramCarousel } from "@/components/InstagramCarousel";
 import { PopularSearches } from "@/components/PopularSearches";
-import { Button, Section, SectionHead, SectionTitle, Stat } from "@/components/ui";
+import { Button, Section, SectionHead, SectionTitle } from "@/components/ui";
 import {
   ArrowIcon, ShieldIcon, TagIcon, HeadsetIcon, CalendarIcon,
-  BoatIcon, RouteIcon, AnchorIcon, OccasionIcon, ClockIcon, WhatsAppIcon,
+  BoatIcon, RouteIcon, AnchorIcon, OccasionIcon, ClockIcon, WhatsAppIcon, MailIcon,
 } from "@/components/icons";
 
 import { yachts, inr } from "@/data/yachts";
@@ -413,19 +413,42 @@ export default async function HomePage() {
       {/* ================= INSTAGRAM ================= */}
       <InstagramCarousel />
 
-      {/* ================= STATS ================= */}
+      {/* ================= AGENTS & B2B ================= */}
       <Section>
-        <div className="container-x grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { value: "9", label: "Boats in the charter fleet" },
-            { value: "3", label: "Home ports on the west coast" },
-            { value: "< 1 hr", label: "Typical reply time" },
-            { value: "100%", label: "Licensed captains" },
-          ].map((s, i) => (
-            <Reveal key={s.label} delay={i * 70}>
-              <Stat value={s.value} label={s.label} />
-            </Reveal>
-          ))}
+        <div className="container-x">
+          <Reveal>
+            <div className="flex flex-col items-start justify-between gap-8 rounded-3xl bg-navy-deep p-8 md:flex-row md:items-center md:p-12">
+              <div className="max-w-xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal">For travel agents &amp; B2B partners</p>
+                <h2 className="mt-3 font-display text-2xl leading-tight text-white md:text-[1.75rem]">
+                  Sell our fleet, keep <span className="italic font-normal text-white/85">the margin</span>
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-white/70">
+                  Travel agents, DMCs and event planners get net B2B rates across the whole fleet —
+                  margins structured up to 20% a booking, a dedicated WhatsApp desk, and free
+                  promotional sails for registered partners.
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
+                <Link
+                  href="/agents"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-crimson px-6 py-3 text-sm font-medium text-white transition-all hover:-translate-y-0.5 hover:bg-crimson-dark"
+                  data-cta="home-agents-view-rates"
+                >
+                  View agent &amp; B2B rates <ArrowIcon className="h-4 w-4" />
+                </Link>
+                <a
+                  href={`mailto:${site.email}?subject=${encodeURIComponent("B2B / Agent partnership enquiry")}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/12 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm ring-1 ring-white/30 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-navy"
+                  data-cta="home-agents-email"
+                >
+                  <MailIcon className="h-4 w-4" />
+                  Email us
+                </a>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </Section>
 
