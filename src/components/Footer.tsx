@@ -70,6 +70,7 @@ const columns: Column[] = [
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
+      { label: "Agents & B2B Rates", href: "/agents" },
     ],
   },
 ];

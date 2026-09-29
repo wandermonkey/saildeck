@@ -109,6 +109,11 @@ export const navigation: NavNode[] = [
   /* Kept out of the header — the "Contact us" button already goes here. */
   { label: "Contact", href: "/contact", hideInHeader: true },
 
+  /* Footer-only, per the brief — a header slot would crowd the main menu
+     for a page whose entire audience is agents and B2B partners, not the
+     direct-booking visitors the header is built around. */
+  { label: "Agents & B2B Rates", href: "/agents", hideInHeader: true },
+
   /* Kept out of the header to save space, but these pages carry real search
      intent ("yacht rental mumbai"), so they stay in the footer sitemap. */
   {

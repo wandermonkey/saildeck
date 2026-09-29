@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/about/marinas", 0.6),
     entry("/about/team", 0.5),
     entry("/faq", 0.6),
+    entry("/agents", 0.6),
 
     entry("/privacy", 0.2, "yearly"),
     entry("/terms", 0.2, "yearly"),
