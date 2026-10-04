@@ -245,8 +245,8 @@ export const yachts: Yacht[] = [
     description: [
       "**Tara** is a 40-foot twin-hull sailing catamaran chartered by the hour from the **Gateway of India**, and at up to **25 guests** she is the biggest group booking in the Saildeck fleet after the flagship. A catamaran's two hulls give her a wide, stable deck that barely rolls at anchor — the reason groups who would rather not think about their footing while holding a drink tend to book her over a monohull.",
       "Below deck she carries **two ensuite cabins** and a proper galley with a fridge and stove, so the boat can genuinely run a full-day charter rather than just a two-hour slot. On deck, a shaded aft lounge with a Bluetooth sound system covers the group when the sun is high, and the wide forward trampoline netting is where most people actually end up sitting — it is the one part of the boat every group's photos come from.",
-      "Because she is licensed for a large group, Tara is the boat we put forward for a **[corporate offsite](/blog/corporate-yacht-charters-india)**, a milestone anniversary with three generations aboard, or a birthday that has outgrown a smaller charter — see our **[guide to matching group size to boat size](/blog/group-size-boat-size-guide)** if you are still deciding between her and a smaller yacht. She is also a comfortable, steady platform for a **[Mumbai Darshan by cruise](/products/mumbai-darshan-by-cruise)** past the Gateway, the old coastal forts and the naval dockyard — and for families, the wide flat deck and low freeboard make her one of the easier boats in the fleet to keep children safely in one place; more on that in our **[family boating guide](/blog/family-friendly-boating-mumbai-goa)**.",
-      "Boarding is by tender from the Gateway of India in Colaba — if you are coming from elsewhere in the city, our **[guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding)** covers the options. Every charter includes the captain and crew, fuel for the standard route, life jackets for every guest and the sound system. The 5–7pm slot is timed to the **[best light for a sunset cruise](/blog/sunset-cruises-in-mumbai-guide)** and is the first one to book out — message us on WhatsApp with your date and group size for a firm all-in price.",
+      "Because she is licensed for a large group, Tara is the boat we put forward for a [corporate offsite](/blog/corporate-yacht-charters-india), a milestone anniversary with three generations aboard, or a birthday that has outgrown a smaller charter — see our [guide to matching group size to boat size](/blog/group-size-boat-size-guide) if you are still deciding between her and a smaller yacht. She is also a comfortable, steady platform for a [Mumbai Darshan by cruise](/products/mumbai-darshan-by-cruise) past the Gateway, the old coastal forts and the naval dockyard — and for families, the wide flat deck and low freeboard make her one of the easier boats in the fleet to keep children safely in one place; more on that in our [family boating guide](/blog/family-friendly-boating-mumbai-goa).",
+      "Boarding is by tender from the Gateway of India in Colaba — if you are coming from elsewhere in the city, our [guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the options. Every charter includes the captain and crew, fuel for the standard route, life jackets for every guest and the sound system. The 5–7pm slot is timed to the [best light for a sunset cruise](/blog/sunset-cruises-in-mumbai-guide) and is the first one to book out — message us on WhatsApp with your date and group size for a firm all-in price.",
     ],
     specs: [
       { label: "Type", value: "Sailing catamaran" },
@@ -447,7 +447,7 @@ export const yachts: Yacht[] = [
     description: [
       "**Tikla Queen** is a larger sister to Saildeck's XS Marine sailboats — built by the same yard, but with room for up to **8 guests** rather than five, and with a small outboard alongside her sail for when the wind drops. She departs from the **Gateway of India** in Colaba, and the extra length shows most in how many people she carries comfortably rather than in how the sailing itself feels.",
       "Below deck she has a proper **cuddy cabin** rather than a bare storage locker — enough headroom and bench seating to shelter from the sun, and enough space that we regularly decorate it for a birthday or anniversary with sequin cushions spelling out names, fairy lights and rose petals. On deck, the open bow and the aft seating around the tiller are where most groups actually sit, with the city skyline behind them for most of the sail.",
-      "Because she seats more than our smaller sailboat, Tikla Queen is the one families book for an outing with grandparents and children in the same group, and the one groups choose for a **[birthday on the water](/blog/bachelorette-birthday-parties-on-a-yacht)** where eight people need to fit rather than five. If you are weighing up how many guests a given boat can actually take, **[our guide to matching group size to boat size](/blog/group-size-boat-size-guide)** covers the trade-offs across the fleet.",
+      "Because she seats more than our smaller sailboat, Tikla Queen is the one families book for an outing with grandparents and children in the same group, and the one groups choose for a [birthday on the water](/blog/bachelorette-birthday-parties-on-a-yacht) where eight people need to fit rather than five. If you are weighing up how many guests a given boat can actually take, [our guide to matching group size to boat size](/blog/group-size-boat-size-guide) covers the trade-offs across the fleet.",
       "Boarding follows the same pattern as our other sailboats — a motorboat transfer from the jetty out to Tikla Queen at anchor, so allow the transfer time on both ends of your slot. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring — light clothing and flat shoes, not heels, since this is still an open sailing deck rather than a motor yacht's flat sundeck.",
       "No sailing experience is needed — a skipper and deckhand run the boat throughout. Pricing is for the whole boat, not per person; see the full slot pricing below, and message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
     ],
@@ -556,8 +556,8 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Tantallon** is a classic, teak-finished cruising sailboat — a proper yacht rather than a day-sailing dinghy, with a genoa on a furler alongside her mainsail and a forward cabin you can actually stand up in. She carries up to **7 guests** and departs from the **Gateway of India** in Colaba, and she is the boat we point people toward when the brief is somewhere between an afternoon sail and a proper evening out on the water.",
-      "Below deck, a varnished teak saloon runs either side of a fold-down dining table, with striped cushions, a monogrammed pillow and a genuine **forward V-berth cabin** through the doorway — not a bare cuddy. We regularly set this table up for a **[candlelit dinner](/products/dinner-on-a-yacht)**: tea lights, a champagne bucket and fairy lights along the deckhead, which is a large part of why couples book Tantallon specifically rather than one of the smaller sailboats. Her open bow and cockpit are also a favourite backdrop for **[pre-wedding and couple photoshoots](/products/wedding-photoshoot-on-a-yacht)** — the wide teak deck and tall rig give a photographer plenty to work with.",
-      "She is [a sailing yacht rather than a motor yacht](/blog/motor-yacht-or-sailing-yacht), which means the ride is quieter and depends more on the wind than an engine — an auxiliary outboard covers the still days. Families book her for the same reason they book our other sailboats: **[the flatter, more contained deck suits children better](/blog/family-friendly-boating-mumbai-goa)** than a large motor yacht's open sundeck, and at up to 7 guests she comfortably fits a family with grandparents aboard. If you're comparing her against the rest of the fleet for a specific group size, **[our guide to matching group size to boat size](/blog/group-size-boat-size-guide)** covers the trade-offs.",
+      "Below deck, a varnished teak saloon runs either side of a fold-down dining table, with striped cushions, a monogrammed pillow and a genuine **forward V-berth cabin** through the doorway — not a bare cuddy. We regularly set this table up for a [candlelit dinner](/products/dinner-on-a-yacht): tea lights, a champagne bucket and fairy lights along the deckhead, which is a large part of why couples book Tantallon specifically rather than one of the smaller sailboats. Her open bow and cockpit are also a favourite backdrop for [pre-wedding and couple photoshoots](/products/wedding-photoshoot-on-a-yacht) — the wide teak deck and tall rig give a photographer plenty to work with.",
+      "She is [a sailing yacht rather than a motor yacht](/blog/motor-yacht-or-sailing-yacht), which means the ride is quieter and depends more on the wind than an engine — an auxiliary outboard covers the still days. Families book her for the same reason they book our other sailboats: [the flatter, more contained deck suits children better](/blog/family-friendly-boating-mumbai-goa) than a large motor yacht's open sundeck, and at up to 7 guests she comfortably fits a family with grandparents aboard. If you're comparing her against the rest of the fleet for a specific group size, [our guide to matching group size to boat size](/blog/group-size-boat-size-guide) covers the trade-offs.",
       "Boarding is by motorboat transfer from the jetty near the Gateway of India — [our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring. The 6–8pm slot is timed for [the best light of a sunset sail](/blog/sunset-cruises-in-mumbai-guide) and is the first one to book out.",
       "No sailing experience is needed — a skipper and deckhand run the boat throughout. Pricing is for the whole boat, not per person; see the full slot pricing below, and message us on WhatsApp with your date, head count and whether you'd like the dinner table set up, for a firm price and the day's exact reporting time.",
     ],
@@ -671,7 +671,7 @@ export const yachts: Yacht[] = [
     description: [
       "The **Azimut 38** is the most premium boat in the Saildeck fleet — a 38-foot Italian-built flybridge motor yacht with a genuine **master cabin**, not a curtained-off berth. Below deck she has two full cabins, including a master with a round double bed and mood lighting, and an enclosed, air-conditioned saloon with a proper galley and dining table. She carries up to **12 guests** and departs from the **Gateway of India** in Colaba.",
       "The flybridge is what sets her apart on the water: a second helm station up top with its own lounge seating, so the captain can run the boat from open air while guests spread across three distinct decks — the bow sun pad, the flybridge lounge and the aft cockpit — rather than sharing one. It's [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht), which means a smoother, faster ride and an enclosed saloon to retreat to if the weather turns.",
-      "This is the boat we put forward for a **[corporate charter](/blog/corporate-yacht-charters-india)** that needs to look the part, or a celebration where guests want real cabins rather than open deck seating — the round-bed master cabin in particular gets requested for anniversaries and proposals. At 12 guests she sits comfortably above our sailboats for **[group size](/blog/group-size-boat-size-guide)**, without stepping up to the full 25–30 guest flagship.",
+      "This is the boat we put forward for a [corporate charter](/blog/corporate-yacht-charters-india) that needs to look the part, or a celebration where guests want real cabins rather than open deck seating — the round-bed master cabin in particular gets requested for anniversaries and proposals. At 12 guests she sits comfortably above our sailboats for [group size](/blog/group-size-boat-size-guide), without stepping up to the full 25–30 guest flagship.",
       "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and head count for a firm price. The [sunset slot](/blog/sunset-cruises-in-mumbai-guide) is the one most people ask for first on this boat, given the flybridge view.",
     ],
     specs: [
@@ -745,8 +745,8 @@ export const yachts: Yacht[] = [
     ],
     videos: [],
     description: [
-      "**Feeling Nauti** is a 31-foot sailing yacht that regularly carries larger celebration groups — up to **10 guests** — from the **Gateway of India** in Colaba. She has been one of Saildeck's most-booked boats for **[bachelorette parties and birthdays](/blog/bachelorette-birthday-parties-on-a-yacht)** specifically, and her wide foredeck cushioning is built for a group to sit together rather than spread out along narrow side decks.",
-      "Below deck there is a cabin for shelter and storage, and on deck an auxiliary outboard covers the still days alongside her sail. At 10 guests she sits in the middle of our fleet for **[group size](/blog/group-size-boat-size-guide)** — bigger than our smaller day-sailors, more intimate than the large motor yachts.",
+      "**Feeling Nauti** is a 31-foot sailing yacht that regularly carries larger celebration groups — up to **10 guests** — from the **Gateway of India** in Colaba. She has been one of Saildeck's most-booked boats for [bachelorette parties and birthdays](/blog/bachelorette-birthday-parties-on-a-yacht) specifically, and her wide foredeck cushioning is built for a group to sit together rather than spread out along narrow side decks.",
+      "Below deck there is a cabin for shelter and storage, and on deck an auxiliary outboard covers the still days alongside her sail. At 10 guests she sits in the middle of our fleet for [group size](/blog/group-size-boat-size-guide) — bigger than our smaller day-sailors, more intimate than the large motor yachts.",
       "Boarding is by tender from the jetty near the Gateway of India. No sailing experience is needed — a skipper and deckhand run the boat throughout. Pricing is for the whole boat, not per person; message us on WhatsApp with your date, group size and occasion for a firm price and, if you'd like, a decoration quote.",
     ],
     specs: [
@@ -829,9 +829,9 @@ export const yachts: Yacht[] = [
     ],
     videos: [],
     description: [
-      "**Flo** is a 31-foot Jeanneau sailing yacht that carries up to **8 guests** from the **Gateway of India** in Colaba. She has become one of Saildeck's regular choices for **[proposals](/blog/how-to-plan-a-proposal-on-a-yacht)** and **[birthdays](/blog/bachelorette-birthday-parties-on-a-yacht)** specifically — the below-deck saloon gives a private spot to lay out a rose-petal message or a decorated cake away from the open deck.",
+      "**Flo** is a 31-foot Jeanneau sailing yacht that carries up to **8 guests** from the **Gateway of India** in Colaba. She has become one of Saildeck's regular choices for [proposals](/blog/how-to-plan-a-proposal-on-a-yacht) and [birthdays](/blog/bachelorette-birthday-parties-on-a-yacht) specifically — the below-deck saloon gives a private spot to lay out a rose-petal message or a decorated cake away from the open deck.",
       "On deck, the cockpit and bow seat a group of eight comfortably for a straightforward sail, and an auxiliary outboard covers the still days alongside her sail. Below deck there is a cabin and saloon table, which is also where we set up any decoration you've arranged in advance.",
-      "She suits **[families with children](/blog/family-friendly-boating-mumbai-goa)** as well as couples — her deck is a manageable size to keep an eye on everyone without the boat feeling crowded at 8 guests. Boarding is by tender from the jetty near the Gateway of India. No sailing experience is needed — a skipper and deckhand run the boat throughout; message us on WhatsApp with your date, group size and occasion for a firm price.",
+      "She suits [families with children](/blog/family-friendly-boating-mumbai-goa) as well as couples — her deck is a manageable size to keep an eye on everyone without the boat feeling crowded at 8 guests. Boarding is by tender from the jetty near the Gateway of India. No sailing experience is needed — a skipper and deckhand run the boat throughout; message us on WhatsApp with your date, group size and occasion for a firm price.",
     ],
     specs: [
       { label: "Builder", value: "Jeanneau" },
@@ -906,7 +906,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Nauti by Nature** is a 33-foot Hanse sailing yacht that carries up to **12 guests** from the **Gateway of India** in Colaba — one of the larger sailboats in the Saildeck fleet, and one of the few with a genuine forward cabin rather than a bare storage cuddy. Below deck there's a made-up berth, a galley and a saloon dining table that regularly gets set up for a celebration.",
-      "This is the boat with the widest track record for on-board decoration in our fleet: we've turned her saloon into a **[proposal](/blog/how-to-plan-a-proposal-on-a-yacht)** set-up with roses and a Marry Me banner, a **[birthday](/blog/bachelorette-birthday-parties-on-a-yacht)** with balloons, and a casual pizza party for a group of friends. At 12 guests she also suits a **[larger family charter](/blog/family-friendly-boating-mumbai-goa)** with room to spread across the deck and the saloon.",
+      "This is the boat with the widest track record for on-board decoration in our fleet: we've turned her saloon into a [proposal](/blog/how-to-plan-a-proposal-on-a-yacht) set-up with roses and a Marry Me banner, a [birthday](/blog/bachelorette-birthday-parties-on-a-yacht) with balloons, and a casual pizza party for a group of friends. At 12 guests she also suits a [larger family charter](/blog/family-friendly-boating-mumbai-goa) with room to spread across the deck and the saloon.",
       "Boarding is by tender from the jetty near the Gateway of India. No sailing experience is needed — a skipper and deckhand run the boat throughout. Pricing is for the whole boat, not per person; message us on WhatsApp with your date, group size and occasion for a firm price and, if you'd like, a decoration quote.",
     ],
     specs: [
@@ -977,7 +977,7 @@ export const yachts: Yacht[] = [
     ],
     videos: [],
     description: [
-      "**Playboy** is a private sailboat for up to **7 guests**, departing from the **Gateway of India** in Colaba. She has become a regular pick for **[anniversaries and proposals](/blog/how-to-plan-a-proposal-on-a-yacht)** — her bow decorates well with roses and ribbon, and her modest size keeps the moment feeling private rather than staged.",
+      "**Playboy** is a private sailboat for up to **7 guests**, departing from the **Gateway of India** in Colaba. She has become a regular pick for [anniversaries and proposals](/blog/how-to-plan-a-proposal-on-a-yacht) — her bow decorates well with roses and ribbon, and her modest size keeps the moment feeling private rather than staged.",
       "On deck, open seating around the bow and cockpit suits a small group comfortably, with a cuddy below for shade and storage. No sailing experience is needed — a skipper runs the boat throughout, and decoration, a cake or a flower bouquet can all be arranged ahead of boarding.",
       "Boarding is by motorboat transfer from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date, group size and occasion for a firm price and a decoration quote if you'd like one.",
     ],
@@ -1051,8 +1051,8 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Joan of Arc** is a flybridge cruising motor yacht based on the **Mandovi river** in Goa, carrying up to **12 guests** with a marble ensuite bathroom on board — a genuine step up from an open day boat. The foredeck sun pad and the shaded flybridge give guests two very different ways to spend the afternoon on the same charter.",
-      "She is the boat we put forward for **[first-time visitors to Goa](/blog/yachting-in-goa-first-timers-guide)** who want a comfortable, guided introduction to the water, and for groups heading out toward **[Grande Island for snorkelling](/blog/grande-island-goa-snorkelling-diving)** or a run along the coast to see **[Goa's best beaches from the water](/blog/best-beaches-by-boat-in-goa)**. Sightings on the river-mouth routes are common — see our guide to **[dolphin watching in Goa](/blog/dolphin-watching-in-goa)** for when your odds are best.",
-      "Boarding is arranged from a jetty on the Mandovi. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price. She also suits a **[corporate day out](/blog/corporate-yacht-charters-india)** that needs to look the part without leaving Goa.",
+      "She is the boat we put forward for [first-time visitors to Goa](/blog/yachting-in-goa-first-timers-guide) who want a comfortable, guided introduction to the water, and for groups heading out toward [Grande Island for snorkelling](/blog/grande-island-goa-snorkelling-diving) or a run along the coast to see [Goa's best beaches from the water](/blog/best-beaches-by-boat-in-goa). Sightings on the river-mouth routes are common — see our guide to [dolphin watching in Goa](/blog/dolphin-watching-in-goa) for when your odds are best.",
+      "Boarding is arranged from a jetty on the Mandovi. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price. She also suits a [corporate day out](/blog/corporate-yacht-charters-india) that needs to look the part without leaving Goa.",
     ],
     specs: [
       { label: "Type", value: "Flybridge motor yacht" },
@@ -1122,7 +1122,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "The **Lagoon 54** is the biggest sailing catamaran in the Saildeck fleet — a 54-foot luxury multihull carrying up to **35 guests**, departing from the **Gateway of India** in Colaba. A twin-hull this size gives an exceptionally stable, wide deck, which is exactly why groups this large book her over anything else in our roster.",
-      "The layout runs across three distinct levels: a shaded flybridge lounge up top, a wide aft cockpit with built-in seating, and an enclosed saloon reached by a spiral staircase, with multiple cabins below deck. It's the boat we put forward for a **[large corporate offsite](/blog/corporate-yacht-charters-india)** or a milestone celebration where the guest list runs into the dozens — see our **[guide to group size and boat size](/blog/group-size-boat-size-guide)** if you're deciding between her and a smaller boat.",
+      "The layout runs across three distinct levels: a shaded flybridge lounge up top, a wide aft cockpit with built-in seating, and an enclosed saloon reached by a spiral staircase, with multiple cabins below deck. It's the boat we put forward for a [large corporate offsite](/blog/corporate-yacht-charters-india) or a milestone celebration where the guest list runs into the dozens — see our [guide to group size and boat size](/blog/group-size-boat-size-guide) if you're deciding between her and a smaller boat.",
       "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and head count for a firm price and a catering quote if you need one.",
     ],
     specs: [
@@ -1265,7 +1265,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Nava** is a 45-foot Jeanneau sailing yacht — one of the larger sailboats in the Saildeck fleet, carrying up to **12 guests** from the **Gateway of India** in Colaba. Below deck she has a proper varnished teak saloon with wraparound seating and real cabins, not a bare cuddy, which is what separates her from the smaller day-sailors in our roster.",
-      "Her size and the enclosed saloon make her a comfortable choice for a **[larger family charter](/blog/family-friendly-boating-mumbai-goa)** with several generations aboard, or a group booking where guests want somewhere to sit out of the sun between stretches on deck. At 12 guests, see our **[guide to group size and boat size](/blog/group-size-boat-size-guide)** if you're weighing her against a smaller sailboat.",
+      "Her size and the enclosed saloon make her a comfortable choice for a [larger family charter](/blog/family-friendly-boating-mumbai-goa) with several generations aboard, or a group booking where guests want somewhere to sit out of the sun between stretches on deck. At 12 guests, see our [guide to group size and boat size](/blog/group-size-boat-size-guide) if you're weighing her against a smaller sailboat.",
       "Boarding is by tender from the jetty near the Gateway of India. No sailing experience is needed — a skipper and crew run the boat throughout. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price.",
     ],
     specs: [
@@ -1336,7 +1336,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Sea Ray** is a sport cruiser based in Goa, carrying up to **10 guests** on the rivers and coastline around Panjim. She has a proper ensuite cabin and bathroom below deck, and her route regularly passes Old Goa's riverfront churches — the kind of scenery photographs well without needing to plan a special detour for it.",
-      "This is the boat we suggest for **[first-time visitors to Goa](/blog/yachting-in-goa-first-timers-guide)** who want a comfortable, sheltered introduction to the water, and for groups who'd rather have a cabin to retreat to than an entirely open deck. She suits a run out toward **[Grande Island](/blog/grande-island-goa-snorkelling-diving)** or a relaxed cruise along **[Goa's best beaches](/blog/best-beaches-by-boat-in-goa)**.",
+      "This is the boat we suggest for [first-time visitors to Goa](/blog/yachting-in-goa-first-timers-guide) who want a comfortable, sheltered introduction to the water, and for groups who'd rather have a cabin to retreat to than an entirely open deck. She suits a run out toward [Grande Island](/blog/grande-island-goa-snorkelling-diving) or a relaxed cruise along [Goa's best beaches](/blog/best-beaches-by-boat-in-goa).",
       "Boarding is arranged from a jetty in the Panjim area. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering quote if you'd like one.",
     ],
     specs: [
@@ -1481,7 +1481,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Taj Exotica** is a flybridge cruising motor yacht based on the **Mandovi river** in Goa, carrying up to **18 guests** with a proper teak-finished saloon and galley below deck. She's one of the larger boats in our Goa fleet, and the flybridge gives a second, shaded vantage point above the main deck for a group this size to spread across.",
-      "This is the boat we put forward for a **[corporate day out](/blog/corporate-yacht-charters-india)** in Goa or a milestone celebration with a guest list bigger than a standard day boat comfortably carries — her deck has hosted exactly that kind of decorated group charter before. She also suits a run out toward **[Grande Island](/blog/grande-island-goa-snorkelling-diving)** or along **[Goa's best beaches](/blog/best-beaches-by-boat-in-goa)** for groups who want the scenery without giving up saloon space.",
+      "This is the boat we put forward for a [corporate day out](/blog/corporate-yacht-charters-india) in Goa or a milestone celebration with a guest list bigger than a standard day boat comfortably carries — her deck has hosted exactly that kind of decorated group charter before. She also suits a run out toward [Grande Island](/blog/grande-island-goa-snorkelling-diving) or along [Goa's best beaches](/blog/best-beaches-by-boat-in-goa) for groups who want the scenery without giving up saloon space.",
       "Boarding is arranged from a jetty on the Mandovi. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering or decoration quote.",
     ],
     specs: [
@@ -1519,10 +1519,9 @@ export const yachts: Yacht[] = [
     ],
   },
   {
-    /* Saildeck's own boat (registration BOR-IV-01682/92, confirmed on the
-       hull across multiple photos). Gallery is genuine photography, used
-       unedited. Confirm exact registration and cabin count before this goes
-       live. */
+    /* Saildeck's own boat — hull name "Tropicana XI", registration
+       BDR-IV-01682, confirmed on the hull and helm across the full photo
+       set. Gallery is genuine photography, used unedited. */
     slug: "vari-44-motor-yacht-mumbai",
     name: "Vari 44",
     tagline: "A 44-foot flybridge motor yacht for up to 18 guests, departing the Gateway of India.",
@@ -1543,16 +1542,33 @@ export const yachts: Yacht[] = [
       "Catering & decoration on request",
     ],
     gallery: [
-      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-side-profile-dusk.webp", alt: "Vari 44's side profile at anchor at dusk" },
-      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-profile.webp", alt: "Vari 44's flybridge and hull viewed from alongside" },
-      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-helm.webp", alt: "The flybridge upper helm and seating with the Mumbai skyline behind" },
-      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-aft-saloon.webp", alt: "The enclosed saloon with wraparound seating" },
-      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-saloon-skyline-view.webp", alt: "The saloon looking out over the water toward the city skyline" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-bow-taj-mahal-palace.webp", alt: "Vari 44's bow with the Taj Mahal Palace Hotel visible behind" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-bow-tropicana-xi-daytime.webp", alt: "Vari 44, hull-named Tropicana XI, at anchor off Mumbai" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-side-profile-blue-sky.webp", alt: "Vari 44's full side profile at anchor under a clear sky" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-side-profile-bow-tropicana.webp", alt: "Vari 44's bow and side profile with her hull name visible" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-side-profile-overcast.webp", alt: "Vari 44 at anchor under an overcast sky, a sailboat moored alongside" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-bow-gateway-of-india.webp", alt: "Vari 44's bow with the Gateway of India waterfront in the distance" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-sunset-celebration-bow.webp", alt: "Guests gathered on the bow for a sunset celebration, flower garlands on the rails" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-helm-station.webp", alt: "The flybridge helm station with wraparound seating" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-helm-blue-sky.webp", alt: "The flybridge helm and seating under a clear sky" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-helm-marina-view.webp", alt: "The flybridge helm looking out over moored sailboats off Mumbai" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-seating.webp", alt: "Flybridge U-shaped seating around the upper helm" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-seating-detail.webp", alt: "Close-up of the flybridge seating and sun canopy" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-flybridge-structure-detail.webp", alt: "Detail of the flybridge structure and ladder down to the cockpit" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-aft-cockpit-deck.webp", alt: "The aft cockpit deck seen from the flybridge stairs" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-stern-swim-platform.webp", alt: "Vari 44's stern and swim platform" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-stern-boarding-steps.webp", alt: "The stern boarding steps up to the flybridge" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-saloon-wide-angle.webp", alt: "A wide view of the enclosed saloon with the helm visible beyond" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-saloon-cockpit-view.webp", alt: "The saloon looking aft toward the open cockpit door" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-saloon-aft-view.webp", alt: "The enclosed saloon with wraparound seating" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-saloon-doorway-view.webp", alt: "The saloon looking out through the aft doorway toward the city and moored boats" },
+      { src: "/images/fleet/vari-44/vari-44-motor-yacht-mumbai-saloon-helm-view.webp", alt: "The saloon looking forward toward the lower helm station" },
     ],
     videos: [],
     description: [
       "**Vari 44** is a 44-foot flybridge motor yacht carrying up to **18 guests** from the **Gateway of India** in Colaba. She sits comfortably in the middle of our motor yacht range — bigger than a day boat, with an upper helm and flybridge seating that gives a group this size room to spread across two decks rather than one.",
-      "The enclosed saloon below offers shelter from the sun or a sudden shower, and the swim platform at the stern makes boarding straightforward for a large group. She suits a **[corporate outing](/blog/corporate-yacht-charters-india)** or a celebration where the guest list has grown past what a smaller boat comfortably carries — see our **[guide to group size and boat size](/blog/group-size-boat-size-guide)** if you're deciding between her and a bigger or smaller option.",
+      "The enclosed saloon below offers shelter from the sun or a sudden shower, and the swim platform at the stern makes boarding straightforward for a large group. She suits a [corporate outing](/blog/corporate-yacht-charters-india) or a celebration where the guest list has grown past what a smaller boat comfortably carries — see our [guide to group size and boat size](/blog/group-size-boat-size-guide) if you're deciding between her and a bigger or smaller option.",
+      "She's also a regular pick for a sunset celebration — the flybridge clears easily for a flower garland along the rails, and the foredeck gives a group enough room to gather for a toast without anyone standing in the helmsman's way.",
       "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering or decoration quote.",
     ],
     specs: [
@@ -1625,7 +1641,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**Blue Whale** is a flybridge motor yacht carrying up to **18 guests** from the **Gateway of India** in Colaba. Her dark blue hull is easy to pick out at anchor, and below deck she has a genuine cabin with an oval berth rather than a bare cuddy — a real point of difference at this end of our fleet.",
-      "The saloon is finished in leather with a wet bar, fridge and microwave, which makes her a comfortable pick for a **[corporate outing](/blog/corporate-yacht-charters-india)** or a longer celebration that needs somewhere proper to sit between stretches on deck. At 18 guests, see our **[guide to group size and boat size](/blog/group-size-boat-size-guide)** if you're weighing her against a smaller or larger boat.",
+      "The saloon is finished in leather with a wet bar, fridge and microwave, which makes her a comfortable pick for a [corporate outing](/blog/corporate-yacht-charters-india) or a longer celebration that needs somewhere proper to sit between stretches on deck. At 18 guests, see our [guide to group size and boat size](/blog/group-size-boat-size-guide) if you're weighing her against a smaller or larger boat.",
       "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering or decoration quote.",
     ],
     specs: [
@@ -1701,7 +1717,7 @@ export const yachts: Yacht[] = [
     videos: [],
     description: [
       "**L3** is a Majesty 44 motor yacht carrying up to **14 guests** from the **Gateway of India** in Colaba, with two genuine cabins below deck — a master with an ensuite and a second guest cabin — rather than the single berth most boats her size carry.",
-      "The lower saloon and foredeck lounge give the group somewhere to sit whether the sun is out or not, and the layout below deck makes her one of the more comfortable choices in our fleet for a longer charter or a group that wants privacy to change and rest. This makes her a strong pick for [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) charter with a **[corporate group](/blog/corporate-yacht-charters-india)** or a celebration that runs past the usual two-hour slot.",
+      "The lower saloon and foredeck lounge give the group somewhere to sit whether the sun is out or not, and the layout below deck makes her one of the more comfortable choices in our fleet for a longer charter or a group that wants privacy to change and rest. This makes her a strong pick for [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) charter with a [corporate group](/blog/corporate-yacht-charters-india) or a celebration that runs past the usual two-hour slot.",
       "Boarding is by tender from the jetty near the Gateway of India. Pricing is for the whole boat, not per person; message us on WhatsApp with your date and group size for a firm price and a catering or decoration quote.",
     ],
     specs: [
