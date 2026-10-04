@@ -338,7 +338,7 @@ export const managementServices: ContentPage[] = [
     eyebrow: "Management",
     title: "Yacht",
     accent: "management",
-    seoTitle: "Yacht Management Company in Mumbai & Goa — Crew, Technical, Safety, Accounting & Insurance",
+    seoTitle: "Yacht Management Company in Mumbai & Goa",
     seoDescription:
       "Saildeck is a full-service yacht management company in India covering marine operations, technical management, accounting, safety & security, crew management, crew recruitment, procurement and insurance — Mumbai, Navi Mumbai and Goa.",
     intro:
@@ -696,7 +696,7 @@ export const managementServices: ContentPage[] = [
     eyebrow: "Management",
     title: "Visiting yacht",
     accent: "support",
-    seoTitle: "Yacht Agency & Visiting Yacht Support in India — Clearance & Berthing",
+    seoTitle: "Yacht Agency & Visiting Yacht Support in India",
     seoDescription:
       "Yacht agency services for vessels visiting India. Customs and immigration clearance, cruising permits, berthing, bunkering, provisioning, crew changes and technical support.",
     intro:

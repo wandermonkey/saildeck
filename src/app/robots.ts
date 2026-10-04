@@ -7,8 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // The enquiry endpoint has nothing to index and should not be crawled.
-        disallow: ["/api/"],
+        // The enquiry endpoint and the payment utility page have nothing to
+        // index and should not be crawled.
+        disallow: ["/api/", "/pay"],
       },
     ],
     sitemap: new URL("/sitemap.xml", site.url).toString(),

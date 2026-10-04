@@ -26,7 +26,10 @@ import { buildMetadata, faqSchema } from "@/lib/seo";
 import { getReviews } from "@/lib/reviews";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Yacht Rental Mumbai & Goa | Boat Charter & Speedboat Hire — Saildeck",
+  // The root layout's title template does not apply to this page's own
+  // metadata (it only applies to nested route segments), so the brand name
+  // has to be spelled out here explicitly or it disappears from the <title>.
+  title: "Yacht Charter Mumbai, Goa & Navi Mumbai | From ₹2,999/hr — Saildeck",
   description:
     "Rent a private yacht in Mumbai, Navi Mumbai or Goa from ₹2,999/hour with captain and crew. Speedboats to Elephanta and Alibaug, yacht sales, management and sailing school. Book on WhatsApp.",
   path: "/",

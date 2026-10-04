@@ -1859,7 +1859,7 @@ const newPosts: Post[] = [
     title: "How to become a yacht charter B2B partner in India",
     excerpt:
       "Travel agents, DMCs and event planners turn away a boat enquiry every week without realising it's a booking they could have earned a margin on. Here's exactly how Saildeck's agent program works, which boat to recommend for which client, and how to register.",
-    seoTitle: "Yacht Charter B2B Partner Program for Travel Agents — Saildeck Agent Rates",
+    seoTitle: "Yacht Charter B2B Partner Program for Travel Agents",
     seoDescription:
       "How travel agents, DMCs and event planners earn margins structured up to 20% reselling Saildeck's 20-boat Mumbai and Goa fleet — how the program works, which boat to recommend for which client, and how to register.",
     category: "Guides",

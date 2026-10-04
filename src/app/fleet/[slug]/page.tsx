@@ -21,7 +21,7 @@ import {
 
 import { yachts, getYacht, inr } from "@/data/yachts";
 import { destinations } from "@/data/destinations";
-import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, aggregateRatingSchema } from "@/lib/seo";
 import { site, whatsappLink, telLink } from "@/lib/site";
 
 /** Pre-renders all nine boat pages at build time — instant TTFB, perfect CWV. */
@@ -81,6 +81,7 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
     // Absolute URLs — schema.org validators reject relative image paths.
     image: yacht.gallery.map((g) => new URL(g.src, site.url).toString()),
     brand: { "@type": "Brand", name: site.name },
+    aggregateRating: aggregateRatingSchema(),
     offers: {
       "@type": "Offer",
       price: cheapestSlot ? cheapestSlot.amount : yacht.pricePerHour,

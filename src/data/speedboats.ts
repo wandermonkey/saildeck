@@ -42,7 +42,7 @@ export const speedboatRoutes: SpeedboatRoute[] = [
     name: "Mumbai to Elephanta",
     from: "Gateway of India",
     to: "Elephanta Island",
-    seoTitle: "Mumbai to Elephanta Speedboat — Private Charter from Gateway of India",
+    seoTitle: "Mumbai to Elephanta Speedboat — Private Charter",
     seoDescription:
       "Private speedboat from the Gateway of India to Elephanta Caves in about 25 minutes. Skip the ferry queue, set your own timings, up to 6 guests per boat. Book on WhatsApp.",
     h1: "Mumbai to Elephanta",

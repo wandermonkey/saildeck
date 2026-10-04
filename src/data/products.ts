@@ -168,7 +168,7 @@ export const products: Product[] = [
     gallery: [
       { src: "/images/products/proposal-on-a-yacht/proposal-on-a-yacht-mumbai-goa-marry-me-sunset-hero.jpg", alt: "A couple embracing beside a lit Marry Me sign on a yacht bow at sunset, the Mumbai skyline behind", width: 1200, height: 1600 },
     ],
-    seoTitle: "Proposal on a Yacht in Mumbai & Goa — Boats from ₹3,500, Decor from ₹500",
+    seoTitle: "Proposal on a Yacht in Mumbai & Goa — From ₹3,500",
     seoDescription:
       "Plan a proposal on a yacht or sailboat in Mumbai and Goa. Boats from ₹3,500 to ₹40,000, Marry Me decor from ₹500 to ₹15,000, photographers, catering and a timed golden-hour or sunrise anchorage — arranged before you board.",
     whatsappMessage: "Hi Saildeck! I would like to plan a proposal on a yacht.",

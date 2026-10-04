@@ -76,7 +76,22 @@ export function localBusinessSchema() {
       { "@type": "City", name: "Navi Mumbai" },
       { "@type": "State", name: "Goa" },
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: site.rating.value,
+      reviewCount: site.rating.count,
+    },
     sameAs: Object.values(site.social).filter(Boolean),
+  };
+}
+
+/** Shared by any Product/Offer schema (currently the fleet pages) so a star
+ *  rating is eligible to show in the SERP alongside the listing. */
+export function aggregateRatingSchema() {
+  return {
+    "@type": "AggregateRating",
+    ratingValue: site.rating.value,
+    reviewCount: site.rating.count,
   };
 }
 
