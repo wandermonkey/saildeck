@@ -10,7 +10,7 @@ import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { Button, SectionTitle, Pill } from "@/components/ui";
-import { ArrowIcon, WhatsAppIcon, CheckIcon, ClockIcon, UsersIcon, RouteIcon } from "@/components/icons";
+import { ArrowIcon, WhatsAppIcon, CheckIcon, ClockIcon, UsersIcon, RouteIcon, CreditCardIcon } from "@/components/icons";
 
 import { speedboatRoutes, getSpeedboatRoute } from "@/data/speedboats";
 import { inr } from "@/data/yachts";
@@ -93,6 +93,9 @@ export default async function SpeedboatRoutePage({ params }: { params: Promise<{
           </Button>
           <Button href="#enquire" variant="light" size="lg" dataCta="speedboat-hero-cta">
             Send an enquiry <ArrowIcon className="h-4 w-4" />
+          </Button>
+          <Button href="/pay" variant="light" size="lg" dataCta="speedboat-hero-pay">
+            <CreditCardIcon className="h-4 w-4" /> Pay now
           </Button>
         </div>
       </PageHero>

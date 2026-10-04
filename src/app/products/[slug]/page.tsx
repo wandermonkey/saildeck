@@ -12,7 +12,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { RichText } from "@/components/RichText";
 import { Button, SectionTitle, Pill } from "@/components/ui";
-import { ArrowIcon, WhatsAppIcon, CheckIcon } from "@/components/icons";
+import { ArrowIcon, WhatsAppIcon, CheckIcon, CreditCardIcon } from "@/components/icons";
 
 import { products, getProduct } from "@/data/products";
 import { buildMetadata, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/seo";
@@ -114,6 +114,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </Button>
               <Button href="#enquire" variant="outline" dataCta="product-hero-cta">
                 Send an enquiry <ArrowIcon className="h-4 w-4" />
+              </Button>
+              <Button href="/pay" variant="outline" dataCta="product-hero-pay">
+                <CreditCardIcon className="h-4 w-4" /> Pay now
               </Button>
             </div>
           </div>
