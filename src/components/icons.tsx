@@ -38,6 +38,13 @@ export const PhoneIcon = ({ className = "h-4 w-4" }: P) => (
   </svg>
 );
 
+export const CreditCardIcon = ({ className = "h-4 w-4" }: P) => (
+  <svg {...stroke} className={className}>
+    <rect x="2" y="5" width="20" height="14" rx="2" />
+    <path d="M2 10h20" />
+  </svg>
+);
+
 export const MailIcon = ({ className = "h-4 w-4" }: P) => (
   <svg {...stroke} className={className}>
     <rect x="2" y="4" width="20" height="16" rx="2" />

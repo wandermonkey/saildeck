@@ -16,7 +16,7 @@ import { Faq } from "@/components/Faq";
 import { SectionTitle, Pill } from "@/components/ui";
 import {
   CheckIcon, ArrowIcon, WhatsAppIcon, PhoneIcon, StarIcon,
-  UsersIcon, RulerIcon, BedIcon, AnchorIcon, PinIcon,
+  UsersIcon, RulerIcon, BedIcon, AnchorIcon, PinIcon, CreditCardIcon,
 } from "@/components/icons";
 
 import { yachts, getYacht, inr } from "@/data/yachts";
@@ -215,6 +215,14 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
                   <PhoneIcon className="h-4 w-4" />
                   {site.phoneDisplay}
                 </a>
+                <Link
+                  href="/pay"
+                  data-cta="yacht-pay-now"
+                  className="flex w-full items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-sm font-medium text-navy transition-colors hover:border-crimson hover:text-crimson"
+                >
+                  <CreditCardIcon className="h-4 w-4" />
+                  Pay now
+                </Link>
               </div>
             </div>
           </aside>
