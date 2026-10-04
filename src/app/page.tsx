@@ -9,7 +9,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { CtaBand } from "@/components/CtaBand";
 import { GoogleReviews } from "@/components/GoogleReviews";
 import { HeroVideo } from "@/components/HeroVideo";
-import { InstagramCarousel } from "@/components/InstagramCarousel";
 import { PopularSearches } from "@/components/PopularSearches";
 import { Button, Section, SectionHead, SectionTitle } from "@/components/ui";
 import {
@@ -409,9 +408,6 @@ export default async function HomePage() {
 
       {/* ================= GOOGLE REVIEWS ================= */}
       <GoogleReviews data={reviews} />
-
-      {/* ================= INSTAGRAM ================= */}
-      <InstagramCarousel />
 
       {/* ================= AGENTS & B2B ================= */}
       <Section>
