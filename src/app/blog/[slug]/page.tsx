@@ -96,11 +96,28 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
 
         {/* Full-width banner rather than a small image boxed into the reading
-            column — this is the reader's first real look at the story. */}
+            column — this is the reader's first real look at the story. A
+            post that sets imageWidth/imageHeight (a real, often non-wide
+            photo) renders at its own aspect ratio instead of being
+            force-cropped into the default frame. */}
         <div className="container-x py-8 md:py-10">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface-2 sm:aspect-[16/9] lg:aspect-[21/9]">
-            <Image src={post.image} alt={post.imageAlt} fill priority sizes="100vw" className="object-cover" />
-          </div>
+          {post.imageWidth && post.imageHeight ? (
+            <div className="mx-auto overflow-hidden rounded-2xl bg-surface-2" style={{ maxWidth: post.imageWidth }}>
+              <Image
+                src={post.image}
+                alt={post.imageAlt}
+                width={post.imageWidth}
+                height={post.imageHeight}
+                priority
+                sizes="(max-width: 1024px) 100vw, 60rem"
+                className="h-auto w-full"
+              />
+            </div>
+          ) : (
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface-2 sm:aspect-[16/9] lg:aspect-[21/9]">
+              <Image src={post.image} alt={post.imageAlt} fill priority sizes="100vw" className="object-cover" />
+            </div>
+          )}
         </div>
 
         <div className="container-x max-w-3xl pb-16">
@@ -124,6 +141,23 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                       </li>
                     ))}
                   </ul>
+                )}
+                {block.image && (
+                  <figure className="mt-6">
+                    <div className="overflow-hidden rounded-2xl bg-surface-2" style={{ maxWidth: block.image.width }}>
+                      <Image
+                        src={block.image.src}
+                        alt={block.image.alt}
+                        width={block.image.width}
+                        height={block.image.height}
+                        sizes="(max-width: 1024px) 100vw, 48rem"
+                        className="h-auto w-full"
+                      />
+                    </div>
+                    {block.image.caption && (
+                      <figcaption className="mt-2.5 text-xs text-faint">{block.image.caption}</figcaption>
+                    )}
+                  </figure>
                 )}
               </section>
             </Reveal>

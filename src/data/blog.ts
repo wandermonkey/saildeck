@@ -9,8 +9,23 @@ export type Post = {
   readMins: number;
   image: string;
   imageAlt: string;
+  /**
+   * The banner's own pixel dimensions. When set, the banner renders at its
+   * true aspect ratio instead of being force-cropped into the default
+   * 4:3/16:9/21:9 frame — set this for a real (often non-landscape) photo
+   * so nothing is cropped off it. Omit for a photo shot wide enough that
+   * the crop was never a problem.
+   */
+  imageWidth?: number;
+  imageHeight?: number;
   /** Simple block model — headings and paragraphs, rendered by the template. */
-  body: { heading?: string; paras: string[]; bullets?: string[] }[];
+  body: {
+    heading?: string;
+    paras: string[];
+    bullets?: string[];
+    /** `width`/`height` render the photo at its own aspect ratio, uncropped. */
+    image?: { src: string; alt: string; caption?: string; width: number; height: number };
+  }[];
 };
 
 /**
@@ -1931,6 +1946,126 @@ const newPosts: Post[] = [
         heading: "The bottom line",
         paras: [
           "Every yacht charter enquiry that lands on your desk and gets waved off to a Google search is a booking, a margin and a relationship handed to someone else. The fix isn't complicated — it's a rate card, a WhatsApp group and twenty boats you can already describe accurately because we just told you which one fits which client. The next time someone asks you for “something on the water,” you'll have an answer, and a commission, ready in the time it takes to send one message.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "proposal-on-a-yacht-in-mumbai-and-goa",
+    title: "Proposal on a yacht in Mumbai and Goa: the complete guide",
+    excerpt:
+      "Boats from ₹3,500 to ₹40,000, Marry Me decor from ₹500, the one time of day that actually works, and which boat to book — everything you need to plan a proposal on a yacht in Mumbai or Goa.",
+    seoTitle: "Proposal on a Yacht in Mumbai & Goa — Complete 2026 Guide",
+    seoDescription:
+      "Plan a proposal on a yacht in Mumbai or Goa: boats from ₹3,500 to ₹40,000 an hour, Marry Me decor from ₹500 to ₹15,000, the best time to propose, alcohol and drone rules, and which boat to book for your proposal.",
+    category: "Guides",
+    date: "2026-10-04",
+    readMins: 10,
+    image: "/images/products/proposal-on-a-yacht/proposal-on-a-yacht-luxury-motor-yacht-mystique-couple.jpg",
+    imageAlt: "A couple at the bow of a motor yacht off Mumbai, arms outstretched, moments before a proposal",
+    imageWidth: 1331,
+    imageHeight: 888,
+    body: [
+      {
+        paras: [
+          "There is a version of this moment that happens on a restaurant floor, with a waiter hovering and three tables close enough to hear everything. And there is the version that happens on open water, with nobody around but the two of you, a captain who already knows to go quiet, and the entire Mumbai or Goa coastline for a backdrop. Almost everyone who has done both says the second one is the only one worth doing.",
+          "This is the complete guide to planning it: what boats actually cost, what the decor packages buy you, the one time of day nobody tells you about, and exactly which boat to book depending on how big — or how quiet — you want the moment to be. Everything here also lives on our [Proposal on a Yacht](/products/proposal-on-a-yacht) page, where you can check a specific date.",
+        ],
+      },
+      {
+        heading: "Why a yacht beats every other proposal spot in Mumbai or Goa",
+        paras: [
+          "A restaurant, a rooftop or a beach all have the same flaw: other people are already there, and you can't ask them to leave. A yacht solves that by design. Once the boat clears the harbour, the only people aboard are the ones you chose — your partner, you, and a crew briefed to disappear until you signal otherwise.",
+          "It also hands you a backdrop nobody else gets. Mumbai's skyline from open water — the Gateway of India, the Taj Mahal Palace dome, fishing boats silhouetted against the Arabian Sea — is a view almost nobody sees from this angle, which is exactly why it reads as a moment rather than a location. In Goa, the same logic plays out against the Mandovi river mouth or open water with nothing but sea to the horizon. Either way, you get a clean frame with nothing and no one in it that you didn't put there yourself.",
+        ],
+      },
+      {
+        heading: "What it costs: boats from ₹3,500 to ₹40,000 an hour",
+        paras: [
+          "Charters are priced per boat, not per person, for a standard two-hour booking. The range is wide because the boats are genuinely different experiences, not just different sizes.",
+        ],
+        bullets: [
+          "**Compact sail boats** — from ₹3,500 for 2 hours. Intimate, just the two of you, nothing but wind and water.",
+          "**Mid-size motor yachts and catamarans** — ₹8,000 to ₹15,000. Room for a photographer or a few close friends to hide nearby.",
+          "**Premium and luxury motor yachts** — ₹25,000 to ₹40,000. A cabin, a bigger deck, and a setup that can roll straight into a celebration afterwards.",
+          "Exact pricing depends on the date, the time slot and which boat — see the full breakdown on the [proposal page](/products/proposal-on-a-yacht) or message us directly for a firm quote.",
+        ],
+      },
+      {
+        heading: "Marry Me decor, from a ₹500 balloon arch to a full floral setup",
+        paras: [
+          "Decoration is quoted separately from the charter, and the range runs from genuinely simple to fully produced. A balloon arch or foil Marry Me sign is enough for most proposals and photographs cleanly against open water — it's also the package most couples actually choose. At the top end, a full rose-petal runway, a floral arch and fairy lights turn the bow into something closer to a stage set.",
+        ],
+        bullets: [
+          "Marry Me balloon arch or foil signage only — from ₹500",
+          "Petals, balloons and a personalised banner together — ₹2,500 to ₹5,000",
+          "Full floral arch, petal runway, fairy lights and a styled toast table — ₹8,000 to ₹15,000",
+          "Decor is set up before you board, so you walk into it rather than watch it being built",
+        ],
+        image: {
+          src: "/images/products/proposal-on-a-yacht/proposal-on-a-yacht-marry-me-floral-heart-decor.jpg",
+          alt: "A heart-shaped floral arch with an illuminated Will You Marry Me sign and candles on a yacht bow at night",
+          caption: "A full floral setup — the top-tier package, styled and lit before you ever board.",
+          width: 1190,
+          height: 1190,
+        },
+      },
+      {
+        heading: "Which boat to book for your proposal",
+        paras: [
+          "The right boat depends on how many people you're bringing and how produced you want the moment to be — a quiet proposal for two wants something very different from one with a small entourage filming from a few feet away.",
+        ],
+        bullets: [
+          "**Just the two of you, nothing else** — the [5 Pax Sailing Boat](/fleet/5-pax-sailing-boat-charter-mumbai), wind-powered with no engine noise, from ₹3,500. The most intimate option on the water.",
+          "**A proposal with a bit of occasion to it** — [Flo](/fleet/flo-31-foot-sailing-yacht-mumbai), a 31-foot Jeanneau that's become one of our regular picks for exactly this.",
+          "**A small group hiding nearby with a camera** — the [MAC 30](/fleet/mac-30-sailing-yacht-mumbai) or [Nauti by Nature](/fleet/hanse-33-sailing-yacht-mumbai), a 33-foot Hanse with a real cabin below to retreat into.",
+          "**A bigger entourage or a proposal that rolls into a party** — the [Tara Sailing Catamaran](/fleet/tara-sailing-catamaran-mumbai) or [Nava](/fleet/nava-45-foot-sailing-yacht-mumbai), both with enough deck space for a mixed-age group.",
+          "**A fully produced, luxury proposal** — the [Princess 61](/fleet/princess-61-luxury-motor-yacht-mumbai) or [Vari 44](/fleet/vari-44-motor-yacht-mumbai), flybridge motor yachts with a cabin and room for a proper celebration straight after.",
+          "Still not sure? Tell us the headcount and the vibe you want on WhatsApp and we'll recommend one rather than hand you a catalogue to guess from.",
+        ],
+      },
+      {
+        heading: "The best time of day to propose",
+        paras: [
+          "Early morning — 7 to 9 AM — is genuinely the best window, and it's a practical reason rather than a romantic one. The water off both Mumbai and Goa is at its calmest before the day's boat traffic and wind pick up, which means a steadier deck, cleaner audio if you're filming, and none of the afternoon haze that dulls the skyline in photographs. You'll also have the anchorage largely to yourselves.",
+          "Sunset remains the popular choice for the golden-hour colour in photographs, and there's nothing wrong with it — you just share the window with every other boat doing the same thing that evening, so those slots book out first. Either way, we time the anchorage to the light you've chosen, not the other way around.",
+        ],
+        image: {
+          src: "/images/products/proposal-on-a-yacht/proposal-on-a-yacht-cunning-plan-sailboat-couple.jpg",
+          alt: "A couple standing quietly at the mast of a sailboat at dusk, the Mumbai skyline behind",
+          caption: "A quiet moment before the question — this is the part no one photographs but everyone remembers.",
+          width: 874,
+          height: 1318,
+        },
+      },
+      {
+        heading: "Alcohol on board — what you need to know",
+        paras: [
+          "Alcohol isn't automatically included, and it needs prior permission before your date rather than a request made at the jetty — Indian coastal and excise rules mean it can't simply be carried aboard on the day without us knowing in advance. If champagne for the toast matters to you, tell us when you book and we'll confirm what's possible for your specific boat and route.",
+        ],
+      },
+      {
+        heading: "Drone photography: allowed in Goa, not in Mumbai",
+        paras: [
+          "This is the one detail that depends entirely on which city you book in. Drone flights are not permitted over Mumbai's coastal waters near the Gateway of India — the area sits inside restricted airspace, regardless of what any individual operator advertises. In Goa, drone photography is allowed with the standard permissions in place, so if an aerial shot of the moment matters to you, a Goa charter is the one that can actually deliver it.",
+        ],
+      },
+      {
+        heading: "Mumbai or Goa — choosing your coast",
+        paras: [
+          "Mumbai charters leave from near the Gateway of India in Colaba, with the city's skyline as the backdrop for the whole sail — see our [Mumbai yachting guide](/destinations/mumbai) for departure points and timing. Goa charters run from the Mandovi river and coastal jetties around Panjim and Vasco, trading the skyline for open sea and a slower pace — our [Goa guide](/destinations/goa) covers the specifics. Pricing and decor packages are the same across both; drone availability is the one real difference.",
+        ],
+      },
+      {
+        heading: "How we help keep the surprise",
+        paras: [
+          "If your partner doesn't know, tell us and we plan around it. That usually means booking the charter under a generic occasion, briefing the crew on whatever cover story gets them to the jetty, and timing the decor to appear either before boarding or once you're underway, depending on what your partner will and won't see beforehand. We've run enough of these to know where a surprise typically slips, and we plan around those points specifically.",
+        ],
+      },
+      {
+        heading: "Planning yours",
+        paras: [
+          "Two to three weeks' notice is comfortable for a standard decorated proposal — sunset slots and weekends book out faster, so message us early if the date matters more than the flexibility. Everything in this guide — boats, pricing, decor packages and an 18-question FAQ — lives on the [Proposal on a Yacht](/products/proposal-on-a-yacht) page, or [message us directly on WhatsApp](https://wa.me/918424848489?text=Hi%20Saildeck!%20I%20would%20like%20to%20plan%20a%20proposal%20on%20a%20yacht.) with your date and we'll take it from there.",
         ],
       },
     ],
