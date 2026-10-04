@@ -12,7 +12,6 @@ export const bankDetails = {
 };
 
 export const upi = {
-  /** Your real UPI VPA, e.g. "saildeckmarine@okaxis". */
-  vpa: "saildeck@upi",
-  payeeName: "Saildeck Maritime",
+  vpa: "saildeck@idfcbank",
+  payeeName: "Saildeck Maritime Private Limited",
 };
