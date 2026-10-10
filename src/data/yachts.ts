@@ -510,108 +510,98 @@ export const yachts: Yacht[] = [
     ],
   },
   {
-    /* Saildeck's own boat. Gallery is the operator's real photography, used
-       unedited. lengthFt is an estimate from her visible proportions and the
-       forward cabin — she is not an XS Marine boat like Tikla Queen and the
-       5 Pax boat, she has a genoa on a furler, a teak saloon and a real
-       V-berth. Confirm the actual length and registration before this goes
-       live, the same way Tara's and Tikla's specs needed correcting. */
-    slug: "tantallon-7-pax-sailing-boat-mumbai",
-    name: "Tantallon",
-    tagline: "A classic teak-finished cruising sailboat for up to 7 guests, with a real cabin below.",
-    pricePerHour: 3000,
-    guests: 7,
-    lengthFt: 30,
-    cabins: 1,
-    crew: 2,
+    /* NEW BOAT — added in place of Tantallon's old homepage slot (Tantallon
+       is still in the fleet, moved to the end of this array). No real
+       photography exists for this boat yet: gallery below is generic
+       Unsplash stock (same bootstrapping convention the top-of-file comment
+       describes), captioned honestly rather than claiming Mumbai/Gateway of
+       India in the alt text. SWAP THESE FOR REAL PHOTOS OF THIS BOAT BEFORE
+       LAUNCH — see the chat for details. Pricing, inclusions and add-ons
+       below are the real, confirmed figures the operator provided. */
+    slug: "xs-63-6-seater-sailboat-charter-mumbai",
+    name: "XS 63 (6-Seater)",
+    tagline: "A private 6-seat day-sailing boat from the Gateway of India — decor, juice, chips and music included.",
+    pricePerHour: 2000,
+    guests: 6,
+    lengthFt: 21,
+    cabins: 0,
+    crew: 1,
     destinations: ["mumbai"],
     category: "Sailing Yacht",
-    highlights: ["Classic teak-finished saloon", "Forward cabin with real berths", "Private charter, up to 7 guests"],
+    highlights: ["Wind-powered — no engine noise", "Private charter, up to 6 guests", "Decor, juice, chips & speaker included"],
     amenities: [
       "Private sailboat & skipper",
-      "Forward V-berth cabin",
-      "Teak-finished saloon & dining table",
-      "Auxiliary outboard motor",
-      "Candlelit dinner set-up available",
+      "Motorboat transfer, both ways",
       "Life jackets for every guest",
+      "Basic on-board decor",
+      "Juice packs & chips included",
+      "Bluetooth speaker for music",
     ],
     gallery: [
-      { src: "/images/fleet/tantallon/tantallon-hero.jpeg", alt: "A couple in formal wear on the bow of Tantallon under sail, her name on the hull" },
-      { src: "/images/fleet/tantallon/tantallon-side-profile-guests.jpg", alt: "Tantallon under sail with guests seated at the bow, skyline behind" },
-      { src: "/images/fleet/tantallon/tantallon-bow-guests-sailing.jpg", alt: "Guests seated at the bow as Tantallon heels under a genoa and mainsail" },
-      { src: "/images/fleet/tantallon/tantallon-skyline-portrait.jpeg", alt: "A guest posed at the bow with the Mumbai skyline and Gateway of India behind" },
-      { src: "/images/fleet/tantallon/tantallon-couple-skyline.jpeg", alt: "A couple standing at the bow under sail with the city skyline in view" },
-      { src: "/images/fleet/tantallon/tantallon-guests-bow.jpeg", alt: "A group of friends seated at the bow at golden hour with the harbour behind" },
-      { src: "/images/fleet/tantallon/tantallon-family-sunset.jpeg", alt: "A family seated at the bow watching the sunset with a child in a life jacket" },
-      { src: "/images/fleet/tantallon/tantallon-bow-family-sunset.jpg", alt: "A family group at the bow at sunset as Tantallon sails on" },
-      { src: "/images/fleet/tantallon/tantallon-cockpit-group.jpg", alt: "Guests seated in the cockpit under sail with the crew at the helm" },
-      { src: "/images/fleet/tantallon/tantallon-cockpit-sunset.jpg", alt: "The cockpit and striped seating as Tantallon sails into the sunset" },
-      { src: "/images/fleet/tantallon/tantallon-cockpit-empty.jpg", alt: "The cockpit's striped cushioned seating and teak fittings at anchor" },
-      { src: "/images/fleet/tantallon/tantallon-saloon-day.jpg", alt: "The teak-finished saloon with striped cushions and a fold-down dining table" },
-      { src: "/images/fleet/tantallon/tantallon-saloon-berth-view.jpg", alt: "The saloon looking forward toward the V-berth cabin through the doorway" },
-      { src: "/images/fleet/tantallon/tantallon-saloon-candles.jpg", alt: "A candlelit dinner set-up in the saloon with champagne and tea lights" },
-      { src: "/images/fleet/tantallon/tantallon-dinner-setup.jpg", alt: "A romantic dinner set-up below deck with fairy lights, champagne and candles" },
-      { src: "/images/fleet/tantallon/tantallon-cabin-berth.jpeg", alt: "The forward V-berth cabin with striped cushions" },
+      { src: "https://images.unsplash.com/photo-1534296264129-b318f8140c27?auto=format&fit=crop&w=1800&q=80", alt: "A small sailboat with white sails heeling on open water" },
+      { src: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1800&q=80", alt: "A small group of guests sitting aboard a day-sailing boat on calm water" },
+      { src: "https://images.unsplash.com/photo-1526335727645-74a18e4ffb2f?auto=format&fit=crop&w=1800&q=80", alt: "A small sailboat under sail against open sea and sky" },
+      { src: "https://images.unsplash.com/photo-1599134432254-e8cbfb74f1ab?auto=format&fit=crop&w=1800&q=80", alt: "A white day-sailing boat at anchor on still water" },
     ],
     videos: [],
     description: [
-      "**Tantallon** is a classic, teak-finished cruising sailboat — a proper yacht rather than a day-sailing dinghy, with a genoa on a furler alongside her mainsail and a forward cabin you can actually stand up in. She carries up to **7 guests** and departs from the **Gateway of India** in Colaba, and she is the boat we point people toward when the brief is somewhere between an afternoon sail and a proper evening out on the water.",
-      "Below deck, a varnished teak saloon runs either side of a fold-down dining table, with striped cushions, a monogrammed pillow and a genuine **forward V-berth cabin** through the doorway — not a bare cuddy. We regularly set this table up for a [candlelit dinner](/products/dinner-on-a-yacht): tea lights, a champagne bucket and fairy lights along the deckhead, which is a large part of why couples book Tantallon specifically rather than one of the smaller sailboats. Her open bow and cockpit are also a favourite backdrop for [pre-wedding and couple photoshoots](/products/wedding-photoshoot-on-a-yacht) — the wide teak deck and tall rig give a photographer plenty to work with.",
-      "She is [a sailing yacht rather than a motor yacht](/blog/motor-yacht-or-sailing-yacht), which means the ride is quieter and depends more on the wind than an engine — an auxiliary outboard covers the still days. Families book her for the same reason they book our other sailboats: [the flatter, more contained deck suits children better](/blog/family-friendly-boating-mumbai-goa) than a large motor yacht's open sundeck, and at up to 7 guests she comfortably fits a family with grandparents aboard. If you're comparing her against the rest of the fleet for a specific group size, [our guide to matching group size to boat size](/blog/group-size-boat-size-guide) covers the trade-offs.",
-      "Boarding is by motorboat transfer from the jetty near the Gateway of India — [our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring. The 6–8pm slot is timed for [the best light of a sunset sail](/blog/sunset-cruises-in-mumbai-guide) and is the first one to book out.",
-      "No sailing experience is needed — a skipper and deckhand run the boat throughout. Pricing is for the whole boat, not per person; see the full slot pricing below, and message us on WhatsApp with your date, head count and whether you'd like the dinner table set up, for a firm price and the day's exact reporting time.",
+      "The **XS 63 (6-Seater)** is Saildeck's roomier day-sailing boat — a private, wind-powered sailboat for up to **6 guests**, with no engine running once the sails are up. Every booking already includes basic on-board decor, chilled juice packs and chips, and a Bluetooth speaker for your own playlist, so there's nothing extra to arrange for a straightforward afternoon on the water. She departs from the **Gateway of India** in Colaba, the same jetty every Saildeck sailboat sails from.",
+      "If you've been searching for a 'yacht' in Mumbai and keep landing on large motor cruisers with a jacuzzi and a sound system, this is a different kind of booking. A sailboat like the XS 63 has no engine running while you sail — just wind against canvas and the hull moving through the water, with the skipper trimming sail rather than running a throttle. It's a quieter, more hands-on way to spend two hours on the harbour, and because there's no crew beyond a single skipper and none of a motor yacht's fuel or machinery, it costs meaningfully less than a crewed motor yacht carrying the same number of guests.",
+      "You meet the crew at **Jetty No. 5**, directly across the road from the Taj Mahal Palace's main entrance at the Gateway of India — arrive fifteen minutes before your slot with a government photo ID. A motorboat carries you out to the sailboat at anchor, about fifteen minutes each way, so a two-hour booking works out to roughly ninety minutes of actual sailing. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring — light clothing, a cap and flat, non-slip shoes rather than heels, since this is an open sailing deck.",
+      "Six seats is enough room for a family outing with grandparents and a child or two in the same booking, without moving up to the larger group size of [Tikla Queen](/fleet/tikla-queen-8-pax-sailing-boat-mumbai). No sailing ability is needed and life jackets are carried for every guest, including children. It's equally the boat couples book for a [proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a small birthday group, where the included decor and speaker mean the basics are already sorted — you only need to add a cake, flowers or champagne if you want them.",
+      "Pricing is ₹3,500 for the whole boat on either morning slot, and ₹4,500 for an afternoon or evening slot — not per person. Add a flower bouquet (₹500), extra flower decor (₹2,000), a 500g cake (₹600) or a non-alcoholic fruit champagne (₹600) when you book. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
     ],
     specs: [
-      { label: "Type", value: "Classic cruising sailboat" },
-      { label: "Length overall", value: "~30 ft" },
-      { label: "Layout", value: "Teak saloon, forward V-berth cabin" },
-      { label: "Propulsion", value: "Sail (main & genoa), with an auxiliary outboard" },
-      { label: "Guest capacity", value: "7 guests" },
+      { label: "Builder", value: "XS Marine" },
+      { label: "Length overall", value: "21 ft" },
+      { label: "Layout", value: "Open deck, cuddy cabin below" },
+      { label: "Propulsion", value: "Sail only — no engine while sailing" },
+      { label: "Guest capacity", value: "6 guests" },
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 3500 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 3500 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
     ],
     pricingExtras: [
-      "Weekend and public holiday slots — ₹500 extra per booking",
-      "Candlelit dinner set-up (table, tea lights, decor) — from ₹3,500",
-      "Cake on board — ₹950",
-      "Flower bouquet on board — ₹850",
+      "Fruit Champagne (non-alcoholic sparkling) — ₹600",
+      "Additional flower decor — ₹2,000",
+      "Flower bouquet on board — ₹500",
+      "Cake, 500g — ₹600",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 7 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 6 guests — not per person. Includes basic on-board decor, juice packs, chips and a Bluetooth speaker. Morning slots are ₹3,500; afternoon and evening slots are both ₹4,500. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
-        q: "How much does it cost to charter Tantallon?",
-        a: "From ₹6,000 for the whole boat on a weekday morning slot, up to ₹7,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
+        q: "How much does the XS 63 (6-Seater) cost to charter?",
+        a: "₹3,500 for the whole boat on a morning slot (7–9am or 9–11am), and ₹4,500 for an afternoon (2–4pm) or evening (4–6pm or 6–8pm) slot. Prices are for the whole boat, not per person, and already include basic decor, juice packs, chips and a Bluetooth speaker.",
       },
       {
-        q: "What makes Tantallon different from your other sailboats?",
-        a: "She's a full cruising sailboat rather than a day-sailing dinghy — a genoa alongside the mainsail, a teak-finished saloon with a real dining table, and a forward cabin with proper berths. That's why she's the one we recommend for a dinner on board or a photoshoot rather than a quick afternoon sail.",
+        q: "What's the difference between this sailboat and a motor yacht?",
+        a: "No engine runs while you're sailing — the boat moves on wind alone, with the skipper trimming sail rather than operating a throttle. It's a quieter experience with a smaller crew than a motor yacht, which is also why it costs less for a similar group size.",
       },
       {
-        q: "Can you set up a candlelit dinner on board?",
-        a: "Yes — a table below deck with tea lights, a champagne bucket and fairy lights is one of our most-requested set-ups on this boat. Tell us the occasion when you book and we will quote the decoration and any catering separately.",
-      },
-      {
-        q: "Is Tantallon good for a pre-wedding or couple photoshoot?",
-        a: "Yes, her wide teak deck, tall rig and forward cabin give a photographer several distinct backdrops in one charter. Many of our own gallery photos here are from exactly that kind of shoot.",
+        q: "What's included in the price, and what are the add-ons?",
+        a: "Included: basic on-board decor, juice packs, chips and a Bluetooth speaker for music, plus the skipper, transfer and life jackets. Optional add-ons are a flower bouquet (₹500), additional flower decor (₹2,000), a 500g cake (₹600) and non-alcoholic fruit champagne (₹600).",
       },
       {
         q: "Do I need sailing experience?",
-        a: "No. A skipper and deckhand sail the boat throughout — you are a guest, not crew, though you are welcome to ask questions if you're curious.",
+        a: "No. A qualified skipper sails the boat throughout — you are a guest, not crew, though you're welcome to ask questions or take the helm for a stretch if the skipper judges conditions suitable.",
       },
       {
-        q: "Where do we meet, and how do we get to the boat?",
-        a: "At the jetty near the Gateway of India in Colaba. A motorboat then carries you out to Tantallon at anchor — allow about fifteen minutes each way, which is why a two-hour slot gives roughly ninety minutes of actual sailing.",
+        q: "Where exactly do we meet, and how do we get to the boat?",
+        a: "At Jetty No. 5, directly across the road from the Taj Mahal Palace hotel's main entrance at the Gateway of India, Colaba. A motorboat then carries you out to the sailboat at anchor — about fifteen minutes each way, which is why a two-hour slot gives roughly ninety minutes of actual sailing.",
       },
       {
-        q: "Is this boat suitable for families with children or grandparents?",
-        a: "Yes — the contained deck and the cabin below make her a comfortable choice for a mixed-generation group. Life jackets are carried for every guest and swimming ability is not required.",
+        q: "Is this boat suitable for children or non-swimmers?",
+        a: "Yes. Life jackets are carried for every guest and swimming ability is not required. Children from about three years old are welcome with a guardian aboard, and six seats is a comfortable size for a family outing with grandparents too.",
+      },
+      {
+        q: "Can we bring alcohol, or add our own food and decorations?",
+        a: "Alcohol is not permitted aboard this vessel. Outside snacks are generally fine alongside the juice and chips already included, and a cake, bouquet or extra flower decor can all be arranged when you book.",
       },
       {
         q: "What happens if the weather is bad on our date?",
@@ -1751,6 +1741,118 @@ export const yachts: Yacht[] = [
       {
         q: "Does L3 have two real cabins?",
         a: "Yes — a master cabin with an ensuite bathroom and a second guest cabin, both with made-up beds rather than bare berths. She's one of the more comfortable boats in our fleet for a longer charter.",
+      },
+    ],
+  },
+  {
+    /* Saildeck's own boat. Gallery is the operator's real photography, used
+       unedited. lengthFt is an estimate from her visible proportions and the
+       forward cabin — she is not an XS Marine boat like Tikla Queen and the
+       5 Pax boat, she has a genoa on a furler, a teak saloon and a real
+       V-berth. Confirm the actual length and registration before this goes
+       live, the same way Tara's and Tikla's specs needed correcting.
+       Moved to the end of the fleet array (and off the homepage) in favour
+       of the new XS 63 (6-Seater) — still fully listed under /fleet. */
+    slug: "tantallon-7-pax-sailing-boat-mumbai",
+    name: "Tantallon",
+    tagline: "A classic teak-finished cruising sailboat for up to 7 guests, with a real cabin below.",
+    pricePerHour: 3000,
+    guests: 7,
+    lengthFt: 30,
+    cabins: 1,
+    crew: 2,
+    destinations: ["mumbai"],
+    category: "Sailing Yacht",
+    highlights: ["Classic teak-finished saloon", "Forward cabin with real berths", "Private charter, up to 7 guests"],
+    amenities: [
+      "Private sailboat & skipper",
+      "Forward V-berth cabin",
+      "Teak-finished saloon & dining table",
+      "Auxiliary outboard motor",
+      "Candlelit dinner set-up available",
+      "Life jackets for every guest",
+    ],
+    gallery: [
+      { src: "/images/fleet/tantallon/tantallon-hero.jpeg", alt: "A couple in formal wear on the bow of Tantallon under sail, her name on the hull" },
+      { src: "/images/fleet/tantallon/tantallon-side-profile-guests.jpg", alt: "Tantallon under sail with guests seated at the bow, skyline behind" },
+      { src: "/images/fleet/tantallon/tantallon-bow-guests-sailing.jpg", alt: "Guests seated at the bow as Tantallon heels under a genoa and mainsail" },
+      { src: "/images/fleet/tantallon/tantallon-skyline-portrait.jpeg", alt: "A guest posed at the bow with the Mumbai skyline and Gateway of India behind" },
+      { src: "/images/fleet/tantallon/tantallon-couple-skyline.jpeg", alt: "A couple standing at the bow under sail with the city skyline in view" },
+      { src: "/images/fleet/tantallon/tantallon-guests-bow.jpeg", alt: "A group of friends seated at the bow at golden hour with the harbour behind" },
+      { src: "/images/fleet/tantallon/tantallon-family-sunset.jpeg", alt: "A family seated at the bow watching the sunset with a child in a life jacket" },
+      { src: "/images/fleet/tantallon/tantallon-bow-family-sunset.jpg", alt: "A family group at the bow at sunset as Tantallon sails on" },
+      { src: "/images/fleet/tantallon/tantallon-cockpit-group.jpg", alt: "Guests seated in the cockpit under sail with the crew at the helm" },
+      { src: "/images/fleet/tantallon/tantallon-cockpit-sunset.jpg", alt: "The cockpit and striped seating as Tantallon sails into the sunset" },
+      { src: "/images/fleet/tantallon/tantallon-cockpit-empty.jpg", alt: "The cockpit's striped cushioned seating and teak fittings at anchor" },
+      { src: "/images/fleet/tantallon/tantallon-saloon-day.jpg", alt: "The teak-finished saloon with striped cushions and a fold-down dining table" },
+      { src: "/images/fleet/tantallon/tantallon-saloon-berth-view.jpg", alt: "The saloon looking forward toward the V-berth cabin through the doorway" },
+      { src: "/images/fleet/tantallon/tantallon-saloon-candles.jpg", alt: "A candlelit dinner set-up in the saloon with champagne and tea lights" },
+      { src: "/images/fleet/tantallon/tantallon-dinner-setup.jpg", alt: "A romantic dinner set-up below deck with fairy lights, champagne and candles" },
+      { src: "/images/fleet/tantallon/tantallon-cabin-berth.jpeg", alt: "The forward V-berth cabin with striped cushions" },
+    ],
+    videos: [],
+    description: [
+      "**Tantallon** is a classic, teak-finished cruising sailboat — a proper yacht rather than a day-sailing dinghy, with a genoa on a furler alongside her mainsail and a forward cabin you can actually stand up in. She carries up to **7 guests** and departs from the **Gateway of India** in Colaba, and she is the boat we point people toward when the brief is somewhere between an afternoon sail and a proper evening out on the water.",
+      "Below deck, a varnished teak saloon runs either side of a fold-down dining table, with striped cushions, a monogrammed pillow and a genuine **forward V-berth cabin** through the doorway — not a bare cuddy. We regularly set this table up for a [candlelit dinner](/products/dinner-on-a-yacht): tea lights, a champagne bucket and fairy lights along the deckhead, which is a large part of why couples book Tantallon specifically rather than one of the smaller sailboats. Her open bow and cockpit are also a favourite backdrop for [pre-wedding and couple photoshoots](/products/wedding-photoshoot-on-a-yacht) — the wide teak deck and tall rig give a photographer plenty to work with.",
+      "She is [a sailing yacht rather than a motor yacht](/blog/motor-yacht-or-sailing-yacht), which means the ride is quieter and depends more on the wind than an engine — an auxiliary outboard covers the still days. Families book her for the same reason they book our other sailboats: [the flatter, more contained deck suits children better](/blog/family-friendly-boating-mumbai-goa) than a large motor yacht's open sundeck, and at up to 7 guests she comfortably fits a family with grandparents aboard. If you're comparing her against the rest of the fleet for a specific group size, [our guide to matching group size to boat size](/blog/group-size-boat-size-guide) covers the trade-offs.",
+      "Boarding is by motorboat transfer from the jetty near the Gateway of India — [our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring. The 6–8pm slot is timed for [the best light of a sunset sail](/blog/sunset-cruises-in-mumbai-guide) and is the first one to book out.",
+      "No sailing experience is needed — a skipper and deckhand run the boat throughout. Pricing is for the whole boat, not per person; see the full slot pricing below, and message us on WhatsApp with your date, head count and whether you'd like the dinner table set up, for a firm price and the day's exact reporting time.",
+    ],
+    specs: [
+      { label: "Type", value: "Classic cruising sailboat" },
+      { label: "Length overall", value: "~30 ft" },
+      { label: "Layout", value: "Teak saloon, forward V-berth cabin" },
+      { label: "Propulsion", value: "Sail (main & genoa), with an auxiliary outboard" },
+      { label: "Guest capacity", value: "7 guests" },
+      { label: "Home port", value: "Gateway of India, Mumbai" },
+    ],
+    pricingSlots: [
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+    ],
+    pricingExtras: [
+      "Weekend and public holiday slots — ₹500 extra per booking",
+      "Candlelit dinner set-up (table, tea lights, decor) — from ₹3,500",
+      "Cake on board — ₹950",
+      "Flower bouquet on board — ₹850",
+    ],
+    pricingNote:
+      "Prices are for the whole boat, up to 7 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+    faqs: [
+      {
+        q: "How much does it cost to charter Tantallon?",
+        a: "From ₹6,000 for the whole boat on a weekday morning slot, up to ₹7,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
+      },
+      {
+        q: "What makes Tantallon different from your other sailboats?",
+        a: "She's a full cruising sailboat rather than a day-sailing dinghy — a genoa alongside the mainsail, a teak-finished saloon with a real dining table, and a forward cabin with proper berths. That's why she's the one we recommend for a dinner on board or a photoshoot rather than a quick afternoon sail.",
+      },
+      {
+        q: "Can you set up a candlelit dinner on board?",
+        a: "Yes — a table below deck with tea lights, a champagne bucket and fairy lights is one of our most-requested set-ups on this boat. Tell us the occasion when you book and we will quote the decoration and any catering separately.",
+      },
+      {
+        q: "Is Tantallon good for a pre-wedding or couple photoshoot?",
+        a: "Yes, her wide teak deck, tall rig and forward cabin give a photographer several distinct backdrops in one charter. Many of our own gallery photos here are from exactly that kind of shoot.",
+      },
+      {
+        q: "Do I need sailing experience?",
+        a: "No. A skipper and deckhand sail the boat throughout — you are a guest, not crew, though you are welcome to ask questions if you're curious.",
+      },
+      {
+        q: "Where do we meet, and how do we get to the boat?",
+        a: "At the jetty near the Gateway of India in Colaba. A motorboat then carries you out to Tantallon at anchor — allow about fifteen minutes each way, which is why a two-hour slot gives roughly ninety minutes of actual sailing.",
+      },
+      {
+        q: "Is this boat suitable for families with children or grandparents?",
+        a: "Yes — the contained deck and the cabin below make her a comfortable choice for a mixed-generation group. Life jackets are carried for every guest and swimming ability is not required.",
+      },
+      {
+        q: "What happens if the weather is bad on our date?",
+        a: "The skipper makes the final call on safety grounds. If the coast guard suspends sailing or wind conditions are unsafe, we reschedule your charter to another date at no cost.",
       },
     ],
   },
