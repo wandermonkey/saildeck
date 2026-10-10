@@ -84,7 +84,10 @@ export function VideoSection({
                       playsInline
                       poster={poster}
                       preload="metadata"
-                      className="absolute inset-0 h-full w-full bg-black"
+                      // object-contain (not the img/video default of stretching
+                      // to fill) so a portrait phone video doesn't distort
+                      // inside this 16:9 box — it just letterboxes on black.
+                      className="absolute inset-0 h-full w-full bg-black object-contain"
                     >
                       {v.webm && <source src={v.webm} type="video/webm" />}
                       {v.src && <source src={v.src} type="video/mp4" />}

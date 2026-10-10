@@ -510,14 +510,13 @@ export const yachts: Yacht[] = [
     ],
   },
   {
-    /* NEW BOAT — added in place of Tantallon's old homepage slot (Tantallon
-       is still in the fleet, moved to the end of this array). No real
-       photography exists for this boat yet: gallery below is generic
-       Unsplash stock (same bootstrapping convention the top-of-file comment
-       describes), captioned honestly rather than claiming Mumbai/Gateway of
-       India in the alt text. SWAP THESE FOR REAL PHOTOS OF THIS BOAT BEFORE
-       LAUNCH — see the chat for details. Pricing, inclusions and add-ons
-       below are the real, confirmed figures the operator provided. */
+    /* Real operator photography, used unedited — supplied as a shared library
+       covering several of Saildeck's XS Marine-class small sailboats (hull
+       names visible across the set include Caviar, Flora/Flora Queen, Menaka,
+       Arrow and Aqua Queen — the same boat class, not one single hull), per
+       the operator's explicit instruction to use the whole library for this
+       listing rather than filter to a single boat. Pricing, inclusions and
+       add-ons are the real, confirmed figures the operator provided. */
     slug: "xs-63-6-seater-sailboat-charter-mumbai",
     name: "XS 63 (6-Seater)",
     tagline: "A private 6-seat day-sailing boat from the Gateway of India — decor, juice, chips and music included.",
@@ -538,18 +537,48 @@ export const yachts: Yacht[] = [
       "Bluetooth speaker for music",
     ],
     gallery: [
-      { src: "https://images.unsplash.com/photo-1534296264129-b318f8140c27?auto=format&fit=crop&w=1800&q=80", alt: "A small sailboat with white sails heeling on open water" },
-      { src: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1800&q=80", alt: "A small group of guests sitting aboard a day-sailing boat on calm water" },
-      { src: "https://images.unsplash.com/photo-1526335727645-74a18e4ffb2f?auto=format&fit=crop&w=1800&q=80", alt: "A small sailboat under sail against open sea and sky" },
-      { src: "https://images.unsplash.com/photo-1599134432254-e8cbfb74f1ab?auto=format&fit=crop&w=1800&q=80", alt: "A white day-sailing boat at anchor on still water" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-hero.webp", alt: "The sailboat Caviar under full sail with a family of guests aboard" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-full-sail-harbour.jpg", alt: "The sailboat Arrow under full sail with a group of guests aboard, other sailboats in a busy harbour" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-skipper-helm.jpg", alt: "The sailboat Menaka under sail with guests aboard and the skipper at the helm" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-couple-bow-aqua-queen.jpg", alt: "A couple standing at the bow of the sailboat Aqua Queen, decorated with fresh flowers" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-couple-bow-balloons.jpg", alt: "A couple posing at the bow of the sailboat Flora Queen with the Mumbai skyline behind" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-family-child-helm.jpg", alt: "A family group aboard the sailboat Flora under sail, with a child at the helm and balloons on the bow rail" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-friends-deck.jpg", alt: "A group of friends relaxing on the deck cushions during a sail" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-guests-boarding.jpg", alt: "The sailboat Menaka near the jetty with guests boarding and rose bouquets on the bow, harbour boats behind" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-couple-bow-red-balloons.jpg", alt: "A couple standing at the bow under sail, decorated with red balloons, Mumbai skyline in the distance" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-cake-champagne-table.jpg", alt: "A couple celebrating with a cake and bottle of sparkling fruit juice at the cockpit table" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-candlelit-family-table.jpg", alt: "A candlelit evening table set-up on deck with fairy lights, a cake and flowers, a family celebrating together" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-marry-me-proposal.webp", alt: "An 'I Love U, Marry Me' balloon proposal display at the bow with red hearts and roses" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-i-love-u-balloons.webp", alt: "An 'I Love U' balloon display at the bow with red heart balloons and pink drapes" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-couple-mast-golden-hour.jpg", alt: "A couple standing near the mast at golden hour, with flowers along the rail and the Mumbai skyline behind" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-couple-deck-golden-hour.jpg", alt: "A couple posing on deck at golden hour with 'Happy Anniversary' balloons and fresh flowers along the rail" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-sunset-birthday.webp", alt: "A couple seated at the bow under sail at sunset, with 'Happy Birthday' balloons and fresh roses" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-sunset-anniversary-silhouette.webp", alt: "A couple silhouetted at the bow at sunset under a 'Happy Anniversary' balloon display" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-anniversary-gateway-1.webp", alt: "A 'Happy Anniversary' balloon display on deck with the Gateway of India and Taj Mahal Palace visible at golden hour" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-anniversary-gateway-2.jpg", alt: "A 'Happy Anniversary' balloon display at the bow with the Gateway of India and Taj Mahal Palace visible behind" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-anniversary-harbour-view.webp", alt: "A 'Happy Anniversary' balloon display at the bow with rose bouquets, the Gateway of India visible across the water" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-anniversary-skyline.webp", alt: "A 'Happy Anniversary' set-up at the bow with red heart balloons and fresh flowers, city skyline and harbour boats behind" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-birthday-pink-heart.jpg", alt: "A 'Happy Birthday' balloon display at the bow with a pink heart balloon and fresh roses, harbour boats behind" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-bouquet-birthday.webp", alt: "A guest seated on deck with a bouquet of roses, next to a 'Happy Birthday' balloon display" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-red-dress-bouquet-1.jpg", alt: "A guest in a red dress holding a bouquet beside a gold 'Happy Birthday' balloon display and a cake" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-red-dress-bouquet-2.jpg", alt: "A guest in a red dress holding a bouquet of flowers at the bow under sail" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-25th-birthday.jpg", alt: "A guest giving a thumbs-up beside a gold '25th Birthday' balloon display, snacks and drinks on deck" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-bouquet-heart-balloon.jpg", alt: "A guest seated at the bow holding a rose bouquet beside a gold 'Happy Birthday' balloon display and a red heart balloon" },
+      { src: "/images/fleet/xs-63-sailing-boat-charter-mumbai/xs-63-dusk-marry-me-cake.jpg", alt: "An illuminated 'Happy Birthday, Marry Me' balloon display at dusk with a cake and fairy lights on deck" },
     ],
-    videos: [],
+    videos: [
+      {
+        title: "On board the XS 63 — a real charter, start to finish",
+        src: "/videos/xs-63-sailing-boat-charter-mumbai.mp4",
+        poster: "/videos/xs-63-sailing-boat-charter-mumbai-poster.jpg",
+      },
+    ],
     description: [
       "The **XS 63 (6-Seater)** is Saildeck's roomier day-sailing boat — a private, wind-powered sailboat for up to **6 guests**, with no engine running once the sails are up. Every booking already includes basic on-board decor, chilled juice packs and chips, and a Bluetooth speaker for your own playlist, so there's nothing extra to arrange for a straightforward afternoon on the water. She departs from the **Gateway of India** in Colaba, the same jetty every Saildeck sailboat sails from.",
       "If you've been searching for a 'yacht' in Mumbai and keep landing on large motor cruisers with a jacuzzi and a sound system, this is a different kind of booking. A sailboat like the XS 63 has no engine running while you sail — just wind against canvas and the hull moving through the water, with the skipper trimming sail rather than running a throttle. It's a quieter, more hands-on way to spend two hours on the harbour, and because there's no crew beyond a single skipper and none of a motor yacht's fuel or machinery, it costs meaningfully less than a crewed motor yacht carrying the same number of guests.",
       "You meet the crew at **Jetty No. 5**, directly across the road from the Taj Mahal Palace's main entrance at the Gateway of India — arrive fifteen minutes before your slot with a government photo ID. A motorboat carries you out to the sailboat at anchor, about fifteen minutes each way, so a two-hour booking works out to roughly ninety minutes of actual sailing. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring — light clothing, a cap and flat, non-slip shoes rather than heels, since this is an open sailing deck.",
       "Six seats is enough room for a family outing with grandparents and a child or two in the same booking, without moving up to the larger group size of [Tikla Queen](/fleet/tikla-queen-8-pax-sailing-boat-mumbai). No sailing ability is needed and life jackets are carried for every guest, including children. It's equally the boat couples book for a [proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a small birthday group, where the included decor and speaker mean the basics are already sorted — you only need to add a cake, flowers or champagne if you want them.",
-      "Pricing is ₹3,500 for the whole boat on either morning slot, and ₹4,500 for an afternoon or evening slot — not per person. Add a flower bouquet (₹500), extra flower decor (₹2,000), a 500g cake (₹600) or a non-alcoholic fruit champagne (₹600) when you book. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
+      "Pricing is ₹3,500 for the whole boat on either morning slot, and ₹4,500 for an afternoon or evening slot — not per person. See the full add-ons list below the pricing table if you'd like a cake, flowers or a celebratory fruit champagne on board. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
     ],
     specs: [
       { label: "Builder", value: "XS Marine" },

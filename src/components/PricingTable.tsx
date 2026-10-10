@@ -43,14 +43,17 @@ export function PricingTable({
       </ul>
 
       {extras && extras.length > 0 && (
-        <ul className="mt-4 space-y-1.5 text-sm text-muted">
-          {extras.map((x) => (
-            <li key={x} className="flex gap-2">
-              <span className="text-crimson">●</span>
-              {x}
-            </li>
-          ))}
-        </ul>
+        <div className="mt-5 rounded-xl border border-line bg-surface p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-crimson">Add-ons</p>
+          <ul className="mt-2.5 space-y-2 text-sm font-medium text-navy">
+            {extras.map((x) => (
+              <li key={x} className="flex gap-2">
+                <span className="mt-0.5 text-crimson">●</span>
+                <span>{x}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {note && <p className="mt-3 text-xs italic text-faint">{note}</p>}
