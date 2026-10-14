@@ -14,3 +14,6 @@ Fleet and Products/
 
 # Local Claude Code tooling, not needed for deployment.
 .claude/
+
+# Instagram ad build scratch
+marketing/instagram-ads/.html/
