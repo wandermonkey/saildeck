@@ -156,3 +156,28 @@ use photos without permission:
 **Not used:** `Couple yacht photoshoot in mumbai.avif` (only 700×400, too
 small) and the TRIDENT sailboat photo (678×452, and the boat's name is on the
 hull).
+
+---
+---
+
+# College student offer — `student-story-599.png` (9:16)
+
+**Primary text**
+Calling all college squads 🎓⛵
+Grab 4 friends and get your own sailboat in Mumbai harbour for 2 hours, at just ₹599 per person.
+
+☀️ 8–10 AM
+🌤️ 2–4 PM
+🌅 4–6 PM
+
+Skipper included. No sailing experience needed. Valid college ID required for all 5.
+DM us on WhatsApp to lock your slot 👉 +91 84248 48489
+
+**Headline:** Student special: ₹599 per person
+**CTA:** Send WhatsApp message
+
+**Targeting idea:** ages 18–24, Mumbai + 25 km. Interests: college/university,
+travel, adventure. Run it on Stories + Reels placements only.
+
+Confirm these offer details before running: price per person, group of
+exactly 5, 2-hour slots, skipper included, college ID needed for all 5.

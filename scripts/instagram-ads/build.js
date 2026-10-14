@@ -326,6 +326,54 @@ const layouts = {
     };
   },
 
+  // Student offer on notebook paper: price sticker, slot chips, fine print.
+  student(ad) {
+    return {
+      css: `
+      body{background:#fbf6ea;color:#0a2a43}
+      body::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,transparent 0 63px,rgba(42,120,190,.16) 63px 65px)}
+      body::after{content:"";position:absolute;top:0;bottom:0;left:40px;width:3px;background:rgba(168,11,40,.35)}
+      .top{position:absolute;left:72px;right:64px;top:240px;display:flex;justify-content:space-between;align-items:center}
+      .only{background:#0a2a43;color:#fff;font-weight:800;font-size:22px;letter-spacing:.12em;padding:12px 20px;border-radius:999px;transform:rotate(2deg)}
+      .collab{position:absolute;left:72px;top:318px;font-family:Caveat,cursive;font-size:56px;color:#a80b28;transform:rotate(-2deg)}
+      .collab u{text-decoration-thickness:4px;text-underline-offset:8px}
+      h1{position:absolute;left:72px;right:64px;top:392px;font-family:"Playfair Display",serif;font-size:118px;line-height:.96;font-weight:600;letter-spacing:-.01em}
+      h1 i{font-weight:500;color:#a80b28}
+      .pic{position:absolute;left:84px;top:650px;width:900px;background:#fff;padding:18px 18px 70px;transform:rotate(-3deg);box-shadow:0 30px 50px -24px rgba(10,42,67,.55)}
+      .pic .img{height:540px;background:url('${url(ad.photo)}') ${ad.pos}/cover}
+      .pic .cap{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:Caveat,cursive;font-size:46px}
+      .tape{position:absolute;top:-22px;width:160px;height:46px;background:rgba(255,216,77,.75)}
+      .tape.l{left:60px;transform:rotate(-8deg)} .tape.r{right:60px;transform:rotate(7deg)}
+      .price{position:absolute;right:40px;top:540px;width:330px;height:330px;transform:rotate(10deg);display:grid;place-items:center;text-align:center;color:#0a2a43;z-index:3}
+      .price::before{content:"";position:absolute;inset:0;background:#ffd84d;clip-path:polygon(50% 0,59% 12%,73% 5%,77% 20%,93% 19%,89% 34%,100% 43%,90% 54%,98% 68%,83% 72%,81% 88%,66% 85%,57% 99%,46% 89%,32% 97%,28% 82%,12% 84%,15% 68%,1% 60%,11% 48%,2% 34%,17% 29%,17% 13%,32% 15%,40% 1%);filter:drop-shadow(0 10px 18px rgba(0,0,0,.25))}
+      .price div{position:relative}
+      .price .j{font-size:26px;font-weight:800;letter-spacing:.18em}
+      .price .n{font-family:"Playfair Display",serif;font-size:108px;font-weight:700;line-height:1;margin:2px 0}
+      .price .p{font-size:26px;font-weight:800}
+      .slots{position:absolute;left:72px;right:64px;top:1290px}
+      .slots .lbl{font-family:Caveat,cursive;font-size:50px;color:#a80b28;margin-bottom:10px}
+      .chips{display:flex;gap:18px}
+      .chip{flex:1;text-align:center;border:3px solid #0a2a43;border-radius:20px;padding:14px 0 12px;background:#fff;box-shadow:5px 5px 0 #0a2a43}
+      .chip b{display:block;font-size:36px;font-weight:800}
+      .chip span{font-size:22px;font-weight:600;color:#5c6e7c}
+      .fine{position:absolute;left:72px;right:64px;top:1478px;font-size:25px;line-height:1.45;font-weight:600;color:#14415f}
+      .fine b{color:#a80b28;display:block;font-weight:800}
+      .foot{position:absolute;left:72px;right:64px;top:1568px}
+      .cta.light .num{color:#0a2a43}`,
+      body: `
+      <div class="top">${mark(true)}<span class="only">🎓 STUDENTS ONLY</span></div>
+      <div class="collab"><u>special college collab</u> ✌️</div>
+      <h1>${ad.title}</h1>
+      <div class="pic"><span class="tape l"></span><span class="tape r"></span><div class="img"></div><div class="cap">${ad.cap}</div></div>
+      <div class="price"><div><div class="j">JUST</div><div class="n">₹${ad.price}</div><div class="p">per person</div></div></div>
+      <div class="slots"><div class="lbl">pick your slot →</div><div class="chips">${ad.slots
+        .map(([t, s]) => `<div class="chip"><b>${t}</b><span>${s}</span></div>`)
+        .join("")}</div></div>
+      <div class="fine">${ad.fine}</div>
+      <div class="foot">${cta(ad.cta, { light: true })}</div>`,
+    };
+  },
+
   // Carousel card: colour block, title, framed photo.
   vibe(ad, w, h) {
     const end = !!ad.cta;
@@ -514,6 +562,16 @@ const ads = [
   {
     file: "set2-carousel-6", size: "square", layout: "vibe", bg: "#0a2a43", fg: "#fff", photo: P2.princessTaj, pos: "center 55%",
     kicker: "VIBE 05", title: "Tell us your vibe.<br><i>We'll match the boat.</i>", cta: "Book on WhatsApp",
+  },
+
+  /* ===== College student offer ===== */
+  {
+    file: "student-story-599", size: "story", layout: "student",
+    photo: F + "5-pax-sailing-boat/5-pax-sailing-boat-friends-group.jpg", pos: "center 40%",
+    title: "Squad of 5?<br><i>Set sail.</i>", cap: "class of the sea 🌊", price: 599,
+    slots: [["8–10 AM", "morning sail ☀️"], ["2–4 PM", "afternoon breeze 🌤️"], ["4–6 PM", "golden hour 🌅"]],
+    fine: "Group of 5 · Your own sailboat for 2 hrs · Skipper included<b>🎓 Valid college ID required for all 5</b>",
+    cta: "Book your slot",
   },
 ];
 
