@@ -69,3 +69,90 @@ Birthdays, proposals, sundowners with the squad and the big milestones — all d
   birthdays and sundowners).
 - **The chat is a mock-up:** the names in the group chat are made up. That's
   a common ad format, but don't present it as a real customer conversation.
+
+---
+---
+
+# Set 2 — from the marketing Drive photos (`set2-*.png`)
+
+Rebuild just this set: `node scripts/instagram-ads/build.js set2`
+Source photos live in `marketing/instagram-ads/source/`.
+
+## Feed (4:5) + matching Story (9:16)
+
+### 1 · Weekend upgrade — `set2-feed-1-weekend-upgrade.png`
+**Primary text**
+Same café. Same rooftop. Same traffic. Same friends — but this time, on the water. 🌅
+Take the whole gang out on a private yacht at sunset. Music up, city glowing, captain and crew included.
+**Headline:** Upgrade your weekend
+**CTA:** Send WhatsApp message
+
+### 2 · Your evening — `set2-feed-2-your-evening.png` · `set2-story-1-golden-hour.png`
+**Primary text**
+Picture this: the Taj and the Gateway behind you, golden light on the water, and nowhere to be. ✨
+Private sunset sails from the Gateway of India. Our skipper sails, you sit back and enjoy the view.
+**Headline:** This could be your evening
+**CTA:** Send WhatsApp message
+
+### 3 · Girls' trip to Goa — `set2-feed-3-girls-trip-goa.png`
+**Primary text**
+Planning the girls' trip to Goa? 👯‍♀️ Make one day a yacht day.
+A private yacht just for your group: outfits, photos, and the river all to yourselves. Captain and crew included.
+**Headline:** Private yacht charters in Goa
+**CTA:** Send WhatsApp message
+
+### 4 · Date ideas, ranked — `set2-feed-4-date-ideas.png` · `set2-story-4-date-ideas.png`
+**Primary text**
+Date ideas, ranked:
+4. Dinner at the usual place
+3. Another movie
+2. A long drive (in traffic)
+1. A private sunset sail ⛵
+Trust us on this one. Message us to book date night.
+**Headline:** Plan a date they'll remember
+**CTA:** Send WhatsApp message
+
+### Stories only
+- `set2-story-2-say-it.png` — *"Say it where the whole city can see."* Proposals & anniversaries.
+  Primary text: Some questions deserve the best backdrop in Mumbai. 💍 We'll decorate the yacht — you bring the ring.
+- `set2-story-3-no-plans.png` — *"No plans. Just the sea."*
+  Primary text: Switch off for an evening. Private sunset sails from the Gateway of India. 🌊
+
+## Carousel (1:1) — "Pick your vibe": `set2-carousel-1.png` … `set2-carousel-6.png`
+**Primary text**
+What's your yacht vibe? 👀 Romantic, party, girls' day or sail & chill — swipe, pick one, then tell us on WhatsApp and we'll match you with the right boat.
+**Card headlines:** 1. What's your yacht vibe? · 2. The romantic · 3. The party · 4. The girls' day · 5. The sail & chill · 6. Book on WhatsApp
+**CTA:** Send WhatsApp message
+
+---
+
+### ⚠️ Check before running Set 2
+
+**AI-generated photos.** These three are Gemini images. I cropped out the
+Gemini sparkle mark, but they are still AI-generated:
+- `ai-sailboat-gateway-golden.png` → used in *Your evening*, *Golden hour*
+- `ai-couple-gateway-sunset.png` → used in *Say it*
+- `ai-group-party-sunset-bridge.png` → used in *Weekend upgrade*, carousel *The party*
+
+When you upload these ads, turn on Meta's AI disclosure ("AI info"). Meta may
+also detect and label them automatically. The sailboat in the AI image says
+"AVENTURA" on the hull. If you don't have a boat by that name, a customer might
+ask to book it, so consider this before using it.
+
+**Photos that may not be yours to use.** Filenames and styles suggest these came
+from stock sites or other companies' websites. Confirm you have the rights
+before paying to promote them, because Meta can reject or take down ads that
+use photos without permission:
+- `couple-bow-sunset-vertical.jpg` (*No plans* story) looks like a stock photo
+- `couple-yacht-sunset-landscape.webp` (carousel *The romantic*) is a widely
+  circulated stock image
+- `goa-girls-group-white.jpg` (*Girls' trip*, carousel *The girls' day*). Its
+  original filename (`kitty-party-yacht-Mumbai-1-1024x679`) looks like a
+  download from someone else's website.
+- `goa-yellow-dress-bow.jpg`, `goa-red-dress-sunpad.jpg`: the filenames look like
+  Instagram downloads. If they're your customers, get their OK to use their
+  photos in ads.
+
+**Not used:** `Couple yacht photoshoot in mumbai.avif` (only 700×400, too
+small) and the TRIDENT sailboat photo (678×452, and the boat's name is on the
+hull).

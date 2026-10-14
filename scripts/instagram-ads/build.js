@@ -29,6 +29,22 @@ const P = {
   marryMe: F + "5-pax-sailing-boat/5-pax-sailing-boat-marry-me.webp",
   iLoveU: F + "5-pax-sailing-boat/5-pax-sailing-boat-iloveu-sunset.webp",
 };
+// Set 2 photos (from the marketing Drive). "ai-" files are AI-generated — see CAPTIONS.md.
+const S = "marketing/instagram-ads/source/";
+const P2 = {
+  aiSailGateway: S + "ai-sailboat-gateway-golden.png",
+  aiCoupleGateway: S + "ai-couple-gateway-sunset.png",
+  aiParty: S + "ai-group-party-sunset-bridge.png",
+  princessTaj: S + "princess-lifescapes-taj-gateway.jpg",
+  motorYachtTaj: S + "motor-yacht-blue-sky-taj.jpg",
+  coupleBow: S + "couple-bow-sunset-vertical.jpg",
+  coupleSunset: S + "couple-yacht-sunset-landscape.webp",
+  coupleToast: S + "couple-toast-sail-mumbai.jpg",
+  sailingPink: S + "sailing-pink-top-mumbai.jpg",
+  goaGirls: S + "goa-girls-group-white.jpg",
+  goaYellow: S + "goa-yellow-dress-bow.jpg",
+  goaRed: S + "goa-red-dress-sunpad.jpg",
+};
 const SIZES = { feed: [1080, 1350], story: [1080, 1920], square: [1080, 1080] };
 const WA = "+91 84248 48489";
 
@@ -181,8 +197,8 @@ const layouts = {
     const sq = w === h;
     return {
       css: `
-      .ph{background-image:url('${url(ad.photo)}');background-position:${ad.pos}}
-      .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,46,${ad.topShade ?? 0.6}) 0%,rgba(6,28,46,0) ${story ? 38 : 42}%,rgba(6,28,46,0) ${ad.cta ? 62 : 72}%,rgba(6,28,46,${ad.cta || ad.bottom ? 0.85 : 0.6}) 100%)}
+      .ph{background-image:url('${url(ad.photo)}');background-position:${ad.pos}${ad.bgSize ? `;background-size:${ad.bgSize}` : ""}}
+      .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,46,${ad.topShade ?? 0.6}) 0%,rgba(6,28,46,0) ${story ? 38 : 42}%,rgba(6,28,46,0) ${ad.cta ? (story ? 46 : 62) : 72}%,rgba(6,28,46,${ad.cta || ad.bottom ? 0.85 : 0.6}) ${ad.cta && story ? 72 : 100}%,rgba(6,28,46,${ad.cta || ad.bottom ? 0.92 : 0.6}) 100%)}
       .top{position:absolute;top:${story ? 240 : 56}px;left:64px;right:64px}
       .eb{margin-top:${story ? 56 : 44}px;font-size:${story ? 28 : 24}px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#ffd7de}
       h1{margin-top:16px;font-family:"Playfair Display",serif;font-weight:600;font-size:${ad.titleSize || (story ? 112 : sq ? 88 : 100)}px;line-height:1;letter-spacing:-.015em;text-shadow:0 4px 30px rgba(0,0,0,.35)}
@@ -216,6 +232,120 @@ const layouts = {
       li::before{content:"✓";width:42px;height:42px;border-radius:50%;background:#fff;color:#a80b28;display:grid;place-items:center;font-size:24px;font-weight:900}
       .btn{background:#fff;color:#a80b28;box-shadow:0 14px 34px -12px rgba(0,0,0,.45)}`,
       body: `<div class="wrap">${mark()}<h1>${ad.title}</h1><ul>${ad.items.map((i) => `<li>${i}</li>`).join("")}</ul>${cta(ad.cta)}</div>`,
+    };
+  },
+
+  // "Your weekend" struck-through list on grey, the upgrade photo below.
+  compare(ad, w, h) {
+    const topH = 500;
+    return {
+      css: `
+      body{background:#e7e4df}
+      .top{position:absolute;left:0;right:0;top:0;height:${topH}px;padding:56px 64px;color:#4b5563}
+      .top .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}
+      .lbl{font-size:24px;font-weight:800;letter-spacing:.2em;color:#6b7280}
+      .old{font-size:52px;font-weight:600;line-height:1.5;color:#6b7280;position:relative;display:table}
+      .old::after{content:"";position:absolute;left:-8px;right:-8px;top:52%;height:6px;background:#a80b28;border-radius:4px;transform:rotate(-2deg)}
+      .yawn{position:absolute;right:64px;top:170px;font-family:Caveat,cursive;font-size:64px;color:#9ca3af;transform:rotate(-6deg)}
+      .photo{position:absolute;left:0;right:0;bottom:0;height:${h - topH}px;background:url('${url(ad.photo)}') ${ad.pos}/${ad.bgSize || "cover"} no-repeat}
+      .photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,46,.65),rgba(6,28,46,0) 28%,rgba(6,28,46,0) 52%,rgba(6,28,46,.9))}
+      .tear{position:absolute;left:0;right:0;top:${topH - 22}px;height:44px;background:#e7e4df;clip-path:polygon(0 0,100% 0,100% 40%,95% 70%,90% 45%,85% 75%,80% 50%,75% 72%,70% 44%,65% 70%,60% 48%,55% 76%,50% 46%,45% 72%,40% 50%,35% 74%,30% 45%,25% 70%,20% 48%,15% 76%,10% 46%,5% 72%,0 50%);z-index:2}
+      .pill{position:absolute;left:64px;top:${topH + 54}px;background:#fff;color:#a80b28;font-weight:800;font-size:22px;letter-spacing:.14em;padding:12px 22px;border-radius:999px}
+      .foot{position:absolute;left:64px;right:64px;bottom:60px}
+      .foot h1{font-family:"Playfair Display",serif;font-size:92px;line-height:1;font-weight:600;margin-bottom:30px;text-shadow:0 2px 24px rgba(0,0,0,.4)}
+      .foot h1 i{font-weight:500}`,
+      body: `
+      <div class="top"><div class="row"><span class="lbl">YOUR WEEKEND</span>${mark(true)}</div>
+        ${ad.old.map((t) => `<div class="old">${t}</div>`).join("")}<div class="yawn">yawn.</div></div>
+      <div class="tear"></div>
+      <div class="photo"></div>
+      <div class="pill">${ad.pill}</div>
+      <div class="foot"><h1>${ad.title}</h1>${cta(ad.cta)}</div>`,
+    };
+  },
+
+  // Three tilted polaroids on a sandy background.
+  polaroids(ad) {
+    const pol = (p, i) =>
+      `<figure class="pol p${i}"><div class="img" style="background-image:url('${url(p.photo)}');background-position:${p.pos || "center"}"></div><figcaption>${p.cap}</figcaption></figure>`;
+    return {
+      css: `
+      body{background:linear-gradient(180deg,#bfe3ea 0%,#f6ead8 38%,#f1dcc0 100%);color:#0a2a43}
+      .head{position:absolute;left:64px;right:64px;top:56px}
+      .hand{font-family:Caveat,cursive;font-size:62px;color:#a80b28;margin-top:26px;transform:rotate(-2deg);display:inline-block}
+      h1{font-family:"Playfair Display",serif;font-size:84px;line-height:1;font-weight:600;margin-top:4px}
+      h1 i{font-weight:500;color:#a80b28}
+      .pol{position:absolute;background:#fff;padding:18px 18px 0;box-shadow:0 24px 40px -18px rgba(10,42,67,.55)}
+      .pol .img{background-size:cover}
+      .pol figcaption{font-family:Caveat,cursive;font-size:40px;text-align:center;padding:10px 0 14px;color:#17242f}
+      .p0{left:44px;top:430px;transform:rotate(-4deg)} .p0 .img{width:600px;height:398px}
+      .p1{right:44px;top:400px;transform:rotate(5deg)} .p1 .img{width:300px;height:400px}
+      .p2{left:590px;top:885px;transform:rotate(-3deg);z-index:2} .p2 .img{width:250px;height:333px}
+      .tape{position:absolute;width:120px;height:34px;background:rgba(255,255,255,.6);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+      .foot{position:absolute;left:64px;top:985px;width:470px}
+      .foot p{font-size:29px;line-height:1.35;font-weight:600;margin-bottom:24px;color:#14415f}
+      .foot .num{display:block;margin-top:14px;color:#0a2a43}
+      .foot .cta{flex-direction:column;align-items:flex-start;gap:0}`,
+      body: `
+      <div class="head">${mark(true)}<div class="hand">${ad.hand}</div><h1>${ad.title}</h1></div>
+      ${ad.photos.map(pol).join("")}
+      <div class="foot"><p>${ad.sub}</p>${cta(ad.cta, { light: true })}</div>`,
+    };
+  },
+
+  // "Date ideas, ranked" list beside a portrait photo.
+  ranked(ad, w, h) {
+    const story = h > 1500;
+    const top = story ? 250 : 60;
+    const phW = story ? 460 : 430, phH = Math.round(phW * 16 / 9);
+    return {
+      css: `
+      body{background:#f6efe6;color:#0a2a43}
+      .wrap{position:absolute;left:64px;top:${top}px;width:${story ? 952 : 520}px}
+      .k{font-size:22px;font-weight:800;letter-spacing:.2em;color:#a80b28;margin:${story ? 60 : 44}px 0 10px}
+      h1{font-family:"Playfair Display",serif;font-size:${story ? 92 : 84}px;line-height:.98;font-weight:600}
+      h1 i{font-weight:500;color:#a80b28}
+      ol{list-style:none;margin-top:${story ? 80 : 64}px;display:grid;gap:${story ? 52 : 40}px;justify-items:start}
+      li{font-size:${story ? 44 : 34}px;font-weight:600;line-height:1.25;color:#8b9aa6;position:relative;padding-left:58px}
+      li b{position:absolute;left:0;top:0;font-family:"Playfair Display",serif;font-size:${story ? 44 : 40}px;color:#c7d3dc}
+      li s{text-decoration-color:#a80b28;text-decoration-thickness:4px}
+      li.win{color:#0a2a43;font-weight:800;font-size:${story ? 56 : 50}px;display:inline-block}
+      li.win b{color:#a80b28}
+      li.win::after{content:"";position:absolute;left:-18px;top:-16px;right:-26px;bottom:-16px;border:4px solid #a80b28;border-radius:50% 46% 52% 48%/60% 50% 55% 45%;transform:rotate(-2deg)}
+      .ph2{position:absolute;right:56px;top:${story ? 1075 : 110}px;width:${phW}px;height:${phH}px;border-radius:26px;background:url('${url(ad.photo)}') ${ad.pos || "center"}/cover;transform:rotate(3deg);box-shadow:0 30px 50px -24px rgba(10,42,67,.6);border:10px solid #fff}
+      .note{position:absolute;right:${story ? 660 : 110}px;top:${story ? 1120 : 110 + phH - 30}px;font-family:Caveat,cursive;font-size:${story ? 58 : 52}px;color:#a80b28;transform:rotate(-4deg)}
+      .foot{position:absolute;left:64px;right:64px;bottom:${story ? 330 : 60}px}
+      .sub2{font-size:${story ? 32 : 28}px;line-height:1.4;font-weight:600;color:#14415f;margin-bottom:26px;max-width:${story ? 400 : 480}px}
+      .cta.light .num{color:#0a2a43}
+      ${story ? ".foot{right:auto;width:400px}.foot .cta{flex-direction:column;align-items:flex-start;gap:14px}" : ""}`,
+      body: `
+      <div class="wrap">${mark(true)}<div class="k">${ad.kicker}</div><h1>${ad.title}</h1>
+        <ol>${ad.list.map((t, i) => (i === ad.list.length - 1 ? `<li class="win"><b>1</b>${t}</li>` : `<li><b>${ad.list.length - i}</b><s>${t}</s></li>`)).join("")}</ol></div>
+      <div class="ph2"></div><div class="note">${ad.note}</div>
+      <div class="foot">${ad.sub ? `<div class="sub2">${ad.sub}</div>` : ""}${cta(ad.cta, { light: true })}</div>`,
+    };
+  },
+
+  // Carousel card: colour block, title, framed photo.
+  vibe(ad, w, h) {
+    const end = !!ad.cta;
+    return {
+      css: `
+      body{background:${ad.bg};color:${ad.fg}}
+      .wrap{position:absolute;inset:0;padding:60px 64px}
+      .row{display:flex;justify-content:space-between;align-items:center}
+      .k{font-size:22px;font-weight:800;letter-spacing:.2em;opacity:.75}
+      h1{font-family:"Playfair Display",serif;font-size:${end ? 76 : 88}px;line-height:1;font-weight:600;margin-top:30px}
+      h1 i{font-weight:500}
+      .frame{position:absolute;left:64px;right:64px;top:${end || ad.title.includes("<br>") ? 340 : 290}px;bottom:${end ? 200 : 64}px;border-radius:28px;background:url('${url(ad.photo)}') ${ad.pos || "center"}/cover;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+      .tag{position:absolute;left:28px;bottom:28px;background:rgba(255,255,255,.94);color:#0a2a43;font-weight:700;font-size:26px;padding:14px 24px;border-radius:999px}
+      .swipe{position:absolute;right:30px;bottom:18px;font-family:Caveat,cursive;font-size:52px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+      .foot{position:absolute;left:64px;right:64px;bottom:60px}
+      .cta .num{color:${ad.fg}}`,
+      body: `
+      <div class="wrap"><div class="row">${mark(ad.fg !== "#fff")}<span class="k">${ad.kicker}</span></div><h1>${ad.title}</h1></div>
+      <div class="frame">${ad.tag ? `<span class="tag">${ad.tag}</span>` : ""}${ad.swipe ? `<span class="swipe">${ad.swipe}</span>` : ""}</div>
+      ${end ? `<div class="foot">${cta(ad.cta)}</div>` : ""}`,
     };
   },
 };
@@ -305,6 +435,85 @@ const ads = [
     title: "Pick a date.<br><i>We'll handle the rest.</i>",
     items: ["Captain & crew included", "Basic decor included", "No sailing experience needed"],
     cta: "Book on WhatsApp",
+  },
+
+  /* ===== SET 2 — photos from the marketing Drive ===== */
+  // FEED 4:5
+  {
+    file: "set2-feed-1-weekend-upgrade", size: "feed", layout: "compare", photo: P2.aiParty, pos: "40% center",
+    old: ["Same café ☕", "Same rooftop 🍸", "Same traffic 🚗"],
+    pill: "YOUR WEEKEND, UPGRADED ⛵",
+    title: "Same friends.<br><i>Better view.</i>", cta: "Plan the party",
+  },
+  {
+    file: "set2-feed-2-your-evening", size: "feed", layout: "hero", photo: P2.aiSailGateway, pos: "38% center", topShade: 0.5,
+    pill: "SUNSET SAILS · GATEWAY OF INDIA",
+    title: "This could be<br><i>your evening.</i>", cta: "Book the sunset",
+  },
+  {
+    file: "set2-feed-3-girls-trip-goa", size: "feed", layout: "polaroids",
+    hand: "Girls' trip to Goa? 👯‍♀️", title: "Make one day<br><i>a yacht day.</i>",
+    photos: [
+      { photo: P2.goaGirls, pos: "center 40%", cap: "the whole squad 🤍" },
+      { photo: P2.goaYellow, pos: "center 30%", cap: "main character" },
+      { photo: P2.goaRed, pos: "center 40%", cap: "red dress energy" },
+    ],
+    sub: "Private yacht charters in Goa, with captain and crew.", cta: "Plan the girls' day",
+  },
+  {
+    file: "set2-feed-4-date-ideas", size: "feed", layout: "ranked", photo: P2.coupleToast, pos: "center 40%",
+    kicker: "DATE NIGHT", title: "Date ideas,<br><i>ranked.</i>",
+    list: ["Dinner at the usual place", "Another movie", "A long drive (in traffic)", "Sunset sail ⛵"],
+    note: "trust us 😉", sub: "Private sunset sails from the Gateway of India. Captain & crew included.", cta: "Book date night",
+  },
+
+  // STORIES 9:16
+  {
+    file: "set2-story-1-golden-hour", size: "story", layout: "hero", photo: P2.aiSailGateway, pos: "36% center", topShade: 0.45,
+    pill: "GATEWAY OF INDIA · 6 PM", title: "Golden hour<br><i>hits different here.</i>",
+    footText: "Private sailing past the Taj and the Gateway. Skipper included — you just relax.", cta: "Book on WhatsApp",
+  },
+  {
+    file: "set2-story-2-say-it", size: "story", layout: "hero", photo: P2.aiCoupleGateway, pos: "30% 0%", bgSize: "120% auto", topShade: 0.55,
+    title: "Say it where<br><i>the whole city<br>can see.</i>",
+    footText: "Proposals and anniversaries on a private yacht, decorated and waiting.", cta: "Plan the moment",
+  },
+  {
+    file: "set2-story-3-no-plans", size: "story", layout: "hero", photo: P2.coupleBow, pos: "48% center", topShade: 0.35,
+    title: "No plans.<br><i>Just the sea.</i>",
+    footText: "Private sunset sails from the Gateway of India.", cta: "Book your escape",
+  },
+  {
+    file: "set2-story-4-date-ideas", size: "story", layout: "ranked", photo: P2.coupleToast, pos: "center 40%",
+    kicker: "DATE NIGHT", title: "Date ideas,<br><i>ranked.</i>",
+    list: ["Dinner at the usual place", "Another movie", "A long drive (in traffic)", "Sunset sail ⛵"],
+    note: "trust us 😉", sub: "Private sunset sails from the Gateway of India. Captain & crew included.", cta: "Book date night",
+  },
+
+  // CAROUSEL 1:1 — "Pick your vibe"
+  {
+    file: "set2-carousel-1", size: "square", layout: "vibe", bg: "#0a2a43", fg: "#fff", photo: P2.motorYachtTaj, pos: "center",
+    kicker: "PICK YOUR VIBE", title: "What's your<br><i>yacht vibe?</i>", swipe: "swipe →",
+  },
+  {
+    file: "set2-carousel-2", size: "square", layout: "vibe", bg: "#f6d9dd", fg: "#0a2a43", photo: P2.coupleSunset, pos: "center",
+    kicker: "VIBE 01", title: "The <i>romantic</i>", tag: "Sunset, just the two of you", swipe: "→",
+  },
+  {
+    file: "set2-carousel-3", size: "square", layout: "vibe", bg: "#a80b28", fg: "#fff", photo: P2.aiParty, pos: "35% center",
+    kicker: "VIBE 02", title: "The <i>party</i>", tag: "Music up, city glowing", swipe: "→",
+  },
+  {
+    file: "set2-carousel-4", size: "square", layout: "vibe", bg: "#f6efe6", fg: "#0a2a43", photo: P2.goaGirls, pos: "center 45%",
+    kicker: "VIBE 03", title: "The <i>girls' day</i>", tag: "Matching outfits optional", swipe: "→",
+  },
+  {
+    file: "set2-carousel-5", size: "square", layout: "vibe", bg: "#d5edf0", fg: "#0a2a43", photo: P2.sailingPink, pos: "center 35%",
+    kicker: "VIBE 04", title: "The <i>sail & chill</i>", tag: "Wind in your hair, nowhere to be", swipe: "→",
+  },
+  {
+    file: "set2-carousel-6", size: "square", layout: "vibe", bg: "#0a2a43", fg: "#fff", photo: P2.princessTaj, pos: "center 55%",
+    kicker: "VIBE 05", title: "Tell us your vibe.<br><i>We'll match the boat.</i>", cta: "Book on WhatsApp",
   },
 ];
 
