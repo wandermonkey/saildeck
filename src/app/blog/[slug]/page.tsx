@@ -196,7 +196,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
       </section>
 
-      <CtaBand whatsappMessage={`Hi Saildeck! I read your article on ${post.title} and have a question.`} />
+      <CtaBand whatsappMessage={post.ctaMessage ?? `Hi Saildeck! I read your article on ${post.title} and have a question.`} />
     </>
   );
 }

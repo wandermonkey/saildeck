@@ -18,6 +18,10 @@ export type Post = {
    */
   imageWidth?: number;
   imageHeight?: number;
+  /** Overrides the generic "I read your article" WhatsApp CTA at the bottom
+   *  of the post — use this for a promo/offer post where the real intent is
+   *  booking, not a general question. */
+  ctaMessage?: string;
   /** Simple block model — headings and paragraphs, rendered by the template. */
   body: {
     heading?: string;
@@ -346,6 +350,79 @@ const existingPosts: Post[] = [
  * customer. Treat this as a strong first draft, not finished copy.
  */
 const newPosts: Post[] = [
+  {
+    /* College promo post. Photo is Unsplash stock (friends on a boat) —
+       swap in the real "squad of 5" charter photography used on the
+       promo flyer once a clean, text-free version of it exists; see the
+       chat this was built in. Offer terms (price, slots, ID + story +
+       review requirement) are exactly what the operator specified. */
+    slug: "squad-of-5-college-sailing-discount-mumbai",
+    title: "Squad of 5? Set sail for ₹599 each.",
+    excerpt:
+      "Saildeck's new college collab: a private 2-hour sailboat for your squad of 5, ₹599 a head, no minimum followers needed — just a valid college ID, one story tagging us, and a Google review.",
+    seoTitle: "Student Sailing Discount Mumbai — ₹599pp for a Squad of 5",
+    seoDescription:
+      "College students sail Mumbai harbour for ₹599 each in a private group of 5 — no follower count required. Morning, afternoon or golden-hour slots. Valid college ID, one social story and a Google review is all it takes.",
+    category: "Sailing",
+    date: "2026-10-15",
+    readMins: 5,
+    image: "https://images.unsplash.com/photo-1562862076-42e207f5561e?auto=format&fit=crop&w=1800&q=80",
+    imageAlt: "A group of four friends sitting together on the bow of a sailboat",
+    ctaMessage: "Hi Saildeck! I'd like to book the ₹599 Squad of 5 student sailing offer.",
+    body: [
+      {
+        paras: [
+          "Most college \"discounts\" in Mumbai quietly mean \"if you have 10,000 followers.\" This one doesn't. Saildeck is running a straight **₹599 per person** offer for a private 2-hour sailboat charter, open to any group of 5 college students — it doesn't matter if your Instagram following is 40,000 or 40. The only currency here is five valid college IDs, one story, and one honest Google review.",
+          "If you've been priced out of a yacht day with your friends because the usual rate is quoted per boat rather than per head, this is built for exactly that problem. Five of you, one sailboat, two hours, ₹599 each — the math works out to less than a round of coffees at a decent café, for an afternoon you'll actually remember.",
+        ],
+      },
+      {
+        heading: "The offer, in plain terms",
+        paras: [
+          "This is a genuine private charter, not a shared tour boat with strangers bolted on. Your squad of 5 gets the whole sailboat, a skipper who handles the sailing so none of you need any experience, and two full hours on Mumbai harbour.",
+        ],
+        bullets: [
+          "**₹599 per person** — a group of exactly 5, so ₹2,995 for the whole boat",
+          "**2 hours** of private sailing, skipper included",
+          "Three slots to choose from: **8–10 AM** (morning sail), **2–4 PM** (afternoon breeze) or **4–6 PM** (golden hour)",
+          "Departs from the **Gateway of India**, Colaba — the same jetty every Saildeck sailboat uses",
+          "Valid **college ID required for all 5 guests** at boarding",
+        ],
+      },
+      {
+        heading: "How to actually get the ₹599 rate",
+        paras: [
+          "There's no hidden follower-count tier and no \"apply and we'll review your profile\" step. Three things, and the discount is yours:",
+        ],
+        bullets: [
+          "**Show college ID.** All 5 people in the group need a valid, current college ID at boarding — this is a student offer, and we check.",
+          "**Post one story.** While you're on board or right after, put up one Instagram (or equivalent) story tagging Saildeck. Public account, private account, 200 followers or 20,000 — all of that is irrelevant. We're not asking you to be an influencer, just to share the afternoon.",
+          "**Leave a Google review.** After the charter, one honest Google review from someone in the group. Tell people what the sail was actually like — good, middling or otherwise. We'd rather have five real reviews than one polished one.",
+        ],
+      },
+      {
+        heading: "Why we're doing this without a follower minimum",
+        paras: [
+          "Most \"collab\" offers quietly filter for an audience size, which means the same handful of already-large accounts get every deal while everyone else pays full price for the same boat. That's backwards for a word-of-mouth business — a review from a genuine first-time rider does more for us than a polished story from someone who does five brand collabs a week.",
+          "So the bar here isn't reach, it's honesty: show up, sail, tell your own followers — however many there are — what you thought, and leave a review that reflects it. That's the whole deal.",
+        ],
+      },
+      {
+        heading: "What a 2-hour student sail actually looks like",
+        paras: [
+          "You meet the crew at the jetty near the Gateway of India, around fifteen minutes before your slot, with your college IDs ready. A short motorboat transfer takes your group out to the sailboat at anchor, and from there it's genuinely wind-powered sailing — no engine running once you're underway, just the skipper trimming sail while your group takes in the harbour and the Mumbai skyline from the water.",
+          "No sailing experience is needed and nobody expects you to crew the boat — you're there to enjoy it, though the skipper is usually happy to let someone take the helm for a bit if conditions allow. If you've never been sailing before, [our guide to learning to sail in India](/blog/learning-to-sail-in-india) is a reasonable primer on what the experience is actually like, even if this particular afternoon is pure fun rather than a lesson.",
+          "Dress for wind rather than a photoshoot you have to protect — light clothing, a cap, sunglasses and flat non-slip shoes work best. [Our general packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers the rest, and most of it applies here too.",
+        ],
+      },
+      {
+        heading: "Booking",
+        paras: [
+          "This is a limited college collab, not a standing fleet price, so slots are first-come. Message us on WhatsApp with your preferred date, the slot you want (8–10 AM, 2–4 PM or 4–6 PM) and confirmation that it's a group of 5 current students — we'll come back with availability and lock in your reporting time.",
+        ],
+      },
+    ],
+  },
   {
     slug: "complete-guide-to-yachting-in-mumbai",
     title: "The complete guide to yachting in Mumbai",
