@@ -57,6 +57,10 @@ export type Yacht = {
   /** Small print under the pricing table, e.g. permission requirements. */
   pricingNote?: string;
   featured?: boolean;
+  /** Always sorts to the end of the exported `yachts` list (both the
+   *  homepage's featured slice and the /fleet listing), regardless of this
+   *  object's position in the array below or what gets added later. */
+  pinnedLast?: boolean;
 };
 
 /**
@@ -109,7 +113,10 @@ const standardFaqs = (name: string, guests: number) => [
   },
 ];
 
-export const yachts: Yacht[] = [
+/** Declared in whatever order makes the file easy to edit. The exported
+ *  `yachts` below re-sorts this so `pinnedLast` boats always land at the
+ *  end — don't read from this array directly. */
+const allYachts: Yacht[] = [
   {
     /* Saildeck's own boat — photos and video from the Princess 61 folder.
        Guest capacity, crew count and the hourly rate below still need
@@ -734,6 +741,7 @@ export const yachts: Yacht[] = [
        cabin count and registration before this goes live. */
     slug: "feeling-nauti-31-foot-sailing-yacht-mumbai",
     name: "Feeling Nauti",
+    pinnedLast: true,
     tagline: "A 31-foot sailing yacht for up to 10 guests — a regular pick for group celebrations.",
     pricePerHour: 2800,
     guests: 10,
@@ -967,6 +975,7 @@ export const yachts: Yacht[] = [
        length before this goes live. */
     slug: "jj-yacht-playboy-7-pax-sailing-yacht-mumbai",
     name: "Playboy",
+    pinnedLast: true,
     tagline: "A private sailboat for up to 7 guests, a regular pick for anniversaries and proposals.",
     pricePerHour: 2600,
     guests: 7,
@@ -1180,6 +1189,7 @@ export const yachts: Yacht[] = [
        Confirm exact length and registration before this goes live. */
     slug: "mac-30-sailing-yacht-mumbai",
     name: "MAC 30",
+    pinnedLast: true,
     tagline: "A private sailboat for up to 10 guests, a long-running favourite for group charters.",
     pricePerHour: 3000,
     guests: 10,
@@ -1890,6 +1900,13 @@ export const yachts: Yacht[] = [
     ],
   },
 ];
+
+/** The actual fleet order every page should read from. A stable sort, so
+ *  non-pinned boats keep their relative order from `allYachts` above and
+ *  only the pinned ones shift to the end. */
+export const yachts: Yacht[] = [...allYachts].sort(
+  (a, b) => Number(!!a.pinnedLast) - Number(!!b.pinnedLast)
+);
 
 export const getYacht = (slug: string) => yachts.find((y) => y.slug === slug);
 export const featuredYachts = yachts.filter((y) => y.featured);
