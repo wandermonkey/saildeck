@@ -351,7 +351,7 @@ const allYachts: Yacht[] = [
       "You meet the crew at **Jetty No. 5**, directly across the road from the Taj Mahal Palace's main entrance at the Gateway of India — arrive fifteen minutes before your slot with a government photo ID. A motorboat carries you out to the sailboat at anchor, about fifteen minutes each way, so a two-hour booking works out to roughly ninety minutes of actual sailing. If you're weighing this against a boarding point further from South Mumbai, [our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the difference.",
       "Dress for wind rather than a party — light, breathable clothing, a cap, sunglasses and flat, non-slip shoes are the practical choice, since heels have no place on a moving deck. Carry your ID, sunscreen and as much water as you would drink on a two-hour outing in the sun. [Our full packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers the rest, most of which applies here too. No swimming ability is required — life jackets are carried for everyone aboard, including children from about three years old.",
       "Because she seats only five, this is the boat couples book for a quiet date or a **proposal**, and the one families choose when a big motor yacht feels like overkill for an afternoon on the water. No sailing experience is needed — the skipper handles the boat and is happy to explain what's going on if you ask. If the idea has you thinking about learning properly rather than just riding along, [our guide to learning to sail in India](/blog/learning-to-sail-in-india) is a reasonable next stop. Planning to pop the question instead? [Here is how we set up a proposal on a yacht](/blog/how-to-plan-a-proposal-on-a-yacht).",
-      "Pricing is for the whole boat, not per person, and the earliest slots are the best value — see the full slot pricing below. The 6–8pm sunset departure is the one most people ask for first, so if that's the plan, [read what actually makes a good sunset cruise](/blog/sunset-cruises-in-mumbai-guide) before you pick a date, since sunset time shifts by more than an hour across the year. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
+      "Pricing is for the whole boat, not per person — see the full slot pricing below. The 5–7pm prime slot is the one most people ask for first, so if that's the plan, [read what actually makes a good sunset cruise](/blog/sunset-cruises-in-mumbai-guide) before you pick a date, since sunset time shifts by more than an hour across the year. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
     ],
     specs: [
       { label: "Builder", value: "XS Marine" },
@@ -362,24 +362,22 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 3500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 3500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "5:00 PM", end: "7:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
-      "8:00 PM to 10:00 PM night slot, where available — ₹1,000 extra",
       "Cake on board — ₹950",
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 5 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 5 guests — not per person. The 5–7pm prime slot books out first. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does the 5 Pax Sailing Boat cost?",
-        a: "From ₹3,500 for the whole boat on a weekday morning slot, up to ₹4,500 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
+        a: "₹4,500 for the whole boat on the 7–9am, 9–11am or 2–4pm slot, and ₹6,000 for the 5–7pm prime slot. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
       },
       {
         q: "Do I need sailing experience?",
@@ -585,7 +583,7 @@ const allYachts: Yacht[] = [
       "If you've been searching for a 'yacht' in Mumbai and keep landing on large motor cruisers with a jacuzzi and a sound system, this is a different kind of booking. A sailboat like the XS 63 has no engine running while you sail — just wind against canvas and the hull moving through the water, with the skipper trimming sail rather than running a throttle. It's a quieter, more hands-on way to spend two hours on the harbour, and because there's no crew beyond a single skipper and none of a motor yacht's fuel or machinery, it costs meaningfully less than a crewed motor yacht carrying the same number of guests.",
       "You meet the crew at **Jetty No. 5**, directly across the road from the Taj Mahal Palace's main entrance at the Gateway of India — arrive fifteen minutes before your slot with a government photo ID. A motorboat carries you out to the sailboat at anchor, about fifteen minutes each way, so a two-hour booking works out to roughly ninety minutes of actual sailing. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring — light clothing, a cap and flat, non-slip shoes rather than heels, since this is an open sailing deck.",
       "Six seats is enough room for a family outing with grandparents and a child or two in the same booking, without moving up to the larger group size of [Tikla Queen](/fleet/tikla-queen-8-pax-sailing-boat-mumbai). No sailing ability is needed and life jackets are carried for every guest, including children. It's equally the boat couples book for a [proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a small birthday group, where the included decor and speaker mean the basics are already sorted — you only need to add a cake, flowers or champagne if you want them.",
-      "Pricing is ₹3,500 for the whole boat on either morning slot, and ₹4,500 for an afternoon or evening slot — not per person. See the full add-ons list below the pricing table if you'd like a cake, flowers or a celebratory fruit champagne on board. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
+      "Pricing is ₹4,500 for the whole boat on any of the 2-hour slots, and ₹6,000 for the 5–7pm prime slot — not per person. See the full add-ons list below the pricing table if you'd like a cake, flowers or a celebratory fruit champagne on board. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
     ],
     specs: [
       { label: "Builder", value: "XS Marine" },
@@ -596,11 +594,10 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 3500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 3500 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
       { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
+      { start: "5:00 PM", end: "7:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
     ],
     pricingExtras: [
       "Fruit Champagne (non-alcoholic sparkling) — ₹600",
@@ -609,11 +606,11 @@ const allYachts: Yacht[] = [
       "Cake, 500g — ₹600",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 6 guests — not per person. Includes basic on-board decor, juice packs, chips and a Bluetooth speaker. Morning slots are ₹3,500; afternoon and evening slots are both ₹4,500. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 6 guests — not per person. Includes basic on-board decor, juice packs, chips and a Bluetooth speaker. The 5–7pm prime slot books out first. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does the XS 63 (6-Seater) cost to charter?",
-        a: "₹3,500 for the whole boat on a morning slot (7–9am or 9–11am), and ₹4,500 for an afternoon (2–4pm) or evening (4–6pm or 6–8pm) slot. Prices are for the whole boat, not per person, and already include basic decor, juice packs, chips and a Bluetooth speaker.",
+        a: "₹4,500 for the whole boat on the 7–9am, 9–11am or 2–4pm slot, and ₹6,000 for the 5–7pm prime slot. Prices are for the whole boat, not per person, and already include basic decor, juice packs, chips and a Bluetooth speaker.",
       },
       {
         q: "What's the difference between this sailboat and a motor yacht?",
