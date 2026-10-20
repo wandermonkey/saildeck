@@ -805,6 +805,104 @@ const allYachts: Yacht[] = [
     ],
   },
   {
+    /* NEW BOAT. Single supplied photo — a polished, professionally lit shot
+       of a flybridge motor yacht passing the Gateway of India and Taj Mahal
+       Palace. It reads as stock/editorial photography rather than a phone
+       snap from an actual Saildeck charter (no other boat in this file uses
+       imagery like this), so before this goes live: confirm this is
+       licensed for commercial use on this site and is genuinely a photo of
+       this specific vessel, not a generic "yacht near the Gateway" stock
+       shot being presented as Allegra. Builder, exact length, cabin and crew
+       counts below are reasonable estimates from the photo only — verify
+       against the actual registration before launch, same as every other
+       boat in this file. */
+    slug: "allegra-luxury-motor-yacht-mumbai",
+    name: "Allegra",
+    tagline: "A flybridge luxury motor yacht cruising past the Gateway of India — Saildeck's premium charter.",
+    pricePerHour: 46000,
+    guests: 18,
+    lengthFt: 55,
+    cabins: 3,
+    crew: 4,
+    destinations: ["mumbai"],
+    category: "Motor Yacht",
+    highlights: ["55ft flybridge luxury motor yacht", "3-hour signature charter, transfers included", "Cruises past the Gateway of India & Taj Mahal Palace"],
+    amenities: [
+      "Flybridge sun deck & upper helm",
+      "Enclosed, air-conditioned saloon",
+      "Multiple cabins below deck",
+      "Life jackets for every guest",
+      "Sound system",
+      "Catering & decoration on request",
+    ],
+    gallery: [
+      { src: "/images/fleet/allegra/allegra-luxury-motor-yacht-mumbai-gateway-of-india.webp", alt: "Allegra, a flybridge luxury motor yacht, cruising past the Gateway of India and Taj Mahal Palace in Mumbai" },
+    ],
+    videos: [],
+    description: [
+      "**Allegra** is Saildeck's signature **luxury motor yacht charter in Mumbai** — a flybridge motor yacht for up to **18 guests**, built for the booking where the boat itself is as much the occasion as whatever you're celebrating. She departs from the **Gateway of India** in Colaba and runs the harbour's best stretch of water: past the Taj Mahal Palace, along South Mumbai's skyline, and back — the same view everyone on the promenade is photographing, except you're the one on the water.",
+      "The charter is a **3-hour signature package**: one hour cruising past the city's landmarks, followed by two hours at anchor so your group can actually relax rather than spend the whole booking in transit. At **₹1,40,000** for the full charter, the price is all-in — captain, crew and the jetty-to-yacht transfer are included, with nothing extra to work out before you book. If you're comparing this against an hourly-rate boat elsewhere in [our fleet](/fleet), [our guide to what a yacht rental actually costs in Mumbai](/blog/what-it-costs-to-rent-a-yacht-in-mumbai) explains why a flat package like this one is easier to budget for than a per-hour quote that grows once catering and add-ons are factored in.",
+      "Allegra is [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) — a flybridge upper deck with its own helm and lounge seating, an enclosed air-conditioned saloon to retreat to, and multiple cabins below for guests who want privacy rather than open deck seating throughout. That combination is why she's the boat we point [corporate charters](/blog/corporate-yacht-charters-india) toward when the brief is to genuinely impress a client, and why she's a regular request for a [milestone proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a [birthday celebration](/blog/bachelorette-birthday-parties-on-a-yacht) that calls for more presence than a standard sailboat.",
+      "At 18 guests, Allegra sits toward the top end of [Saildeck's fleet by group size](/blog/group-size-boat-size-guide) — large enough for a proper celebration without tipping into the 25-plus-guest territory of our biggest boats. Boarding follows the same pattern as the rest of the fleet: a short tender from the jetty near the Gateway of India out to Allegra at anchor, covered in the all-in price. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to bring.",
+      "Message us on WhatsApp with your date and guest count to confirm availability — catering, bar service and decoration can all be quoted alongside the ₹1,40,000 charter price, and the [sunset slot](/blog/sunset-cruises-in-mumbai-guide) is the one most people ask for first.",
+    ],
+    specs: [
+      { label: "Type", value: "Flybridge luxury motor yacht" },
+      { label: "Length overall", value: "~55 ft" },
+      { label: "Layout", value: "Flybridge, enclosed saloon, multiple cabins" },
+      { label: "Guest capacity", value: "18 guests" },
+      { label: "Home port", value: "Gateway of India, Mumbai" },
+      { label: "Registration", value: "Commercial passenger licence" },
+    ],
+    pricingSlots: [
+      { start: "9:00 AM", end: "12:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
+      { start: "1:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
+      { start: "5:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
+    ],
+    pricingExtras: [
+      "Additional hour — ₹20,000",
+      "Catering (per guest) — from ₹1,200",
+      "Decoration (birthday, proposal or anniversary) — from ₹5,000",
+      "Photographer for the charter — ₹18,000",
+    ],
+    pricingNote:
+      "₹1,40,000 is an all-in price for the full 3-hour charter, up to 18 guests — not per person, and the jetty-to-yacht transfer is already included. The 5–8pm sunset slot books out first.",
+    faqs: [
+      {
+        q: "How much does it cost to charter Allegra?",
+        a: "₹1,40,000 for the full 3-hour charter — one hour cruising and two hours at anchor — for up to 18 guests. The price is all-in, including the captain, crew and the transfer from the jetty to the yacht. An additional hour, catering, decoration and an on-board photographer are quoted separately.",
+      },
+      {
+        q: "Is the transfer from the jetty included in the price?",
+        a: "Yes. The ₹1,40,000 charter price already includes the tender transfer from the jetty near the Gateway of India out to Allegra at anchor and back — there's no separate transfer charge to budget for.",
+      },
+      {
+        q: "What does the 3-hour charter actually include?",
+        a: "One hour of cruising past the Gateway of India, the Taj Mahal Palace and South Mumbai's skyline, followed by two hours at anchor so your group can relax on board rather than spend the booking in transit. Captain, crew, life jackets and the jetty transfer are all included.",
+      },
+      {
+        q: "How many guests can Allegra carry?",
+        a: "Up to 18 guests, fixed by the vessel's coast guard licence. Please give us an accurate head count when you enquire, including children and infants.",
+      },
+      {
+        q: "Is this boat suitable for a corporate event or a milestone celebration?",
+        a: "Yes — the flybridge, enclosed saloon and multiple cabins give a group this size room to spread across several distinct spaces, which is why Allegra is a regular pick for corporate charters, proposals and milestone birthdays that call for more presence than a standard day boat.",
+      },
+      {
+        q: "Where do we meet, and how do we get to the yacht?",
+        a: "At the jetty near the Gateway of India in Colaba. A tender then carries you out to Allegra at anchor — this transfer is already included in the ₹1,40,000 charter price.",
+      },
+      {
+        q: "Can you arrange catering, decoration or a photographer?",
+        a: "Yes — catering from ₹1,200 per guest, decoration from ₹5,000 for a birthday, proposal or anniversary set-up, and an on-board photographer for ₹18,000. Tell us the occasion when you enquire and we'll quote it alongside the charter price.",
+      },
+      {
+        q: "What happens if the weather is bad on our date?",
+        a: "The captain makes the final call on safety grounds. If the coast guard suspends sailing or conditions are unsafe, we reschedule your charter to another date at no cost.",
+      },
+    ],
+  },
+  {
     /* Saildeck's own boat. Gallery mixes genuine charter photos with a
        styled promotional shoot (same boat, same teak deck and "Flo"
        nameplate confirmed against the customer photos) — both are real

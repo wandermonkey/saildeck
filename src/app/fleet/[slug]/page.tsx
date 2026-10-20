@@ -73,6 +73,17 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
     ? yacht.pricingSlots.reduce((min, s) => (s.amount < min.amount ? s : min))
     : null;
 
+  // Most boats run 2-hour slots, but a few (Allegra's 3-hour signature
+  // package) don't — read the real duration off the slot's own times rather
+  // than hardcoding "2 hr" everywhere.
+  const slotHours = cheapestSlot
+    ? Math.round(
+        (new Date(`2000/01/01 ${cheapestSlot.end}`).getTime() -
+          new Date(`2000/01/01 ${cheapestSlot.start}`).getTime()) /
+          3600000
+      )
+    : null;
+
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -164,7 +175,7 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
                     </>
                   )}
                 </div>
-                <Pill tone="teal">{cheapestSlot ? "2 hr slots" : "2 hr minimum"}</Pill>
+                <Pill tone="teal">{cheapestSlot ? `${slotHours} hr slots` : "2 hr minimum"}</Pill>
               </div>
 
               {cheapestSlot && (
