@@ -1027,11 +1027,18 @@ const allYachts: Yacht[] = [
     ],
   },
   {
-    /* Saildeck's own boat, named "Nauti by nature" (registration RJP-IV-00257).
-       This folder also contained photos of a completely different Hanse —
-       "Peace & Plenty" — and a set of Hanse manufacturer stock/catalog shots;
-       both were excluded, only genuine photos of this actual vessel are used,
-       unedited. Confirm exact registration before this goes live. */
+    /* Saildeck's own boat, "Nauti by Nature" (registration RJP-IV-00257,
+       confirmed on the hull across multiple photos). This folder also
+       contained several "Hanse Yachts 31" and "Hanse-325" files that are
+       manufacturer stock/brokerage catalog photos of different boats (one
+       even carries a visible "TheYachtMarket" watermark) — excluded.
+       The hero and one gallery shot are AI-generated (Gemini) images based
+       on a real sunset charter photo of this boat, used here at the
+       operator's explicit direction rather than a genuine photograph —
+       flagged so nobody mistakes them for real photography later. A third
+       Gemini variant was dropped: it mis-rendered the hull text as "Nauli
+       by Nature" with a garbled registration number. Every other photo
+       below is real, unedited operator photography. */
     slug: "hanse-33-sailing-yacht-mumbai",
     name: "Nauti by Nature",
     tagline: "A 33-foot Hanse sailing yacht for up to 12 guests, with a real cabin below.",
@@ -1052,16 +1059,33 @@ const allYachts: Yacht[] = [
       "Decoration on request",
     ],
     gallery: [
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-nauti-by-nature-under-sail.jpg", alt: "Nauti by Nature under sail with her name visible on the stern" },
-      { src: "/images/fleet/hanse-33/hanse-33-cruising-yacht-mumbai-side-profile.jpg", alt: "The Hanse 33's side profile at anchor with guests aboard" },
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-family-group-sailing.jpg", alt: "A large family group in life jackets seated along the deck under sail" },
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-saloon-pizza-party.jpg", alt: "Pizza and snacks laid out on the saloon table decorated with balloons" },
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-saloon-proposal-decor.jpg", alt: "A Marry Me proposal set-up in the saloon with heart balloons and roses" },
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-saloon-birthday-decor.jpg", alt: "A happy birthday balloon display in the saloon" },
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-forward-cabin-berth.jpg", alt: "The forward cabin with a made-up berth and towels" },
-      { src: "/images/fleet/hanse-33/hanse-33-sailing-yacht-mumbai-galley-passage.jpg", alt: "The galley and passage leading to the forward cabin" },
+      { src: "/images/fleet/hanse-33/hanse-33-nauti-by-nature-sunset-hero.webp", alt: "Nauti by Nature, a Hanse 33 sailing yacht in Mumbai, under sail at sunset with guests aboard" },
+      { src: "/images/fleet/hanse-33/hanse-33-nauti-by-nature-side-profile-registration.webp", alt: "Nauti by Nature at anchor, her name, Hanse logo and registration RJP-IV-00257 visible on the hull" },
+      { src: "/images/fleet/hanse-33/hanse-33-nauti-by-nature-sunset-skyline.webp", alt: "Nauti by Nature under sail at sunset with the Mumbai skyline and ships in the distance" },
+      { src: "/images/fleet/hanse-33/hanse-33-nauti-by-nature-under-sail-guests.webp", alt: "Nauti by Nature under full sail with guests in life jackets aboard" },
+      { src: "/images/fleet/hanse-33/hanse-33-nauti-by-nature-under-sail-group.webp", alt: "A group of guests in orange life jackets seated along the deck as Nauti by Nature sails" },
+      { src: "/images/fleet/hanse-33/hanse-33-saloon-rose-garland-proposal-1.webp", alt: "A white and red rose garland proposal set-up in the saloon with I Love You balloons" },
+      { src: "/images/fleet/hanse-33/hanse-33-saloon-rose-garland-proposal-2.webp", alt: "A close view of the saloon's rose garland and heart balloon proposal decor" },
+      { src: "/images/fleet/hanse-33/hanse-33-saloon-rose-garland-proposal-3.webp", alt: "The full saloon set up for a proposal, with a rose garland, balloons and cushioned bench seating" },
+      { src: "/images/fleet/hanse-33/hanse-33-saloon-marry-me-proposal-decor.webp", alt: "A Marry Me proposal set-up in the saloon with heart balloons, roses and a gift box" },
+      { src: "/images/fleet/hanse-33/hanse-33-saloon-birthday-balloons.webp", alt: "A happy birthday balloon display in the saloon with white balloons on the floor" },
+      { src: "/images/fleet/hanse-33/hanse-33-saloon-pizza-party.webp", alt: "Pizza and snacks laid out on the saloon table, decorated with red and silver balloons" },
+      { src: "/images/fleet/hanse-33/hanse-33-forward-cabin-berth.webp", alt: "The forward cabin with a made-up berth, seen through the saloon doorway" },
+      { src: "/images/fleet/hanse-33/hanse-33-galley-passage.webp", alt: "The galley with a two-basin sink and fridge, and the passage to the forward cabin" },
+      { src: "/images/fleet/hanse-33/hanse-33-head-bathroom.webp", alt: "The head, with a toilet, sink and shower space" },
     ],
-    videos: [],
+    videos: [
+      {
+        title: "On board Nauti by Nature — saloon decor for a celebration",
+        src: "/videos/hanse-33-saloon-decor-1.mp4",
+        poster: "/videos/hanse-33-saloon-decor-1-poster.jpg",
+      },
+      {
+        title: "A birthday set-up in the saloon",
+        src: "/videos/hanse-33-saloon-decor-2.mp4",
+        poster: "/videos/hanse-33-saloon-decor-2-poster.jpg",
+      },
+    ],
     description: [
       "**Nauti by Nature** is a 33-foot Hanse sailing yacht that carries up to **12 guests** from the **Gateway of India** in Colaba — one of the larger sailboats in the Saildeck fleet, and one of the few with a genuine forward cabin rather than a bare storage cuddy. Below deck there's a made-up berth, a galley and a saloon dining table that regularly gets set up for a celebration.",
       "This is the boat with the widest track record for on-board decoration in our fleet: we've turned her saloon into a [proposal](/blog/how-to-plan-a-proposal-on-a-yacht) set-up with roses and a Marry Me banner, a [birthday](/blog/bachelorette-birthday-parties-on-a-yacht) with balloons, and a casual pizza party for a group of friends. At 12 guests she also suits a [larger family charter](/blog/family-friendly-boating-mumbai-goa) with room to spread across the deck and the saloon.",
