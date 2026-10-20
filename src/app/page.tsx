@@ -95,7 +95,7 @@ const featuredSlugs: (string | null)[] = [
   "xs-63-6-seater-sailboat-charter-mumbai",
   "vari-44-motor-yacht-mumbai",
   "allegra-luxury-motor-yacht-mumbai",
-  null,
+  "hanse-33-sailing-yacht-mumbai",
   null,
 ];
 
