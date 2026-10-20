@@ -16,7 +16,7 @@ import {
   BoatIcon, RouteIcon, AnchorIcon, OccasionIcon, ClockIcon, WhatsAppIcon, MailIcon,
 } from "@/components/icons";
 
-import { yachts, inr } from "@/data/yachts";
+import { yachts, getYacht, inr } from "@/data/yachts";
 import { destinations } from "@/data/destinations";
 import { speedboatRoutes } from "@/data/speedboats";
 import { posts, formatPostDate } from "@/data/blog";
@@ -80,9 +80,28 @@ const services = [
   { href: "/about/marinas", title: "Marinas & jetties", blurb: "Where we berth, and consultancy for new waterfronts.", icon: <CalendarIcon className="h-6 w-6" /> },
 ];
 
+/**
+ * Explicit, hand-picked slugs for the homepage's featured grid — three rows
+ * of three. `null` is a deliberately empty slot (still occupies a grid cell,
+ * rendered as a placeholder) rather than auto-filling from `yachts`, so
+ * adding a new boat to the fleet never silently bumps it onto the homepage.
+ * Fill a `null` with a slug to feature that boat.
+ */
+const featuredSlugs: (string | null)[] = [
+  "princess-61-luxury-motor-yacht-mumbai",
+  "tara-sailing-catamaran-mumbai",
+  "5-pax-sailing-boat-charter-mumbai",
+  "tikla-queen-8-pax-sailing-boat-mumbai",
+  "xs-63-6-seater-sailboat-charter-mumbai",
+  "vari-44-motor-yacht-mumbai",
+  "allegra-luxury-motor-yacht-mumbai",
+  null,
+  null,
+];
+
 export default async function HomePage() {
   const reviews = await getReviews();
-  const featured = yachts.slice(0, 6);
+  const featured = featuredSlugs.map((slug) => (slug ? getYacht(slug) : null));
 
   return (
     <>
@@ -180,11 +199,24 @@ export default async function HomePage() {
           </Reveal>
 
           <div className="mt-11 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featured.map((y, i) => (
-              <Reveal key={y.slug} delay={(i % 3) * 80}>
-                <YachtCard yacht={y} priority={i < 3} />
-              </Reveal>
-            ))}
+            {featured.map((y, i) =>
+              y ? (
+                <Reveal key={y.slug} delay={(i % 3) * 80}>
+                  <YachtCard yacht={y} priority={i < 3} />
+                </Reveal>
+              ) : (
+                <div
+                  key={`featured-empty-${i}`}
+                  className="flex min-h-[22rem] flex-col items-center justify-center rounded-2xl border border-dashed border-line bg-surface p-6 text-center"
+                >
+                  <BoatIcon className="h-6 w-6 text-faint" />
+                  <p className="mt-3 text-sm font-medium text-muted">More boats coming soon</p>
+                  <Link href="/fleet" className="mt-2 text-sm font-medium text-crimson hover:underline">
+                    See the full fleet
+                  </Link>
+                </div>
+              )
+            )}
           </div>
 
           {/* These six are a sample, not the whole fleet — this is the button

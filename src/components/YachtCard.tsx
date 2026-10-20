@@ -13,6 +13,20 @@ import { ArrowIcon, UsersIcon, RulerIcon, BedIcon } from "./icons";
 export function YachtCard({ yacht, priority = false }: { yacht: Yacht; priority?: boolean }) {
   const cover = yacht.gallery[0];
 
+  // Most boats run 2-hour slots, but a few (e.g. Allegra's 3-hour signature
+  // package) don't — read the real duration off the cheapest slot's own
+  // times rather than hardcoding "2 hrs" for every boat.
+  const cheapestSlot = yacht.pricingSlots?.length
+    ? yacht.pricingSlots.reduce((min, s) => (s.amount < min.amount ? s : min))
+    : null;
+  const slotHours = cheapestSlot
+    ? Math.round(
+        (new Date(`2000/01/01 ${cheapestSlot.end}`).getTime() -
+          new Date(`2000/01/01 ${cheapestSlot.start}`).getTime()) /
+          3600000
+      )
+    : null;
+
   return (
     <article className="card card-hover group flex flex-col overflow-hidden">
       <Link href={`/fleet/${yacht.slug}`} className="relative block aspect-[4/3] overflow-hidden bg-surface" data-cta="yacht-card">
@@ -68,7 +82,7 @@ export function YachtCard({ yacht, priority = false }: { yacht: Yacht; priority?
                 <span className="font-display text-xl font-semibold text-navy">
                   {inr(Math.min(...yacht.pricingSlots.map((s) => s.amount)))}
                 </span>
-                <span className="text-xs text-muted"> / 2 hrs</span>
+                <span className="text-xs text-muted"> / {slotHours} hrs</span>
               </>
             ) : (
               <>
