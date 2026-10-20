@@ -805,54 +805,94 @@ const allYachts: Yacht[] = [
     ],
   },
   {
-    /* NEW BOAT. Single supplied photo — a polished, professionally lit shot
-       of a flybridge motor yacht passing the Gateway of India and Taj Mahal
-       Palace. It reads as stock/editorial photography rather than a phone
-       snap from an actual Saildeck charter (no other boat in this file uses
-       imagery like this), so before this goes live: confirm this is
-       licensed for commercial use on this site and is genuinely a photo of
-       this specific vessel, not a generic "yacht near the Gateway" stock
-       shot being presented as Allegra. Builder, exact length, cabin and crew
-       counts below are reasonable estimates from the photo only — verify
-       against the actual registration before launch, same as every other
-       boat in this file. */
+    /* Saildeck's own boat — a Ferretti 88, hull name "ALLEGRA" confirmed on
+       the stern across multiple photos, with registration MOR-IV-00642 and
+       port of registry London also visible. Real operator photography
+       throughout (not stock — confirmed by matching this folder against the
+       single placeholder photo used before this gallery was built out).
+       Two distinct saloon/interior styles appear across the set (a
+       wood-panelled cream-leather saloon and a blue-upholstered modern
+       refit with a wood floor) — both are genuine photos of this vessel,
+       most likely from before/after a reupholstering, not two boats.
+       40-guest day-charter capacity and "Ferretti 88"/"Ferretti 80" are
+       both attested in the source filenames/folder name — confirmed with
+       the operator as Ferretti 88. Cabin count (4) and crew are read off
+       the photos (one master double, one second double, two twin cabins) —
+       verify crew headcount against the actual crewing before this goes
+       live. */
     slug: "allegra-luxury-motor-yacht-mumbai",
     name: "Allegra",
-    tagline: "A flybridge luxury motor yacht cruising past the Gateway of India — Saildeck's premium charter.",
+    tagline: "A Ferretti 88 flybridge motor yacht cruising past the Gateway of India — Saildeck's largest charter yacht.",
     pricePerHour: 46000,
-    guests: 18,
-    lengthFt: 55,
-    cabins: 3,
-    crew: 4,
+    guests: 40,
+    lengthFt: 88,
+    cabins: 4,
+    crew: 5,
     destinations: ["mumbai"],
     category: "Motor Yacht",
-    highlights: ["55ft flybridge luxury motor yacht", "3-hour signature charter, transfers included", "Cruises past the Gateway of India & Taj Mahal Palace"],
+    highlights: ["Ferretti 88 flybridge motor yacht", "Saildeck's largest-capacity charter, up to 40 guests", "3-hour signature charter, transfers included"],
     amenities: [
-      "Flybridge sun deck & upper helm",
+      "Flybridge sun deck, wet bar & upper helm",
       "Enclosed, air-conditioned saloon",
-      "Multiple cabins below deck",
+      "4 cabins below deck",
+      "Full galley",
       "Life jackets for every guest",
-      "Sound system",
       "Catering & decoration on request",
     ],
     gallery: [
-      { src: "/images/fleet/allegra/allegra-luxury-motor-yacht-mumbai-gateway-of-india.webp", alt: "Allegra, a flybridge luxury motor yacht, cruising past the Gateway of India and Taj Mahal Palace in Mumbai" },
+      { src: "/images/fleet/allegra/allegra-hero-side-profile.webp", alt: "Allegra, a Ferretti 88 luxury motor yacht, underway off Mumbai with her name visible on the bow" },
+      { src: "/images/fleet/allegra/allegra-cruising-gateway-of-india.webp", alt: "Allegra cruising past the Gateway of India and Taj Mahal Palace in Mumbai" },
+      { src: "/images/fleet/allegra/allegra-stern-registration-sunset.webp", alt: "Allegra's stern at golden hour, showing her name, registration MOR-IV-00642 and home port London" },
+      { src: "/images/fleet/allegra/allegra-stern-registration-dusk.webp", alt: "Allegra at anchor off the Gateway of India at dusk, her name and registration visible on the stern" },
+      { src: "/images/fleet/allegra/allegra-bow-teak-deck.webp", alt: "The foredeck and teak side deck viewed from Allegra's bow rail" },
+      { src: "/images/fleet/allegra/allegra-bow-dusk.webp", alt: "Allegra's foredeck at dusk with the flybridge structure and mooring lines" },
+      { src: "/images/fleet/allegra/allegra-hull-detail-sunset.webp", alt: "Close-up of Allegra's hull and side deck at sunset, city skyline reflected in the window" },
+      { src: "/images/fleet/allegra/allegra-hull-detail-sunset-2.webp", alt: "A second close-up of Allegra's hull and side deck at sunset" },
+      { src: "/images/fleet/allegra/allegra-flybridge-bow-sunpad.webp", alt: "Flybridge bow sun pad seating with the Mumbai skyline behind" },
+      { src: "/images/fleet/allegra/allegra-flybridge-sunpad-dining.webp", alt: "Flybridge sun pad seating beside the dining table, under the bimini" },
+      { src: "/images/fleet/allegra/allegra-flybridge-aft-lounge-helm.webp", alt: "Flybridge aft lounge seating and dining table beside the upper helm" },
+      { src: "/images/fleet/allegra/allegra-flybridge-dark-bimini-lounge.webp", alt: "Flybridge lounge seating under the dark bimini, with the Mumbai skyline and harbour boats behind" },
+      { src: "/images/fleet/allegra/allegra-flybridge-dining-daylight.webp", alt: "Flybridge dining table and chairs in daylight, with moored boats on the harbour" },
+      { src: "/images/fleet/allegra/allegra-flybridge-view-gateway-of-india.webp", alt: "View from the flybridge sun pad over the crowded harbour and the Gateway of India at dusk" },
+      { src: "/images/fleet/allegra/allegra-flybridge-bar-seating.webp", alt: "Flybridge bar stools and bench seating, with the Mumbai skyline and harbour behind" },
+      { src: "/images/fleet/allegra/allegra-flybridge-wetbar-stocked.webp", alt: "The flybridge wet bar stocked with glassware and spirits at golden hour" },
+      { src: "/images/fleet/allegra/allegra-flybridge-wetbar-fridge.webp", alt: "Flybridge seating beside the built-in wet bar and fridge unit" },
+      { src: "/images/fleet/allegra/allegra-flybridge-storage-wetbar.webp", alt: "Flybridge storage lockers and wet bar unit, with harbour boats moored behind" },
+      { src: "/images/fleet/allegra/allegra-flybridge-staircase.webp", alt: "The teak-stepped staircase from the flybridge down to the cockpit" },
+      { src: "/images/fleet/allegra/allegra-aft-deck-stairs-dinette.webp", alt: "The aft deck seating and staircase to the flybridge, with an alfresco dining table" },
+      { src: "/images/fleet/allegra/allegra-aft-deck-alfresco-dining-1.webp", alt: "Alfresco dining on the aft deck under the canopy, with other yachts moored nearby" },
+      { src: "/images/fleet/allegra/allegra-aft-deck-alfresco-dining-2.webp", alt: "A second view of the aft deck's alfresco dining table and canopy" },
+      { src: "/images/fleet/allegra/allegra-lower-helm-dusk.webp", alt: "The lower helm station at dusk, with wood trim and the Mumbai skyline through the windows" },
+      { src: "/images/fleet/allegra/allegra-lower-helm-twilight.webp", alt: "The lower helm at twilight, with a shrine and radios on the dashboard" },
+      { src: "/images/fleet/allegra/allegra-lower-helm-daylight-1.webp", alt: "The lower helm in daylight, with a hazy view of the Mumbai skyline" },
+      { src: "/images/fleet/allegra/allegra-lower-helm-daylight-2.webp", alt: "The lower helm's wood dashboard and instruments, with the city skyline visible through the windscreen" },
+      { src: "/images/fleet/allegra/allegra-saloon-lounge-cream-leather.webp", alt: "The saloon's cream leather lounge seating and wood coffee table" },
+      { src: "/images/fleet/allegra/allegra-saloon-wood-panelled-lounge.webp", alt: "The wood-panelled saloon with cream leather seating and a mirrored ceiling medallion" },
+      { src: "/images/fleet/allegra/allegra-saloon-modern-refit-1.webp", alt: "The saloon's modern refit, with blue upholstery, wood flooring and a mirrored ceiling medallion" },
+      { src: "/images/fleet/allegra/allegra-saloon-modern-refit-2.webp", alt: "The saloon's modern blue lounge seating, looking toward the aft deck doors" },
+      { src: "/images/fleet/allegra/allegra-formal-dining-saloon.webp", alt: "The indoor formal dining table, seating eight, with the aft deck visible beyond" },
+      { src: "/images/fleet/allegra/allegra-galley-kitchen.webp", alt: "Allegra's galley, with a full-size fridge, sink and stovetop" },
+      { src: "/images/fleet/allegra/allegra-master-cabin-double-bed.webp", alt: "A wood-panelled double cabin with a made-up bed and built-in wardrobes" },
+      { src: "/images/fleet/allegra/allegra-second-cabin-double-bed.webp", alt: "A second wood-panelled cabin with a made-up double bed and portholes" },
+      { src: "/images/fleet/allegra/allegra-twin-cabin-pink.webp", alt: "A twin-bed cabin with pink bed linen and wood panelling" },
+      { src: "/images/fleet/allegra/allegra-twin-cabin-cream.webp", alt: "A second twin-bed cabin with cream bed linen and a porthole" },
     ],
     videos: [],
     description: [
-      "**Allegra** is Saildeck's signature **luxury motor yacht charter in Mumbai** — a flybridge motor yacht for up to **18 guests**, built for the booking where the boat itself is as much the occasion as whatever you're celebrating. She departs from the **Gateway of India** in Colaba and runs the harbour's best stretch of water: past the Taj Mahal Palace, along South Mumbai's skyline, and back — the same view everyone on the promenade is photographing, except you're the one on the water.",
+      "**Allegra** is a **Ferretti 88 luxury motor yacht** — Saildeck's largest charter yacht in Mumbai, licensed for up to **40 guests**, built for the booking where the boat itself is as much the occasion as whatever you're celebrating. She departs from the **Gateway of India** in Colaba and runs the harbour's best stretch of water: past the Taj Mahal Palace, along South Mumbai's skyline, and back — the same view everyone on the promenade is photographing, except you're the one on the water.",
       "The charter is a **3-hour signature package**: one hour cruising past the city's landmarks, followed by two hours at anchor so your group can actually relax rather than spend the whole booking in transit. At **₹1,40,000** for the full charter, the price is all-in — captain, crew and the jetty-to-yacht transfer are included, with nothing extra to work out before you book. If you're comparing this against an hourly-rate boat elsewhere in [our fleet](/fleet), [our guide to what a yacht rental actually costs in Mumbai](/blog/what-it-costs-to-rent-a-yacht-in-mumbai) explains why a flat package like this one is easier to budget for than a per-hour quote that grows once catering and add-ons are factored in.",
-      "Allegra is [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) — a flybridge upper deck with its own helm and lounge seating, an enclosed air-conditioned saloon to retreat to, and multiple cabins below for guests who want privacy rather than open deck seating throughout. That combination is why she's the boat we point [corporate charters](/blog/corporate-yacht-charters-india) toward when the brief is to genuinely impress a client, and why she's a regular request for a [milestone proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a [birthday celebration](/blog/bachelorette-birthday-parties-on-a-yacht) that calls for more presence than a standard sailboat.",
-      "At 18 guests, Allegra sits toward the top end of [Saildeck's fleet by group size](/blog/group-size-boat-size-guide) — large enough for a proper celebration without tipping into the 25-plus-guest territory of our biggest boats. Boarding follows the same pattern as the rest of the fleet: a short tender from the jetty near the Gateway of India out to Allegra at anchor, covered in the all-in price. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to bring.",
+      "Allegra is [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) — a flybridge upper deck with its own helm, lounge seating and a stocked wet bar, an enclosed air-conditioned saloon to retreat to, and **four cabins** below for guests who want privacy rather than open deck seating throughout. That combination is why she's the boat we point [corporate charters](/blog/corporate-yacht-charters-india) toward when the brief is to genuinely impress a client, and why she's a regular request for a [milestone proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a [birthday celebration](/blog/bachelorette-birthday-parties-on-a-yacht) that calls for more presence than a standard sailboat.",
+      "At 40 guests, Allegra is the single largest-capacity boat in [Saildeck's fleet](/blog/group-size-boat-size-guide) — the one to book when a celebration has genuinely outgrown every other option, from a large corporate off-site to a wedding-sized family gathering. Boarding follows the same pattern as the rest of the fleet: a short tender from the jetty near the Gateway of India out to Allegra at anchor, covered in the all-in price. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to bring.",
       "Message us on WhatsApp with your date and guest count to confirm availability — catering, bar service and decoration can all be quoted alongside the ₹1,40,000 charter price, and the [sunset slot](/blog/sunset-cruises-in-mumbai-guide) is the one most people ask for first.",
     ],
     specs: [
-      { label: "Type", value: "Flybridge luxury motor yacht" },
-      { label: "Length overall", value: "~55 ft" },
-      { label: "Layout", value: "Flybridge, enclosed saloon, multiple cabins" },
-      { label: "Guest capacity", value: "18 guests" },
+      { label: "Builder", value: "Ferretti" },
+      { label: "Model", value: "Ferretti 88" },
+      { label: "Length overall", value: "88 ft" },
+      { label: "Layout", value: "Flybridge with wet bar, enclosed saloon, 4 cabins" },
+      { label: "Guest capacity", value: "40 guests" },
       { label: "Home port", value: "Gateway of India, Mumbai" },
-      { label: "Registration", value: "Commercial passenger licence" },
+      { label: "Registration", value: "MOR-IV-00642" },
     ],
     pricingSlots: [
       { start: "9:00 AM", end: "12:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
@@ -870,7 +910,7 @@ const allYachts: Yacht[] = [
     faqs: [
       {
         q: "How much does it cost to charter Allegra?",
-        a: "₹1,40,000 for the full 3-hour charter — one hour cruising and two hours at anchor — for up to 18 guests. The price is all-in, including the captain, crew and the transfer from the jetty to the yacht. An additional hour, catering, decoration and an on-board photographer are quoted separately.",
+        a: "₹1,40,000 for the full 3-hour charter — one hour cruising and two hours at anchor — for up to 40 guests. The price is all-in, including the captain, crew and the transfer from the jetty to the yacht. An additional hour, catering, decoration and an on-board photographer are quoted separately.",
       },
       {
         q: "Is the transfer from the jetty included in the price?",
@@ -882,11 +922,11 @@ const allYachts: Yacht[] = [
       },
       {
         q: "How many guests can Allegra carry?",
-        a: "Up to 18 guests, fixed by the vessel's coast guard licence. Please give us an accurate head count when you enquire, including children and infants.",
+        a: "Up to 40 guests, fixed by the vessel's coast guard licence — the largest capacity in the Saildeck fleet. Please give us an accurate head count when you enquire, including children and infants.",
       },
       {
         q: "Is this boat suitable for a corporate event or a milestone celebration?",
-        a: "Yes — the flybridge, enclosed saloon and multiple cabins give a group this size room to spread across several distinct spaces, which is why Allegra is a regular pick for corporate charters, proposals and milestone birthdays that call for more presence than a standard day boat.",
+        a: "Yes — the flybridge with its own wet bar, the enclosed saloon and four cabins below give a large group room to spread across several distinct spaces, which is why Allegra is Saildeck's go-to boat for corporate charters, large celebrations and milestone events that have outgrown a smaller boat.",
       },
       {
         q: "Where do we meet, and how do we get to the yacht?",
