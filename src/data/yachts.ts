@@ -860,8 +860,8 @@ const allYachts: Yacht[] = [
       { start: "5:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
     ],
     pricingExtras: [
-      "Additional hour — ₹20,000",
-      "Catering (per guest) — from ₹1,200",
+      "Additional hour — ₹40,000",
+      "Catering (per guest) — from ₹5,000",
       "Decoration (birthday, proposal or anniversary) — from ₹5,000",
       "Photographer for the charter — ₹18,000",
     ],
@@ -894,7 +894,7 @@ const allYachts: Yacht[] = [
       },
       {
         q: "Can you arrange catering, decoration or a photographer?",
-        a: "Yes — catering from ₹1,200 per guest, decoration from ₹5,000 for a birthday, proposal or anniversary set-up, and an on-board photographer for ₹18,000. Tell us the occasion when you enquire and we'll quote it alongside the charter price.",
+        a: "Yes — catering from ₹5,000 per guest, decoration from ₹5,000 for a birthday, proposal or anniversary set-up, and an on-board photographer for ₹18,000. Tell us the occasion when you enquire and we'll quote it alongside the charter price.",
       },
       {
         q: "What happens if the weather is bad on our date?",
