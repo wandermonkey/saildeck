@@ -1100,11 +1100,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 12000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 12000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1113,11 +1113,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 12 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 12 guests — not per person. Morning and afternoon slots are ₹8,000; the 4–8pm slots are ₹12,000. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Nauti by Nature?",
-        a: "From ₹6,000 for the whole boat on a weekday morning slot, up to ₹7,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹8,000 for the whole boat on the 7–9am, 9–11am or 2–4pm slot, and ₹12,000 for the 4–6pm or 6–8pm slot. Weekends and public holidays run ₹500 higher across all slots.",
       },
       ...standardFaqs("Nauti by Nature", 12),
       {
