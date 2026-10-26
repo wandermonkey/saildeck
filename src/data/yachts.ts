@@ -2068,6 +2068,23 @@ export const yachts: Yacht[] = [...allYachts].sort(
 );
 
 export const getYacht = (slug: string) => yachts.find((y) => y.slug === slug);
+
+/**
+ * What every charter includes at no extra cost, shown just above the
+ * add-ons box on the pricing table. Standard across the whole fleet —
+ * computed here rather than repeated on each boat so the policy only needs
+ * to change in one place. The decor line varies by boat type: motor yachts
+ * and catamarans have an enclosed saloon suited to a flower arrangement,
+ * while sailing yachts' open bow is where we actually hang frills — matches
+ * what's in the real photos across the fleet, not an arbitrary split.
+ */
+export const standardInclusions = (yacht: Yacht) => [
+  "Mineral water",
+  yacht.category === "Sailing Yacht"
+    ? "Basic decor — occasion banner and colour frills at the bow"
+    : "Basic decor — occasion banner and artificial flowers",
+  "Ice with ice box",
+];
 export const featuredYachts = yachts.filter((y) => y.featured);
 export const yachtsInDestination = (d: DestinationSlug) =>
   yachts.filter((y) => y.destinations.includes(d));

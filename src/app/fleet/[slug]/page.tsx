@@ -19,7 +19,7 @@ import {
   UsersIcon, RulerIcon, BedIcon, AnchorIcon, PinIcon, CreditCardIcon,
 } from "@/components/icons";
 
-import { yachts, getYacht, inr } from "@/data/yachts";
+import { yachts, getYacht, inr, standardInclusions } from "@/data/yachts";
 import { destinations } from "@/data/destinations";
 import { buildMetadata, breadcrumbSchema, faqSchema, aggregateRatingSchema } from "@/lib/seo";
 import { site, whatsappLink, telLink } from "@/lib/site";
@@ -300,6 +300,7 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
                 <h3 className="mt-10 font-display text-xl">Pricing &amp; slots</h3>
                 <PricingTable
                   slots={yacht.pricingSlots}
+                  inclusions={standardInclusions(yacht)}
                   extras={yacht.pricingExtras}
                   note={yacht.pricingNote}
                 />

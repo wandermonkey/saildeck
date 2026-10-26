@@ -16,10 +16,12 @@ import { inr } from "@/data/yachts";
  */
 export function PricingTable({
   slots,
+  inclusions,
   extras,
   note,
 }: {
   slots: PricingSlot[];
+  inclusions?: string[];
   extras?: string[];
   note?: string;
 }) {
@@ -41,6 +43,20 @@ export function PricingTable({
           </li>
         ))}
       </ul>
+
+      {inclusions && inclusions.length > 0 && (
+        <div className="mt-5 rounded-xl border border-line bg-teal-soft/40 p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-teal">Inclusions</p>
+          <ul className="mt-2.5 space-y-2 text-sm font-medium text-navy">
+            {inclusions.map((x) => (
+              <li key={x} className="flex gap-2">
+                <span className="mt-0.5 text-teal">●</span>
+                <span>{x}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {extras && extras.length > 0 && (
         <div className="mt-5 rounded-xl border border-line bg-surface p-4">
