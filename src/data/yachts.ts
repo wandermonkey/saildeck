@@ -182,12 +182,12 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
       { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
-      { start: "5:00 PM", end: "7:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 60000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 55000 },
+      { start: "5:00 PM", end: "7:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
     ],
     pricingExtras: [
       "Additional hour — ₹20,000",
@@ -199,7 +199,7 @@ const allYachts: Yacht[] = [
     faqs: [
       {
         q: "How much does it cost to charter the Princess 61 in Mumbai?",
-        a: "Two-hour slots run from ₹30,000 to ₹60,000 depending on the time of day, with sunset slots priced highest. See the full pricing table above for every departure time. An additional hour is ₹20,000, and overnight anchorage, a Mandwa run and on-board photoshoots are all quoted separately. Message us with your date and group size to confirm the slot.",
+        a: "₹45,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. An additional hour is ₹20,000, and overnight anchorage, a Mandwa run and on-board photoshoots are all quoted separately. Message us with your date and group size to confirm the slot.",
       },
       {
         q: "Where does the Princess 61 depart from?",
