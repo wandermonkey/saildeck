@@ -465,11 +465,11 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -478,11 +478,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 8 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 8 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does Tikla Queen cost to charter?",
-        a: "From ₹5,000 for the whole boat on a weekday morning slot, up to ₹6,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
+        a: "₹25,000 for the whole boat on any slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       {
         q: "How is Tikla Queen different from the smaller 5 Pax Sailing Boat?",
