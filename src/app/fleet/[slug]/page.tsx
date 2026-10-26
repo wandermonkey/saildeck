@@ -180,7 +180,7 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
 
               {cheapestSlot && (
                 <a href="#pricing" className="mt-1 inline-block text-xs font-medium text-crimson hover:underline">
-                  See full slot pricing ↓
+                  See Timings and Slot Options ↓
                 </a>
               )}
 
@@ -297,7 +297,7 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
 
             {yacht.pricingSlots && yacht.pricingSlots.length > 0 && (
               <div id="pricing" className="scroll-mt-28">
-                <h3 className="mt-10 font-display text-xl">Pricing &amp; slots</h3>
+                <h3 className="mt-10 font-display text-xl">Slots and Timings</h3>
                 <PricingTable
                   slots={yacht.pricingSlots}
                   inclusions={standardInclusions(yacht)}

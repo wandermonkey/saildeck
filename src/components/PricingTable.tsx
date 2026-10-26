@@ -1,18 +1,17 @@
 import type { PricingSlot } from "@/data/yachts";
-import { inr } from "@/data/yachts";
 
 /**
- * Charter time-slot pricing list.
+ * Charter time-slot list ("Slots and Timings").
  *
- * Boats are often priced by departure slot rather than a flat hourly rate
- * once catering, tide and sunset timing are factored in — this renders that
- * schedule exactly as the operator supplies it, plus optional add-on charges
- * and a small-print note (e.g. permission requirements for an overnight sail).
+ * Deliberately shows only departure windows and what each slot covers, not
+ * a per-slot price — the single headline price lives in the sticky booking
+ * card instead, so there's one number per boat rather than a price next to
+ * every row.
  *
  * This used to be an HTML <table>, then a boxed card list — both still read
- * as "a table" on a phone. Plain text lines (time range + price on one line,
- * the sailing/anchorage detail underneath) have no minimum width and no
- * columns to crop, so they reflow naturally at every screen size.
+ * as "a table" on a phone. Plain text lines (time range, then the
+ * sailing/anchorage detail underneath) have no minimum width and no columns
+ * to crop, so they reflow naturally at every screen size.
  */
 export function PricingTable({
   slots,
@@ -33,8 +32,7 @@ export function PricingTable({
         {slots.map((s, i) => (
           <li key={i} className="py-3">
             <p className="font-medium text-navy">
-              {s.start} – {s.end} <span className="text-faint">–</span>{" "}
-              <span className="font-display font-semibold text-crimson">{inr(s.amount)}</span>
+              {s.start} – {s.end}
             </p>
             <p className="mt-0.5 text-muted">
               {s.sailing}
