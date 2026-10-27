@@ -706,9 +706,9 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
       { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
       { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
     ],
@@ -722,7 +722,7 @@ const allYachts: Yacht[] = [
     faqs: [
       {
         q: "How much does it cost to charter Vari 44?",
-        a: "Two-hour slots run from ₹22,000 to ₹25,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and catering are all quoted separately.",
+        a: "₹25,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. An additional hour, overnight anchorage and catering are all quoted separately.",
       },
       ...standardFaqs("Vari 44", 18),
       {
