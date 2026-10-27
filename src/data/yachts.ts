@@ -465,11 +465,11 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 25000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -482,7 +482,7 @@ const allYachts: Yacht[] = [
     faqs: [
       {
         q: "How much does Tikla Queen cost to charter?",
-        a: "₹25,000 for the whole boat on any slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
+        a: "₹8,000 for the whole boat on any slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       {
         q: "How is Tikla Queen different from the smaller 5 Pax Sailing Boat?",
