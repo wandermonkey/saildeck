@@ -264,12 +264,12 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 10000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 10000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
       { start: "5:00 PM", end: "7:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
     ],
     pricingExtras: [
       "Additional hour — ₹13,000",
@@ -277,11 +277,11 @@ const allYachts: Yacht[] = [
       "Gateway of India to Mandwa, return journey — ₹35,000",
       "Photoshoot on board (per hour) — ₹16,000",
     ],
-    pricingNote: "Special permissions are required for overnight sailing.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight sailing.",
     faqs: [
       {
         q: "How much does it cost to charter Tara?",
-        a: "Two-hour slots run from ₹10,000 to ₹25,000 depending on the time of day, with the 5–7pm sunset slot priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
+        a: "₹25,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
       },
       {
         q: "How many guests can Tara carry?",
@@ -362,10 +362,10 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "5:00 PM", end: "7:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
+      { start: "5:00 PM", end: "7:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -373,11 +373,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 5 guests — not per person. The 5–7pm prime slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 5 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does the 5 Pax Sailing Boat cost?",
-        a: "₹4,500 for the whole boat on the 7–9am, 9–11am or 2–4pm slot, and ₹6,000 for the 5–7pm prime slot. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
+        a: "₹5,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       {
         q: "Do I need sailing experience?",
@@ -583,7 +583,7 @@ const allYachts: Yacht[] = [
       "If you've been searching for a 'yacht' in Mumbai and keep landing on large motor cruisers with a jacuzzi and a sound system, this is a different kind of booking. A sailboat like the XS 63 has no engine running while you sail — just wind against canvas and the hull moving through the water, with the skipper trimming sail rather than running a throttle. It's a quieter, more hands-on way to spend two hours on the harbour, and because there's no crew beyond a single skipper and none of a motor yacht's fuel or machinery, it costs meaningfully less than a crewed motor yacht carrying the same number of guests.",
       "You meet the crew at **Jetty No. 5**, directly across the road from the Taj Mahal Palace's main entrance at the Gateway of India — arrive fifteen minutes before your slot with a government photo ID. A motorboat carries you out to the sailboat at anchor, about fifteen minutes each way, so a two-hour booking works out to roughly ninety minutes of actual sailing. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to wear and bring — light clothing, a cap and flat, non-slip shoes rather than heels, since this is an open sailing deck.",
       "Six seats is enough room for a family outing with grandparents and a child or two in the same booking, without moving up to the larger group size of [Tikla Queen](/fleet/tikla-queen-8-pax-sailing-boat-mumbai). No sailing ability is needed and life jackets are carried for every guest, including children. It's equally the boat couples book for a [proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a small birthday group, where the included decor and speaker mean the basics are already sorted — you only need to add a cake, flowers or champagne if you want them.",
-      "Pricing is ₹4,500 for the whole boat on any of the 2-hour slots, and ₹6,000 for the 5–7pm prime slot — not per person. See the full add-ons list below the pricing table if you'd like a cake, flowers or a celebratory fruit champagne on board. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
+      "Pricing is ₹5,000 for the whole boat on any 2-hour slot — not per person. See the full add-ons list below the pricing table if you'd like a cake, flowers or a celebratory fruit champagne on board. Message us on WhatsApp with your date and head count for a firm price and the day's exact reporting time.",
     ],
     specs: [
       { label: "Builder", value: "XS Marine" },
@@ -594,10 +594,10 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "5:00 PM", end: "7:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
+      { start: "5:00 PM", end: "7:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
     ],
     pricingExtras: [
       "Fruit Champagne (non-alcoholic sparkling) — ₹600",
@@ -606,11 +606,11 @@ const allYachts: Yacht[] = [
       "Cake, 500g — ₹600",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 6 guests — not per person. Includes basic on-board decor, juice packs, chips and a Bluetooth speaker. The 5–7pm prime slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 6 guests — not per person. Same price on every slot. Includes basic on-board decor, juice packs, chips and a Bluetooth speaker. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does the XS 63 (6-Seater) cost to charter?",
-        a: "₹4,500 for the whole boat on the 7–9am, 9–11am or 2–4pm slot, and ₹6,000 for the 5–7pm prime slot. Prices are for the whole boat, not per person, and already include basic decor, juice packs, chips and a Bluetooth speaker.",
+        a: "₹5,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Prices are for the whole boat, not per person, and already include basic decor, juice packs, chips and a Bluetooth speaker.",
       },
       {
         q: "What's the difference between this sailboat and a motor yacht?",
@@ -778,11 +778,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -791,11 +791,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 10 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 10 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does Feeling Nauti cost to charter?",
-        a: "From ₹5,500 for the whole boat on a weekday morning slot, up to ₹6,500 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹8,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("Feeling Nauti", 10),
       {
@@ -1000,11 +1000,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1013,11 +1013,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 8 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 8 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Flo?",
-        a: "From ₹5,000 for the whole boat on a weekday morning slot, up to ₹6,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹8,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("Flo", 8),
       {
@@ -1100,11 +1100,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 12000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 12000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 15000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 15000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 15000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 15000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 15000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1113,11 +1113,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 12 guests — not per person. Morning and afternoon slots are ₹8,000; the 4–8pm slots are ₹12,000. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 12 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Nauti by Nature?",
-        a: "₹8,000 for the whole boat on the 7–9am, 9–11am or 2–4pm slot, and ₹12,000 for the 4–6pm or 6–8pm slot. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹15,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("Nauti by Nature", 12),
       {
@@ -1173,11 +1173,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1186,11 +1186,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 7 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 7 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Playboy?",
-        a: "From ₹4,500 for the whole boat on a weekday morning slot, up to ₹5,500 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹7,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("Playboy", 7),
       {
@@ -1317,11 +1317,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 34000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 38000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 38000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 75000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 75000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 75000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 75000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 75000 },
     ],
     pricingExtras: [
       "Additional hour — ₹18,000",
@@ -1329,11 +1329,11 @@ const allYachts: Yacht[] = [
       "Gateway of India to Mandwa, return journey — ₹45,000",
       "Catering (per guest) — from ₹800",
     ],
-    pricingNote: "Special permissions are required for overnight sailing.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight sailing.",
     faqs: [
       {
         q: "How much does it cost to charter the Lagoon 54?",
-        a: "Two-hour slots run from ₹30,000 to ₹38,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and catering are all quoted separately.",
+        a: "₹75,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, overnight anchorage and catering are all quoted separately.",
       },
       ...standardFaqs("Lagoon 54", 35),
       {
@@ -1388,11 +1388,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1401,11 +1401,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 10 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 10 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter MAC 30?",
-        a: "From ₹5,500 for the whole boat on a weekday morning slot, up to ₹6,500 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹8,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("MAC 30", 10),
       {
@@ -1461,11 +1461,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 22000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 22000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 22000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 22000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 22000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1474,11 +1474,11 @@ const allYachts: Yacht[] = [
       "Catering (per guest) — from ₹800",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 12 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 12 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Nava?",
-        a: "From ₹7,000 for the whole boat on a weekday morning slot, up to ₹8,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹22,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("Nava", 12),
       {
@@ -1603,11 +1603,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 4500 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 5500 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 8000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1616,11 +1616,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 7 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 7 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Taanti?",
-        a: "From ₹4,500 for the whole boat on a weekday morning slot, up to ₹5,500 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots.",
+        a: "₹8,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       ...standardFaqs("Taanti", 7),
       {
@@ -1750,11 +1750,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 17000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 20000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 30000 },
     ],
     pricingExtras: [
       "Additional hour — ₹9,500",
@@ -1762,11 +1762,11 @@ const allYachts: Yacht[] = [
       "Gateway of India to Mandwa, return journey — ₹36,000",
       "Catering (per guest) — from ₹800",
     ],
-    pricingNote: "Special permissions are required for overnight sailing.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight sailing.",
     faqs: [
       {
         q: "How much does it cost to charter Blue Whale?",
-        a: "Two-hour slots run from ₹15,000 to ₹20,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and catering are all quoted separately.",
+        a: "₹30,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, overnight anchorage and catering are all quoted separately.",
       },
       ...standardFaqs("Blue Whale", 18),
       {
@@ -1826,11 +1826,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 17000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 17000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 19000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 45000 },
     ],
     pricingExtras: [
       "Additional hour — ₹10,000",
@@ -1838,11 +1838,11 @@ const allYachts: Yacht[] = [
       "Gateway of India to Mandwa, return journey — ₹40,000",
       "Catering (per guest) — from ₹900",
     ],
-    pricingNote: "Special permissions are required for overnight sailing.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight sailing.",
     faqs: [
       {
         q: "How much does it cost to charter L3?",
-        a: "Two-hour slots run from ₹17,000 to ₹22,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and catering are all quoted separately.",
+        a: "₹45,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, overnight anchorage and catering are all quoted separately.",
       },
       ...standardFaqs("L3", 14),
       {
@@ -1914,11 +1914,11 @@ const allYachts: Yacht[] = [
       { label: "Home port", value: "Gateway of India, Mumbai" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 6500 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 7000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 10000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 10000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 10000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 10000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1.5 hr private sailing", anchorage: "30 min transfer, both ways", amount: 10000 },
     ],
     pricingExtras: [
       "Weekend and public holiday slots — ₹500 extra per booking",
@@ -1927,11 +1927,11 @@ const allYachts: Yacht[] = [
       "Flower bouquet on board — ₹850",
     ],
     pricingNote:
-      "Prices are for the whole boat, up to 7 guests — not per person. Morning slots are the best value; the 6–8pm sunset slot books out first. Alcohol is not permitted on board this vessel.",
+      "Prices are for the whole boat, up to 7 guests — not per person. Same price on every slot. Alcohol is not permitted on board this vessel.",
     faqs: [
       {
         q: "How much does it cost to charter Tantallon?",
-        a: "From ₹6,000 for the whole boat on a weekday morning slot, up to ₹7,000 for the 6–8pm sunset departure. Weekends and public holidays run ₹500 higher across all slots. See the full pricing above for every departure time.",
+        a: "₹10,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day. Weekends and public holidays run ₹500 higher.",
       },
       {
         q: "What makes Tantallon different from your other sailboats?",
