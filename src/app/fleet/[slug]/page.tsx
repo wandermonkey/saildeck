@@ -13,13 +13,14 @@ import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { Faq } from "@/components/Faq";
+import { BookingWidget } from "@/components/booking/BookingWidget";
 import { SectionTitle, Pill } from "@/components/ui";
 import {
   CheckIcon, ArrowIcon, WhatsAppIcon, PhoneIcon, StarIcon,
   UsersIcon, RulerIcon, BedIcon, AnchorIcon, PinIcon, CreditCardIcon,
 } from "@/components/icons";
 
-import { yachts, getYacht, inr, standardInclusions } from "@/data/yachts";
+import { yachts, getYacht, inr, standardInclusions, basePrice } from "@/data/yachts";
 import { destinations } from "@/data/destinations";
 import { buildMetadata, breadcrumbSchema, faqSchema, aggregateRatingSchema } from "@/lib/seo";
 import { site, whatsappLink, telLink } from "@/lib/site";
@@ -188,6 +189,8 @@ export default async function YachtPage({ params }: { params: Promise<{ slug: st
                 Includes captain, crew, fuel for the standard route and life jackets for
                 every guest.
               </p>
+
+              <BookingWidget yachtSlug={yacht.slug} yachtName={yacht.name} basePrice={basePrice(yacht)} />
 
               <dl className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-5">
                 {specs.slice(0, 4).map((s) => (

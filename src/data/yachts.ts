@@ -2087,6 +2087,16 @@ export const standardInclusions = (yacht: Yacht) => [
     : "Basic decor — occasion banner and artificial flowers",
   "Ice with ice box",
 ];
+/** The single price the booking system charges for a standard 2-hour slot on
+ *  this boat — the cheapest of its listed `pricingSlots`, same number the
+ *  "From ₹X" price on `YachtCard` and the fleet page already show. Boats
+ *  with one flat price just return that price; this only matters for any
+ *  boat that still has tiered pricingSlots. */
+export const basePrice = (yacht: Yacht): number =>
+  yacht.pricingSlots?.length
+    ? Math.min(...yacht.pricingSlots.map((s) => s.amount))
+    : yacht.pricePerHour * 2;
+
 export const featuredYachts = yachts.filter((y) => y.featured);
 export const yachtsInDestination = (d: DestinationSlug) =>
   yachts.filter((y) => y.destinations.includes(d));

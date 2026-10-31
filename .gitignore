@@ -6,6 +6,10 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 
+# Local dev fallback database for the booking system (Turso/libSQL). Real
+# deployments use TURSO_DATABASE_URL instead — see .env.example.
+.data/
+
 # Raw source photos/video shared for the fleet listings. The processed,
 # web-ready versions actually used by the site live in /public and are
 # tracked normally — this folder is just the originals, and at ~20MB of

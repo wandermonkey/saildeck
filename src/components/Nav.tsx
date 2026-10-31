@@ -6,10 +6,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { site, telLink, mailLink } from "@/lib/site";
 import { headerNav, type NavNode } from "@/data/navigation";
-import { PhoneIcon, MailIcon, ChevronDown, WhatsAppIcon } from "./icons";
+import { PhoneIcon, MailIcon, ChevronDown, WhatsAppIcon, CartIcon } from "./icons";
 import { whatsappLink } from "@/lib/site";
+import { useCart } from "./booking/CartProvider";
 
 export function Nav() {
+  const { items } = useCart();
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -163,6 +165,20 @@ export function Nav() {
           </ul>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/cart"
+              aria-label={`Cart${items.length ? `, ${items.length} item${items.length === 1 ? "" : "s"}` : ""}`}
+              data-cta="nav-cart"
+              className="relative grid h-10 w-10 place-items-center rounded-full border border-line text-navy transition-colors hover:border-crimson hover:text-crimson"
+            >
+              <CartIcon className="h-[18px] w-[18px]" />
+              {items.length > 0 && (
+                <span className="absolute -right-1 -top-1 grid h-5 w-5 place-items-center rounded-full bg-crimson text-[10px] font-semibold text-white">
+                  {items.length}
+                </span>
+              )}
+            </Link>
+
             {/* Doubles as the Contact link, which is why Contact is flagged
                 hideInHeader — two routes to the same page wastes menu space. */}
             <Link

@@ -6,6 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { JsonLd } from "@/components/JsonLd";
+import { CartProvider } from "@/components/booking/CartProvider";
 import { localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -75,10 +76,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="antialiased">
         <JsonLd data={[organizationSchema(), websiteSchema(), localBusinessSchema()]} />
-        <Nav />
-        <main id="main">{children}</main>
-        <Footer />
-        <WhatsAppFab />
+        <CartProvider>
+          <Nav />
+          <main id="main">{children}</main>
+          <Footer />
+          <WhatsAppFab />
+        </CartProvider>
       </body>
     </html>
   );

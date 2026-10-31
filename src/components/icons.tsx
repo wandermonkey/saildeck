@@ -45,6 +45,14 @@ export const CreditCardIcon = ({ className = "h-4 w-4" }: P) => (
   </svg>
 );
 
+export const CartIcon = ({ className = "h-5 w-5" }: P) => (
+  <svg {...stroke} className={className}>
+    <circle cx="9" cy="20" r="1.5" />
+    <circle cx="18" cy="20" r="1.5" />
+    <path d="M3 4h2l2.4 12.4a1.5 1.5 0 0 0 1.5 1.1h8.2a1.5 1.5 0 0 0 1.5-1.2L20 8H6" />
+  </svg>
+);
+
 export const MailIcon = ({ className = "h-4 w-4" }: P) => (
   <svg {...stroke} className={className}>
     <rect x="2" y="4" width="20" height="16" rx="2" />
