@@ -1,5 +1,5 @@
 import { listAdminUsers } from "@/lib/admin/store";
-import { removeAdminUser } from "../actions";
+import { removeAdminUser } from "../../actions";
 import { AddAdminForm } from "./AddAdminForm";
 
 export const dynamic = "force-dynamic";

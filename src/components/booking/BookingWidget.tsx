@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ALL_SLOTS, slotPrice } from "@/lib/booking/slots";
+import { todayLocal } from "@/lib/booking/dates";
 import { inr } from "@/data/yachts";
 import { useCart } from "./CartProvider";
 
@@ -28,7 +29,7 @@ export function BookingWidget({
   const [loading, setLoading] = useState(false);
   const [added, setAdded] = useState(false);
 
-  const todayStr = useMemo(() => new Date().toISOString().slice(0, 10), []);
+  const todayStr = useMemo(() => todayLocal(), []);
 
   useEffect(() => {
     setAdded(false);

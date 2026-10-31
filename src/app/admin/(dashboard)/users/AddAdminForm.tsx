@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { addAdminUser } from "../actions";
+import { addAdminUser } from "../../actions";
 
 export function AddAdminForm() {
   const [error, action, pending] = useActionState(addAdminUser, null);

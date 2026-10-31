@@ -2,16 +2,11 @@ import Link from "next/link";
 import { yachts, basePrice } from "@/data/yachts";
 import { ALL_SLOTS, getSlot, slotsOverlap } from "@/lib/booking/slots";
 import { listBookingsForRange } from "@/lib/booking/store";
+import { addDays, todayLocal } from "@/lib/booking/dates";
 import { CalendarCell } from "./CalendarCell";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Calendar" };
-
-function addDays(dateStr: string, days: number): string {
-  const d = new Date(dateStr + "T00:00:00");
-  d.setDate(d.getDate() + days);
-  return d.toISOString().slice(0, 10);
-}
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -23,7 +18,7 @@ export default async function CalendarPage({
   const sp = await searchParams;
   const slug = yachts.some((y) => y.slug === sp.slug) ? sp.slug! : yachts[0].slug;
   const yacht = yachts.find((y) => y.slug === slug)!;
-  const from = sp.from && DATE_RE.test(sp.from) ? sp.from : new Date().toISOString().slice(0, 10);
+  const from = sp.from && DATE_RE.test(sp.from) ? sp.from : todayLocal();
   const to = addDays(from, 6);
   const dates = Array.from({ length: 7 }, (_, i) => addDays(from, i));
 
@@ -68,7 +63,7 @@ export default async function CalendarPage({
             ← Previous week
           </Link>
           <Link
-            href={`/admin/calendar?slug=${slug}&from=${new Date().toISOString().slice(0, 10)}`}
+            href={`/admin/calendar?slug=${slug}&from=${todayLocal()}`}
             className="rounded-lg border border-line px-3 py-2 text-sm font-medium text-navy hover:border-crimson hover:text-crimson"
           >
             Today

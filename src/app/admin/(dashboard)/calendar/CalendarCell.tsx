@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { bookForCustomer, blockSlotAction, cancelBookingAction } from "../actions";
+import { bookForCustomer, blockSlotAction, cancelBookingAction } from "../../actions";
 
 type CellBooking = {
   id: string;
