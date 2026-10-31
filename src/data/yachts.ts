@@ -830,7 +830,7 @@ const allYachts: Yacht[] = [
     crew: 5,
     destinations: ["mumbai"],
     category: "Motor Yacht",
-    highlights: ["Ferretti 88 flybridge motor yacht", "Saildeck's largest-capacity charter, up to 40 guests", "3-hour signature charter, transfers included"],
+    highlights: ["Ferretti 88 flybridge motor yacht", "Saildeck's largest-capacity charter, up to 40 guests", "2-hour charter, transfers included"],
     amenities: [
       "Flybridge sun deck, wet bar & upper helm",
       "Enclosed, air-conditioned saloon",
@@ -880,10 +880,10 @@ const allYachts: Yacht[] = [
     videos: [],
     description: [
       "**Allegra** is a **Ferretti 88 luxury motor yacht** — Saildeck's largest charter yacht in Mumbai, licensed for up to **40 guests**, built for the booking where the boat itself is as much the occasion as whatever you're celebrating. She departs from the **Gateway of India** in Colaba and runs the harbour's best stretch of water: past the Taj Mahal Palace, along South Mumbai's skyline, and back — the same view everyone on the promenade is photographing, except you're the one on the water.",
-      "The charter is a **3-hour signature package**: one hour cruising past the city's landmarks, followed by two hours at anchor so your group can actually relax rather than spend the whole booking in transit. At **₹1,40,000** for the full charter, the price is all-in — captain, crew and the jetty-to-yacht transfer are included, with nothing extra to work out before you book. If you're comparing this against an hourly-rate boat elsewhere in [our fleet](/fleet), [our guide to what a yacht rental actually costs in Mumbai](/blog/what-it-costs-to-rent-a-yacht-in-mumbai) explains why a flat package like this one is easier to budget for than a per-hour quote that grows once catering and add-ons are factored in.",
+      "Each charter is a **2-hour slot**: cruising past the city's landmarks before settling at anchor so your group can actually relax rather than spend the whole booking in transit. At **₹1,35,000** for the full charter, the price is all-in — captain, crew and the jetty-to-yacht transfer are included, with nothing extra to work out before you book. If you're comparing this against an hourly-rate boat elsewhere in [our fleet](/fleet), [our guide to what a yacht rental actually costs in Mumbai](/blog/what-it-costs-to-rent-a-yacht-in-mumbai) explains why a flat price like this one is easier to budget for than a per-hour quote that grows once catering and add-ons are factored in.",
       "Allegra is [a motor yacht rather than a sailing yacht](/blog/motor-yacht-or-sailing-yacht) — a flybridge upper deck with its own helm, lounge seating and a stocked wet bar, an enclosed air-conditioned saloon to retreat to, and **four cabins** below for guests who want privacy rather than open deck seating throughout. That combination is why she's the boat we point [corporate charters](/blog/corporate-yacht-charters-india) toward when the brief is to genuinely impress a client, and why she's a regular request for a [milestone proposal](/blog/how-to-plan-a-proposal-on-a-yacht) or a [birthday celebration](/blog/bachelorette-birthday-parties-on-a-yacht) that calls for more presence than a standard sailboat.",
       "At 40 guests, Allegra is the single largest-capacity boat in [Saildeck's fleet](/blog/group-size-boat-size-guide) — the one to book when a celebration has genuinely outgrown every other option, from a large corporate off-site to a wedding-sized family gathering. Boarding follows the same pattern as the rest of the fleet: a short tender from the jetty near the Gateway of India out to Allegra at anchor, covered in the all-in price. [Our guide to Mumbai's departure jetties](/blog/mumbai-harbour-vs-marine-drive-yacht-boarding) covers the boarding point in more detail, and [our packing list for a yacht charter](/blog/what-to-pack-for-a-yacht-charter) covers what to bring.",
-      "Message us on WhatsApp with your date and guest count to confirm availability — catering, bar service and decoration can all be quoted alongside the ₹1,40,000 charter price, and the [sunset slot](/blog/sunset-cruises-in-mumbai-guide) is the one most people ask for first.",
+      "Message us on WhatsApp with your date and guest count to confirm availability — catering, bar service and decoration can all be quoted alongside the ₹1,35,000 charter price, and the [sunset slot](/blog/sunset-cruises-in-mumbai-guide) is the one most people ask for first.",
     ],
     specs: [
       { label: "Builder", value: "Ferretti" },
@@ -895,9 +895,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "MOR-IV-00642" },
     ],
     pricingSlots: [
-      { start: "9:00 AM", end: "12:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
-      { start: "1:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
-      { start: "5:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "2 hours at anchor", amount: 140000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 135000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 135000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 135000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 135000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 135000 },
     ],
     pricingExtras: [
       "Additional hour — ₹40,000",
@@ -906,19 +908,19 @@ const allYachts: Yacht[] = [
       "Photographer for the charter — ₹18,000",
     ],
     pricingNote:
-      "₹1,40,000 is an all-in price for the full 3-hour charter, up to 18 guests — not per person, and the jetty-to-yacht transfer is already included. The 5–8pm sunset slot books out first.",
+      "Prices are for the whole boat, up to 40 guests — not per person. Same price on every slot, and the jetty-to-yacht transfer is already included.",
     faqs: [
       {
         q: "How much does it cost to charter Allegra?",
-        a: "₹1,40,000 for the full 3-hour charter — one hour cruising and two hours at anchor — for up to 40 guests. The price is all-in, including the captain, crew and the transfer from the jetty to the yacht. An additional hour, catering, decoration and an on-board photographer are quoted separately.",
+        a: "₹1,35,000 for the whole boat on any 2-hour slot — the price is the same regardless of time of day, for up to 40 guests. The price is all-in, including the captain, crew and the transfer from the jetty to the yacht. An additional hour, catering, decoration and an on-board photographer are quoted separately.",
       },
       {
         q: "Is the transfer from the jetty included in the price?",
-        a: "Yes. The ₹1,40,000 charter price already includes the tender transfer from the jetty near the Gateway of India out to Allegra at anchor and back — there's no separate transfer charge to budget for.",
+        a: "Yes. The ₹1,35,000 charter price already includes the tender transfer from the jetty near the Gateway of India out to Allegra at anchor and back — there's no separate transfer charge to budget for.",
       },
       {
-        q: "What does the 3-hour charter actually include?",
-        a: "One hour of cruising past the Gateway of India, the Taj Mahal Palace and South Mumbai's skyline, followed by two hours at anchor so your group can relax on board rather than spend the booking in transit. Captain, crew, life jackets and the jetty transfer are all included.",
+        q: "What does the charter actually include?",
+        a: "Cruising past the Gateway of India, the Taj Mahal Palace and South Mumbai's skyline, with time at anchor so your group can relax on board rather than spend the booking in transit. Captain, crew, life jackets and the jetty transfer are all included.",
       },
       {
         q: "How many guests can Allegra carry?",
@@ -930,7 +932,7 @@ const allYachts: Yacht[] = [
       },
       {
         q: "Where do we meet, and how do we get to the yacht?",
-        a: "At the jetty near the Gateway of India in Colaba. A tender then carries you out to Allegra at anchor — this transfer is already included in the ₹1,40,000 charter price.",
+        a: "At the jetty near the Gateway of India in Colaba. A tender then carries you out to Allegra at anchor — this transfer is already included in the ₹1,35,000 charter price.",
       },
       {
         q: "Can you arrange catering, decoration or a photographer?",
@@ -1246,11 +1248,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 12000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 12000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 14000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 16000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 16000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 22000 },
     ],
     pricingExtras: [
       "Additional hour — ₹8,000",
@@ -1258,11 +1260,11 @@ const allYachts: Yacht[] = [
       "Catering (per guest) — from ₹800",
       "Photoshoot on board (per hour) — ₹12,000",
     ],
-    pricingNote: "Special permissions are required for overnight anchorage.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight anchorage.",
     faqs: [
       {
         q: "How much does it cost to charter Joan of Arc?",
-        a: "Two-hour slots run from ₹12,000 to ₹16,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, the Grande Island run and catering are all quoted separately.",
+        a: "₹22,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, the Grande Island run and catering are all quoted separately.",
       },
       ...standardFaqs("Joan of Arc", 12),
       {
@@ -1532,11 +1534,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 8000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 8000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 9000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 10000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 10000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 15000 },
     ],
     pricingExtras: [
       "Additional hour — ₹5,000",
@@ -1544,11 +1546,11 @@ const allYachts: Yacht[] = [
       "Catering (per guest) — from ₹700",
       "Photoshoot on board (per hour) — ₹8,000",
     ],
-    pricingNote: "Special permissions are required for overnight anchorage.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight anchorage.",
     faqs: [
       {
         q: "How much does it cost to charter Sea Ray?",
-        a: "Two-hour slots run from ₹8,000 to ₹10,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, the Grande Island run and catering are all quoted separately.",
+        a: "₹15,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, the Grande Island run and catering are all quoted separately.",
       },
       ...standardFaqs("Sea Ray", 10),
       {
@@ -1677,11 +1679,11 @@ const allYachts: Yacht[] = [
       { label: "Registration", value: "Commercial passenger licence" },
     ],
     pricingSlots: [
-      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 14000 },
-      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 14000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 16000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 18000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 18000 },
+      { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 35000 },
+      { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 35000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 35000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 35000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 35000 },
     ],
     pricingExtras: [
       "Additional hour — ₹9,000",
@@ -1689,11 +1691,11 @@ const allYachts: Yacht[] = [
       "Catering (per guest) — from ₹800",
       "Decoration for a celebration — from ₹3,500",
     ],
-    pricingNote: "Special permissions are required for overnight anchorage.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight anchorage.",
     faqs: [
       {
         q: "How much does it cost to charter Taj Exotica?",
-        a: "Two-hour slots run from ₹14,000 to ₹18,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, the Grande Island run, catering and decoration are all quoted separately.",
+        a: "₹35,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, the Grande Island run, catering and decoration are all quoted separately.",
       },
       ...standardFaqs("Taj Exotica", 18),
       {
@@ -2031,9 +2033,9 @@ const allYachts: Yacht[] = [
     pricingSlots: [
       { start: "7:00 AM", end: "9:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
       { start: "9:00 AM", end: "11:00 AM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
-      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 28000 },
-      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 32000 },
-      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 32000 },
+      { start: "2:00 PM", end: "4:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "4:00 PM", end: "6:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
+      { start: "6:00 PM", end: "8:00 PM", sailing: "1 hour cruising", anchorage: "1 hour anchorage", amount: 25000 },
     ],
     pricingExtras: [
       "Additional hour — ₹15,000",
@@ -2041,11 +2043,11 @@ const allYachts: Yacht[] = [
       "Gateway of India to Mandwa, return journey — ₹40,000",
       "Photoshoot on board (per hour) — ₹18,000",
     ],
-    pricingNote: "Special permissions are required for overnight sailing.",
+    pricingNote: "Same price on every slot. Special permissions are required for overnight sailing.",
     faqs: [
       {
         q: "How much does it cost to charter the Azimut 38?",
-        a: "Two-hour slots run from ₹25,000 to ₹32,000 depending on the time of day, with sunset slots priced highest. See the pricing table above for every departure time. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
+        a: "₹25,000 for a 2-hour slot — the price is the same regardless of time of day. An additional hour, overnight anchorage and on-board photoshoots are all quoted separately.",
       },
       ...standardFaqs("Azimut 38", 12),
       {
