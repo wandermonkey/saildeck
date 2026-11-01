@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { site, telLink } from "@/lib/site";
+import { site, telLink, mailLink } from "@/lib/site";
 import { headerNav, type NavNode } from "@/data/navigation";
-import { ChevronDown, CartIcon } from "./icons";
+import { ChevronDown, CartIcon, PhoneIcon, MailIcon } from "./icons";
 import { useCart } from "./booking/CartProvider";
 
 export function Nav() {
@@ -72,6 +72,51 @@ export function Nav() {
         Skip to content
       </a>
 
+      {/* Utility bar — phone, email, cart and the Events CTA, kept off the
+          main nav row so that row stays just the logo, the menu and one
+          primary button. */}
+      <div className="hidden bg-navy text-white/80 lg:block" style={{ height: "var(--topbar-h)" }}>
+        <div className="container-x flex h-full items-center justify-between text-xs">
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-2">
+              <PhoneIcon className="h-3.5 w-3.5 text-teal" />
+              <a href={telLink} className="transition-colors hover:text-white" data-cta="topbar-call">
+                {site.phoneDisplay}
+              </a>
+            </span>
+            <span className="flex items-center gap-2">
+              <MailIcon className="h-3.5 w-3.5 text-teal" />
+              <a href={mailLink} className="transition-colors hover:text-white" data-cta="topbar-mail">
+                {site.email}
+              </a>
+            </span>
+          </div>
+          <div className="flex items-center gap-5">
+            <Link
+              href="/cart"
+              aria-label={`Cart${items.length ? `, ${items.length} item${items.length === 1 ? "" : "s"}` : ""}`}
+              data-cta="topbar-cart"
+              className="relative flex items-center gap-1.5 transition-colors hover:text-white"
+            >
+              <CartIcon className="h-3.5 w-3.5" />
+              Cart
+              {items.length > 0 && (
+                <span className="grid h-4 w-4 place-items-center rounded-full bg-crimson text-[9px] font-semibold text-white">
+                  {items.length}
+                </span>
+              )}
+            </Link>
+            <Link
+              href="/events"
+              data-cta="topbar-events"
+              className="rounded-full bg-amber px-3.5 py-1.5 text-[11px] font-semibold text-navy transition-all hover:brightness-95"
+            >
+              Events
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <header
         className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
           scrolled ? "shadow-[0_1px_20px_rgba(10,42,67,0.10)]" : "border-b border-line"
@@ -125,28 +170,8 @@ export function Nav() {
           </ul>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/events"
-              aria-current={pathname === "/events" ? "page" : undefined}
-              className="hidden rounded-full bg-amber px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:-translate-y-0.5 hover:brightness-95 sm:block"
-              data-cta="nav-events"
-            >
-              Events
-            </Link>
-
-            <Link
-              href="/cart"
-              aria-label={`Cart${items.length ? `, ${items.length} item${items.length === 1 ? "" : "s"}` : ""}`}
-              data-cta="nav-cart"
-              className="relative grid h-10 w-10 place-items-center rounded-full border border-line text-navy transition-colors hover:border-crimson hover:text-crimson"
-            >
-              <CartIcon className="h-[18px] w-[18px]" />
-              {items.length > 0 && (
-                <span className="absolute -right-1 -top-1 grid h-5 w-5 place-items-center rounded-full bg-crimson text-[10px] font-semibold text-white">
-                  {items.length}
-                </span>
-              )}
-            </Link>
+            {/* Cart and Events live in the topbar on lg+; below that, the
+                mobile sheet carries them (see MobileMenu's footer). */}
 
             {/* Doubles as the Contact link, which is why Contact is flagged
                 hideInHeader — two routes to the same page wastes menu space. */}
@@ -223,6 +248,7 @@ function DropdownPanel({ item }: { item: NavNode }) {
 
 /** Mobile sheet — the full tree as nested accordions. */
 function MobileMenu({ open }: { open: boolean }) {
+  const { items } = useCart();
   return (
     <div
       id="mobile-menu"
@@ -293,6 +319,14 @@ function MobileMenu({ open }: { open: boolean }) {
             data-cta="mobile-events"
           >
             Events
+          </Link>
+          <Link
+            href="/cart"
+            className="flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-center font-medium text-navy"
+            data-cta="mobile-cart"
+          >
+            <CartIcon className="h-4 w-4" />
+            Cart{items.length > 0 ? ` (${items.length})` : ""}
           </Link>
           <Link
             href="/contact"
