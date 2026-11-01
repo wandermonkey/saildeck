@@ -102,18 +102,13 @@ export function Nav() {
                   aria-current={isActive(item.href) ? "page" : undefined}
                   aria-expanded={item.children ? openMenu === item.label : undefined}
                   onFocus={() => item.children && open(item.label)}
-                  className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-[0.9rem] font-medium transition-colors ${
-                    isActive(item.href) ? "text-crimson" : "text-navy hover:text-crimson"
+                  className={`flex items-center rounded-full px-4 py-2 text-[0.9rem] font-medium transition-all duration-300 ${
+                    isActive(item.href)
+                      ? "bg-crimson text-white"
+                      : "text-navy hover:bg-crimson hover:text-white"
                   }`}
                 >
                   {item.label}
-                  {item.children && (
-                    <ChevronDown
-                      className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                        openMenu === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
                 </Link>
 
                 {item.children && openMenu === item.label && (
