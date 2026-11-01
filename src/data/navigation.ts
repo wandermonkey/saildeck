@@ -24,6 +24,11 @@ export const navigation: NavNode[] = [
 
   { label: "Fleet", href: "/fleet", blurb: "Yachts and boats for charter" },
 
+  /* Out of the header dropdown list — it gets its own highlighted button in
+     the header instead, so it isn't competing for space with the other
+     top-level menu items. Still in the footer sitemap via navigation here. */
+  { label: "Events", href: "/events", blurb: "Ticketed parties & cruises", hideInHeader: true },
+
   /* Experiences sit under /products rather than /experiences because the
      section is meant to hold packages and events too, not just charters. */
   {

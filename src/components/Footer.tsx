@@ -25,6 +25,7 @@ const columns: Column[] = [
     href: "/fleet",
     links: [
       { label: "Our Fleet", href: "/fleet" },
+      { label: "Events", href: "/events" },
       { label: "Experiences & Events", href: "/products" },
       { label: "Charter Types", href: "/charters" },
       ...(find("Destinations")?.children ?? []).map((c) => ({

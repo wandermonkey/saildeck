@@ -53,6 +53,19 @@ export const CartIcon = ({ className = "h-5 w-5" }: P) => (
   </svg>
 );
 
+export const CloseIcon = ({ className = "h-5 w-5" }: P) => (
+  <svg {...stroke} className={className}>
+    <path d="M18 6 6 18M6 6l12 12" />
+  </svg>
+);
+
+export const TicketIcon = ({ className = "h-4 w-4" }: P) => (
+  <svg {...stroke} className={className}>
+    <path d="M3 9a2 2 0 0 0 0 6v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a2 2 0 0 1 0-4V9a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z" />
+    <path d="M13 6v2M13 11v2M13 16v2" />
+  </svg>
+);
+
 export const MailIcon = ({ className = "h-4 w-4" }: P) => (
   <svg {...stroke} className={className}>
     <rect x="2" y="4" width="20" height="16" rx="2" />

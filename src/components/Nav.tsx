@@ -4,10 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { site, telLink, mailLink } from "@/lib/site";
+import { site, telLink } from "@/lib/site";
 import { headerNav, type NavNode } from "@/data/navigation";
-import { PhoneIcon, MailIcon, ChevronDown, WhatsAppIcon, CartIcon } from "./icons";
-import { whatsappLink } from "@/lib/site";
+import { ChevronDown, CartIcon } from "./icons";
 import { useCart } from "./booking/CartProvider";
 
 export function Nav() {
@@ -73,40 +72,6 @@ export function Nav() {
         Skip to content
       </a>
 
-      {/* Utility bar — the reference site's top strip, carrying contact detail
-          that would otherwise crowd the main nav. */}
-      <div className="hidden bg-navy text-white/80 lg:block" style={{ height: "var(--topbar-h)" }}>
-        <div className="container-x flex h-full items-center justify-between text-xs">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2">
-              <PhoneIcon className="h-3.5 w-3.5 text-teal" />
-              <a href={telLink} className="transition-colors hover:text-white" data-cta="topbar-call">
-                {site.phoneDisplay}
-              </a>
-            </span>
-            <span className="flex items-center gap-2">
-              <MailIcon className="h-3.5 w-3.5 text-teal" />
-              <a href={mailLink} className="transition-colors hover:text-white" data-cta="topbar-mail">
-                {site.email}
-              </a>
-            </span>
-          </div>
-          <div className="flex items-center gap-6">
-            <span>Mumbai · Navi Mumbai · Goa</span>
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white transition-opacity hover:opacity-80"
-              data-cta="topbar-whatsapp"
-            >
-              <WhatsAppIcon className="h-3.5 w-3.5" />
-              WhatsApp us
-            </a>
-          </div>
-        </div>
-      </div>
-
       <header
         className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
           scrolled ? "shadow-[0_1px_20px_rgba(10,42,67,0.10)]" : "border-b border-line"
@@ -165,6 +130,15 @@ export function Nav() {
           </ul>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/events"
+              aria-current={pathname === "/events" ? "page" : undefined}
+              className="hidden rounded-full bg-amber px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:-translate-y-0.5 hover:brightness-95 sm:block"
+              data-cta="nav-events"
+            >
+              Events
+            </Link>
+
             <Link
               href="/cart"
               aria-label={`Cart${items.length ? `, ${items.length} item${items.length === 1 ? "" : "s"}` : ""}`}
@@ -318,6 +292,13 @@ function MobileMenu({ open }: { open: boolean }) {
         </ul>
 
         <div className="mt-7 space-y-3">
+          <Link
+            href="/events"
+            className="block rounded-full bg-amber px-6 py-3.5 text-center font-semibold text-navy"
+            data-cta="mobile-events"
+          >
+            Events
+          </Link>
           <Link
             href="/contact"
             className="block rounded-full bg-crimson px-6 py-3.5 text-center font-medium text-white"
