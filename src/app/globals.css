@@ -24,6 +24,10 @@
   --color-teal: #2aa8a8;
   --color-teal-soft: #eefafa;
 
+  /* "Most booked" badge — the one deliberate exception to crimson-only
+     actions. Social proof needs its own colour so it never reads as a CTA. */
+  --color-amber: #e0a43a;
+
   /* Surfaces */
   --color-canvas: #ffffff;
   --color-surface: #f4f7f9;
@@ -148,6 +152,12 @@
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-4px);
   }
+}
+
+/* Highlighted border/glow for a hand-picked "Most booked" boat. */
+@utility card-featured {
+  border-color: var(--color-amber);
+  box-shadow: 0 8px 28px -6px rgba(224, 164, 58, 0.35);
 }
 
 /* Hairline grid used behind dark bands. Decorative. */

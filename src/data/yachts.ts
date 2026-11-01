@@ -57,6 +57,10 @@ export type Yacht = {
   /** Small print under the pricing table, e.g. permission requirements. */
   pricingNote?: string;
   featured?: boolean;
+  /** Shows a "Most booked" badge and a highlighted card border/glow on the
+   *  fleet grid and anywhere else `YachtCard` is used. Hand-picked, not
+   *  computed from real booking data. */
+  mostBooked?: boolean;
   /** Always sorts to the end of the exported `yachts` list (both the
    *  homepage's featured slice and the /fleet listing), regardless of this
    *  object's position in the array below or what gets added later. */
@@ -123,6 +127,7 @@ const allYachts: Yacht[] = [
        confirming against the licence and the actual tariff. */
     slug: "princess-61-luxury-motor-yacht-mumbai",
     name: "Princess 61",
+    mostBooked: true,
     tagline: "A British-built flybridge motor yacht, based at the Gateway of India. The flagship of the Mumbai fleet.",
     pricePerHour: 33000,
     guests: 32,
@@ -212,6 +217,7 @@ const allYachts: Yacht[] = [
   {
     slug: "tara-sailing-catamaran-mumbai",
     name: "Tara Sailing Catamaran Mumbai",
+    mostBooked: true,
     tagline: "A 40-foot twin-hull catamaran for up to 25 guests, sailing from the Gateway of India.",
     pricePerHour: 14000,
     guests: 25,
@@ -524,6 +530,7 @@ const allYachts: Yacht[] = [
        add-ons are the real, confirmed figures the operator provided. */
     slug: "xs-63-6-seater-sailboat-charter-mumbai",
     name: "XS 63 (6-Seater)",
+    mostBooked: true,
     tagline: "A private 6-seat day-sailing boat from the Gateway of India — decor, juice, chips and music included.",
     pricePerHour: 2000,
     guests: 6,
@@ -650,6 +657,7 @@ const allYachts: Yacht[] = [
        array, still fully listed under /fleet). */
     slug: "vari-44-motor-yacht-mumbai",
     name: "Vari 44",
+    mostBooked: true,
     tagline: "A 44-foot flybridge motor yacht for up to 18 guests, departing the Gateway of India.",
     pricePerHour: 16000,
     guests: 18,

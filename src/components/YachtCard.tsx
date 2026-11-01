@@ -26,11 +26,18 @@ export function YachtCard({ yacht, priority = false }: { yacht: Yacht; priority?
     : null;
 
   return (
-    <article className="card card-hover group flex flex-col overflow-hidden">
+    <article
+      className={`card card-hover group flex flex-col overflow-hidden ${yacht.mostBooked ? "card-featured" : ""}`}
+    >
       <Link href={`/fleet/${yacht.slug}`} className="relative block aspect-[4/3] overflow-hidden bg-surface" data-cta="yacht-card">
         <CardGallery images={yacht.gallery} priority={priority} />
 
         <div className="pointer-events-none absolute left-3 top-3 flex gap-2">
+          {yacht.mostBooked && (
+            <span className="rounded-full bg-amber px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-navy shadow-sm">
+              ★ Most booked
+            </span>
+          )}
           <span className="rounded-full bg-white/95 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-navy shadow-sm backdrop-blur">
             {yacht.category}
           </span>
