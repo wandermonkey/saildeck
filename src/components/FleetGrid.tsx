@@ -2,52 +2,91 @@
 
 import { useMemo, useState } from "react";
 import { YachtCard } from "./YachtCard";
-import type { Yacht } from "@/data/yachts";
+import { basePrice, type Yacht } from "@/data/yachts";
 
-type Filter = "all" | "mumbai" | "goa" | "navi-mumbai" | "small" | "large";
+type LocationFilter = "all" | "mumbai" | "goa" | "navi-mumbai";
+type TypeFilter = "all" | "Motor Yacht" | "Sailing Yacht" | "Catamaran" | "Speedboat" | "small" | "large" | "budget";
 
-const filters: { id: Filter; label: string }[] = [
-  { id: "all", label: "All boats" },
+const locationFilters: { id: LocationFilter; label: string }[] = [
+  { id: "all", label: "All locations" },
   { id: "mumbai", label: "Mumbai" },
   { id: "goa", label: "Goa" },
   { id: "navi-mumbai", label: "Navi Mumbai" },
-  { id: "small", label: "Up to 12 guests" },
-  { id: "large", label: "15+ guests" },
+];
+
+const typeFilters: { id: TypeFilter; label: string }[] = [
+  { id: "all", label: "All boats" },
+  { id: "Motor Yacht", label: "Motor Yachts" },
+  { id: "Sailing Yacht", label: "Sailing Yachts" },
+  { id: "Catamaran", label: "Catamarans" },
+  { id: "Speedboat", label: "Speedboats" },
+  { id: "small", label: "Couples & Small Groups" },
+  { id: "large", label: "Groups 15+" },
+  { id: "budget", label: "Under ₹10,000" },
 ];
 
 /**
  * Client-side filtering only — the full list is server-rendered first, so
- * every boat stays in the HTML for crawlers regardless of the active chip.
+ * every boat stays in the HTML for crawlers regardless of the active chips.
+ * Location and type/budget are two independent single-select rows, combined
+ * with AND — e.g. "Goa" + "Catamarans" shows only Goa-based catamarans.
  */
 export function FleetGrid({ yachts }: { yachts: Yacht[] }) {
-  const [active, setActive] = useState<Filter>("all");
+  const [location, setLocation] = useState<LocationFilter>("all");
+  const [type, setType] = useState<TypeFilter>("all");
 
   const shown = useMemo(() => {
-    switch (active) {
-      case "mumbai":
-      case "goa":
-      case "navi-mumbai":
-        return yachts.filter((y) => y.destinations.includes(active));
-      case "small":
-        return yachts.filter((y) => y.guests <= 12);
-      case "large":
-        return yachts.filter((y) => y.guests >= 15);
-      default:
-        return yachts;
-    }
-  }, [active, yachts]);
+    return yachts.filter((y) => {
+      const locationMatch = location === "all" || y.destinations.includes(location);
+
+      const typeMatch = (() => {
+        switch (type) {
+          case "all":
+            return true;
+          case "small":
+            return y.guests <= 12;
+          case "large":
+            return y.guests >= 15;
+          case "budget":
+            return basePrice(y) < 10000;
+          default:
+            return y.category === type;
+        }
+      })();
+
+      return locationMatch && typeMatch;
+    });
+  }, [location, type, yachts]);
 
   return (
     <>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter the fleet">
-        {filters.map((f) => (
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by location">
+        {locationFilters.map((f) => (
           <button
             key={f.id}
             type="button"
-            onClick={() => setActive(f.id)}
-            aria-pressed={active === f.id}
+            onClick={() => setLocation(f.id)}
+            aria-pressed={location === f.id}
             className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
-              active === f.id
+              location === f.id
+                ? "border-navy bg-navy text-white"
+                : "border-line bg-white text-muted hover:border-navy hover:text-navy"
+            }`}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter by boat type, group size or budget">
+        {typeFilters.map((f) => (
+          <button
+            key={f.id}
+            type="button"
+            onClick={() => setType(f.id)}
+            aria-pressed={type === f.id}
+            className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
+              type === f.id
                 ? "border-crimson bg-crimson text-white"
                 : "border-line bg-white text-muted hover:border-crimson hover:text-crimson"
             }`}

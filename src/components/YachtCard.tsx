@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { inr, type Yacht } from "@/data/yachts";
+import { CardGallery } from "./CardGallery";
 import { ArrowIcon, UsersIcon, RulerIcon, BedIcon } from "./icons";
 
 /**
@@ -11,8 +11,6 @@ import { ArrowIcon, UsersIcon, RulerIcon, BedIcon } from "./icons";
  * the boat has to be easy to see at a glance.
  */
 export function YachtCard({ yacht, priority = false }: { yacht: Yacht; priority?: boolean }) {
-  const cover = yacht.gallery[0];
-
   // Most boats run 2-hour slots, but a few (e.g. Allegra's 3-hour signature
   // package) don't — read the real duration off the cheapest slot's own
   // times rather than hardcoding "2 hrs" for every boat.
@@ -30,18 +28,9 @@ export function YachtCard({ yacht, priority = false }: { yacht: Yacht; priority?
   return (
     <article className="card card-hover group flex flex-col overflow-hidden">
       <Link href={`/fleet/${yacht.slug}`} className="relative block aspect-[4/3] overflow-hidden bg-surface" data-cta="yacht-card">
-        <Image
-          src={cover.src}
-          alt={cover.alt}
-          fill
-          // Real rendered width per breakpoint, so a 380px card never pulls a
-          // 1800px file. Significant LCP win on the listing pages.
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          priority={priority}
-          className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
-        />
+        <CardGallery images={yacht.gallery} priority={priority} />
 
-        <div className="absolute left-3 top-3 flex gap-2">
+        <div className="pointer-events-none absolute left-3 top-3 flex gap-2">
           <span className="rounded-full bg-white/95 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-navy shadow-sm backdrop-blur">
             {yacht.category}
           </span>
@@ -51,12 +40,6 @@ export function YachtCard({ yacht, priority = false }: { yacht: Yacht; priority?
             </span>
           )}
         </div>
-
-        {yacht.gallery.length > 1 && (
-          <span className="absolute bottom-3 right-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-medium text-navy shadow-sm backdrop-blur">
-            {yacht.gallery.length} photos
-          </span>
-        )}
       </Link>
 
       <div className="flex flex-1 flex-col p-5">

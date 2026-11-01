@@ -5,6 +5,7 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
+import { StickyContactBar } from "@/components/StickyContactBar";
 import { JsonLd } from "@/components/JsonLd";
 import { CartProvider } from "@/components/booking/CartProvider";
 import { localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/seo";
@@ -74,13 +75,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             having succeeded in order to be visible. */}
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
-      <body className="antialiased">
+      <body className="pb-16 antialiased md:pb-0">
         <JsonLd data={[organizationSchema(), websiteSchema(), localBusinessSchema()]} />
         <CartProvider>
           <Nav />
           <main id="main">{children}</main>
           <Footer />
           <WhatsAppFab />
+          <StickyContactBar />
         </CartProvider>
       </body>
     </html>

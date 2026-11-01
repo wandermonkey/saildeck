@@ -39,7 +39,9 @@ export function WhatsAppFab() {
       rel="noopener noreferrer"
       data-cta="whatsapp-fab"
       aria-label="Chat with Saildeck on WhatsApp"
-      className="group fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full bg-[#25D366] py-3.5 pl-4 pr-4 text-[#04210f] shadow-[0_10px_40px_-10px_rgba(37,211,102,0.8)] transition-all duration-500 hover:scale-105 md:bottom-7 md:right-7"
+      // Mobile gets the full-width sticky Call/WhatsApp bar (StickyContactBar)
+      // instead — showing both would be redundant and eat into page content.
+      className="group fixed bottom-7 right-7 z-50 hidden items-center gap-3 rounded-full bg-[#25D366] py-3.5 pl-4 pr-4 text-[#04210f] shadow-[0_10px_40px_-10px_rgba(37,211,102,0.8)] transition-all duration-500 hover:scale-105 md:flex"
     >
       {/* Attention ping, purely decorative */}
       <span

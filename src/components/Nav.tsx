@@ -165,6 +165,20 @@ export function Nav() {
           </ul>
 
           <div className="flex items-center gap-3">
+            {/* Mobile already has the full-width sticky Call/WhatsApp bar
+                (StickyContactBar) — this header button is the desktop
+                equivalent, always visible rather than tucked in the topbar. */}
+            <a
+              href={whatsappLink("Hi Saildeck! I would like to check availability and pricing.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="nav-whatsapp"
+              className="hidden items-center gap-1.5 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-[#04210f] transition-all hover:-translate-y-0.5 sm:flex"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              WhatsApp
+            </a>
+
             <Link
               href="/cart"
               aria-label={`Cart${items.length ? `, ${items.length} item${items.length === 1 ? "" : "s"}` : ""}`}
