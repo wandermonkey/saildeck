@@ -19,6 +19,12 @@ export function SpeedboatFleetList({ boats }: { boats: SpeedboatFleetEntry[] }) 
         const onRequestLink = (label: string) =>
           whatsappLink(`Hi Saildeck! I'd like a price for ${label} on the ${boat.name}.`);
 
+        // Most boats only have a one-way figure per route; show the generic
+        // "Return trip — on request" row only when none of them have a real
+        // return price, so a boat with per-route return pricing doesn't also
+        // get a redundant generic row.
+        const hasAnyReturnPrice = boat.routePrices.some((rp) => rp.priceReturn != null);
+
         return (
           <Reveal key={boat.slug} delay={(i % 2) * 70}>
             <div className="card grid overflow-hidden md:grid-cols-2">
@@ -45,25 +51,41 @@ export function SpeedboatFleetList({ boats }: { boats: SpeedboatFleetEntry[] }) 
                       <td className="py-2.5 pr-4 text-muted">Capacity</td>
                       <td className="py-2.5 text-right font-medium text-navy">{boat.capacity} guests</td>
                     </tr>
-                    {boat.routePrices.map((rp) => (
-                      <tr key={rp.route}>
-                        <td className="py-2.5 pr-4 text-muted">{rp.route} (one way)</td>
-                        <td className="py-2.5 text-right font-medium text-navy">{inr(rp.price)}</td>
+                    {boat.routePrices.flatMap((rp) => {
+                      const rows = [];
+                      if (rp.priceOneWay != null) {
+                        rows.push(
+                          <tr key={`${rp.route}-one-way`}>
+                            <td className="py-2.5 pr-4 text-muted">{rp.route} (one way)</td>
+                            <td className="py-2.5 text-right font-medium text-navy">{inr(rp.priceOneWay)}</td>
+                          </tr>
+                        );
+                      }
+                      if (rp.priceReturn != null) {
+                        rows.push(
+                          <tr key={`${rp.route}-return`}>
+                            <td className="py-2.5 pr-4 text-muted">{rp.route} (return)</td>
+                            <td className="py-2.5 text-right font-medium text-navy">{inr(rp.priceReturn)}</td>
+                          </tr>
+                        );
+                      }
+                      return rows;
+                    })}
+                    {!hasAnyReturnPrice && (
+                      <tr>
+                        <td className="py-2.5 pr-4 text-muted">Return trip</td>
+                        <td className="py-2.5 text-right">
+                          <a
+                            href={onRequestLink("a return trip")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 font-medium text-crimson hover:underline"
+                          >
+                            <WhatsAppIcon className="h-3.5 w-3.5" /> On request
+                          </a>
+                        </td>
                       </tr>
-                    ))}
-                    <tr>
-                      <td className="py-2.5 pr-4 text-muted">Return trip</td>
-                      <td className="py-2.5 text-right">
-                        <a
-                          href={onRequestLink("a return trip")}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 font-medium text-crimson hover:underline"
-                        >
-                          <WhatsAppIcon className="h-3.5 w-3.5" /> On request
-                        </a>
-                      </td>
-                    </tr>
+                    )}
                     <tr>
                       <td className="py-2.5 pr-4 text-muted">Harbour cruising (30 min)</td>
                       <td className="py-2.5 text-right">

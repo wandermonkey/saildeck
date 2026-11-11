@@ -17,8 +17,12 @@ export type SpeedboatFleetEntry = {
   slug: string;
   name: string;
   capacity: number;
-  /** One-way, whole-boat price per route, in INR. */
-  routePrices: { route: string; price: number }[];
+  /**
+   * Whole-boat price per route, in INR. Most boats only have a one-way
+   * figure from the operator; some routes (so far just Baug Life's) have
+   * both — render whichever of the two is present for each route.
+   */
+  routePrices: { route: string; priceOneWay?: number; priceReturn?: number }[];
   image: string;
   imageAlt: string;
 };
@@ -29,9 +33,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
     name: "Baug Life (Mahindra 33)",
     capacity: 12,
     routePrices: [
-      { route: "Mumbai to Mandwa", price: 14000 },
-      { route: "Mumbai to Navi Mumbai", price: 25000 },
-      { route: "Mumbai to Elephanta", price: 24000 },
+      { route: "Mumbai to Mandwa", priceOneWay: 10000, priceReturn: 14000 },
+      { route: "Mumbai to Navi Mumbai", priceReturn: 25000 },
+      { route: "Mumbai to Elephanta", priceReturn: 24000 },
     ],
     image: "/images/speedboats/baug-life-mahindra-33/baug-life-mahindra-33-speedboat-mumbai-harbour-sunset.jpg",
     imageAlt:
@@ -42,9 +46,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
     name: "Blue Whale",
     capacity: 8,
     routePrices: [
-      { route: "Mumbai to Mandwa", price: 10000 },
-      { route: "Mumbai to Navi Mumbai", price: 22000 },
-      { route: "Mumbai to Elephanta", price: 18000 },
+      { route: "Mumbai to Mandwa", priceOneWay: 10000 },
+      { route: "Mumbai to Navi Mumbai", priceOneWay: 22000 },
+      { route: "Mumbai to Elephanta", priceOneWay: 18000 },
     ],
     image: "/images/speedboats/blue-whale-speedboat/blue-whale-8-seater-speedboat-mumbai-to-mandwa.jpg",
     imageAlt:
@@ -55,9 +59,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
     name: "Aqua Ferry",
     capacity: 12,
     routePrices: [
-      { route: "Mumbai to Mandwa", price: 13000 },
-      { route: "Mumbai to Navi Mumbai", price: 24000 },
-      { route: "Mumbai to Elephanta", price: 22000 },
+      { route: "Mumbai to Mandwa", priceOneWay: 13000 },
+      { route: "Mumbai to Navi Mumbai", priceOneWay: 24000 },
+      { route: "Mumbai to Elephanta", priceOneWay: 22000 },
     ],
     image: "/images/speedboats/aqua-ferry-speedboat/aqua-ferry-12-seater-speedboat-mumbai-to-mandwa.jpg",
     imageAlt:
@@ -68,9 +72,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
     name: "Lilah",
     capacity: 12,
     routePrices: [
-      { route: "Mumbai to Mandwa", price: 14000 },
-      { route: "Mumbai to Navi Mumbai", price: 25000 },
-      { route: "Mumbai to Elephanta", price: 24000 },
+      { route: "Mumbai to Mandwa", priceOneWay: 14000 },
+      { route: "Mumbai to Navi Mumbai", priceOneWay: 25000 },
+      { route: "Mumbai to Elephanta", priceOneWay: 24000 },
     ],
     image: "/images/speedboats/lilah-speedboat/lilah-12-seater-speedboat-mumbai-charter.jpg",
     imageAlt:
@@ -81,9 +85,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
     name: "Zamia",
     capacity: 8,
     routePrices: [
-      { route: "Mumbai to Mandwa", price: 9000 },
-      { route: "Mumbai to Navi Mumbai", price: 25000 },
-      { route: "Mumbai to Elephanta", price: 24000 },
+      { route: "Mumbai to Mandwa", priceOneWay: 9000 },
+      { route: "Mumbai to Navi Mumbai", priceOneWay: 25000 },
+      { route: "Mumbai to Elephanta", priceOneWay: 24000 },
     ],
     image: "/images/speedboats/zamia-speedboat/zamia-8-seater-speedboat-mumbai-charter.jpg",
     imageAlt:
