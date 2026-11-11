@@ -1306,9 +1306,9 @@ const allYachts: Yacht[] = [
       "Catering on request",
     ],
     gallery: [
+      { src: "/images/fleet/lagoon-54/lagoon-54-luxury-yacht-mumbai-aft-cockpit-lounge.webp", alt: "The shaded flybridge lounge looking aft over the water" },
       { src: "/images/fleet/lagoon-54/lagoon-54-luxury-catamaran-mumbai-side-profile-skyline.webp", alt: "The Lagoon 54 catamaran at anchor with the Mumbai skyline and Taj Mahal Palace behind" },
       { src: "/images/fleet/lagoon-54/lagoon-54-sailing-catamaran-mumbai-crew-mast.webp", alt: "Crew working the mast on the Lagoon 54 under a clear sky" },
-      { src: "/images/fleet/lagoon-54/lagoon-54-luxury-yacht-mumbai-aft-cockpit-lounge.webp", alt: "The shaded flybridge lounge looking aft over the water" },
       { src: "/images/fleet/lagoon-54/lagoon-54-catamaran-mumbai-aft-deck-seating.jpg", alt: "The wide aft cockpit deck with built-in bench seating" },
       { src: "/images/fleet/lagoon-54/lagoon-54-catamaran-mumbai-flybridge-saloon-view.jpg", alt: "The aft deck looking toward the enclosed saloon and spiral staircase" },
     ],
