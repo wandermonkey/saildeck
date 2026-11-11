@@ -91,12 +91,12 @@ const featuredSlugs: (string | null)[] = [
   "princess-61-luxury-motor-yacht-mumbai",
   "tara-sailing-catamaran-mumbai",
   "5-pax-sailing-boat-charter-mumbai",
-  "tikla-queen-8-pax-sailing-boat-mumbai",
+  "lagoon-54-luxury-catamaran-mumbai",
   "xs-63-6-seater-sailboat-charter-mumbai",
   "vari-44-motor-yacht-mumbai",
   "allegra-luxury-motor-yacht-mumbai",
   "hanse-33-sailing-yacht-mumbai",
-  null,
+  "tikla-queen-8-pax-sailing-boat-mumbai",
 ];
 
 export default async function HomePage() {
