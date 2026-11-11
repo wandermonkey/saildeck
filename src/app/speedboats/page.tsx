@@ -10,7 +10,9 @@ import { Reveal } from "@/components/Reveal";
 import { SectionTitle, Pill } from "@/components/ui";
 import { ArrowIcon, ClockIcon, UsersIcon, CheckIcon } from "@/components/icons";
 
+import { SpeedboatFleetList } from "@/components/SpeedboatFleetList";
 import { speedboatRoutes } from "@/data/speedboats";
+import { speedboatFleet } from "@/data/speedboatFleet";
 import { inr } from "@/data/yachts";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -138,6 +140,17 @@ export default function SpeedboatsPage() {
               </Link>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="py-14 md:py-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionTitle eyebrow="The fleet" title="Which speedboat" accent="will you take?" />
+          </Reveal>
+          <div className="mt-10">
+            <SpeedboatFleetList boats={speedboatFleet} />
+          </div>
         </div>
       </section>
 
