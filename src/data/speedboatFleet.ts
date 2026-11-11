@@ -49,8 +49,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
       { route: "Mumbai to Navi Mumbai", price: 22000 },
       { route: "Mumbai to Elephanta", price: 18000 },
     ],
-    image: u("1552160757-52790c6f4faf"),
-    imageAlt: "Motorboat cutting through deep blue water leaving a white wake — sample photo, to be replaced",
+    image: "/images/speedboats/blue-whale-speedboat/blue-whale-8-seater-speedboat-mumbai-to-mandwa.jpg",
+    imageAlt:
+      "Blue Whale, an 8-seater speedboat, moored in Mumbai harbour — private speedboat charter for Mandwa, Elephanta and Navi Mumbai transfers",
   },
   {
     slug: "aqua-ferry",
@@ -61,8 +62,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
       { route: "Mumbai to Navi Mumbai", price: 24000 },
       { route: "Mumbai to Elephanta", price: 22000 },
     ],
-    image: u("1597154200389-d7ac4c75e180"),
-    imageAlt: "Speedboat at speed crossing open water — sample photo, to be replaced",
+    image: "/images/speedboats/aqua-ferry-speedboat/aqua-ferry-12-seater-speedboat-mumbai-to-mandwa.jpg",
+    imageAlt:
+      "Aqua Ferry, a 12-seater cabin speedboat, moored in Mumbai harbour — private speedboat charter for Mandwa, Elephanta and Navi Mumbai transfers",
   },
   {
     slug: "lilah",
@@ -85,7 +87,8 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
       { route: "Mumbai to Navi Mumbai", price: 25000 },
       { route: "Mumbai to Elephanta", price: 24000 },
     ],
-    image: u("1622082671151-2cbd184f9e60"),
-    imageAlt: "Bow of a speedboat cutting through blue water — sample photo, to be replaced",
+    image: "/images/speedboats/zamia-speedboat/zamia-8-seater-speedboat-mumbai-charter.jpg",
+    imageAlt:
+      "S.B. Zamia, an 8-seater speedboat, in Mumbai harbour — private speedboat charter for Mandwa, Elephanta and Navi Mumbai transfers",
   },
 ];
