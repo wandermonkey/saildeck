@@ -5,13 +5,12 @@
  * those 3 route cards, one row per boat with its capacity and per-route
  * pricing.
  *
- * ⚠️ SAMPLE CONTENT — most images below are still Unsplash stock (reused
- * from speedboats.ts's already-verified set), not real photos of these
- * boats — swap in real photography before this goes live. Baug Life is the
- * first to get its own real photo (lightly colour/contrast-enhanced, same
- * scene). Route prices are the figures the operator gave directly;
- * return-trip and harbour-cruising prices were not provided, so both show
- * "On request" and point to WhatsApp rather than a guessed number.
+ * All 5 boats now have real photos (lightly colour/contrast-enhanced, same
+ * scene as supplied — no content added or removed), saved under
+ * public/images/speedboats/<boat>/ with keyword-rich filenames and alt text
+ * for image-search SEO. Route prices are the figures the operator gave
+ * directly; return-trip and harbour-cruising prices were not provided, so
+ * both show "On request" and point to WhatsApp rather than a guessed number.
  */
 
 export type SpeedboatFleetEntry = {
@@ -23,8 +22,6 @@ export type SpeedboatFleetEntry = {
   image: string;
   imageAlt: string;
 };
-
-const u = (id: string) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1600&q=80`;
 
 export const speedboatFleet: SpeedboatFleetEntry[] = [
   {
@@ -75,8 +72,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
       { route: "Mumbai to Navi Mumbai", price: 25000 },
       { route: "Mumbai to Elephanta", price: 24000 },
     ],
-    image: u("1584212893031-410e387fbaf1"),
-    imageAlt: "Private speedboat on calm water — sample photo, to be replaced",
+    image: "/images/speedboats/lilah-speedboat/lilah-12-seater-speedboat-mumbai-charter.jpg",
+    imageAlt:
+      "S.B. Lilah, a 12-seater speedboat, anchored in Mumbai harbour — private speedboat charter for Mandwa, Elephanta and Navi Mumbai transfers",
   },
   {
     slug: "zamia",
