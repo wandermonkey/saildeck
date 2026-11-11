@@ -7,36 +7,32 @@ import { Pill } from "./ui";
 import { WhatsAppIcon } from "./icons";
 
 /**
- * One row per boat: photo on one side, a pricing table on the other,
- * alternating sides boat to boat. Sibling to the 3 route cards above it on
- * /speedboats, but this list is "which boat", not "which route".
+ * One row per boat: photo always on the left, a pricing table always on the
+ * right, split an even 50/50 — no alternating sides and no lopsided columns.
+ * Sibling to the 3 route cards above it on /speedboats, but this list is
+ * "which boat", not "which route".
  */
 export function SpeedboatFleetList({ boats }: { boats: SpeedboatFleetEntry[] }) {
   return (
     <div className="space-y-6">
       {boats.map((boat, i) => {
-        const reversed = i % 2 === 1;
         const onRequestLink = (label: string) =>
           whatsappLink(`Hi Saildeck! I'd like a price for ${label} on the ${boat.name}.`);
 
         return (
           <Reveal key={boat.slug} delay={(i % 2) * 70}>
-            <div className="card grid overflow-hidden md:grid-cols-[0.8fr_1.2fr]">
-              <div
-                className={`relative aspect-[16/10] md:aspect-auto md:min-h-[17rem] ${
-                  reversed ? "md:order-2" : ""
-                }`}
-              >
+            <div className="card grid overflow-hidden md:grid-cols-2">
+              <div className="relative aspect-[16/10] md:aspect-auto">
                 <Image
                   src={boat.image}
                   alt={boat.imageAlt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
 
-              <div className={`flex flex-col justify-center p-7 md:p-9 ${reversed ? "md:order-1" : ""}`}>
+              <div className="flex flex-col justify-center p-7 md:p-9">
                 <div className="flex flex-wrap items-center gap-2">
                   <Pill tone="crimson">Up to {boat.capacity} guests</Pill>
                 </div>
