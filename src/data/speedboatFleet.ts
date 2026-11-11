@@ -5,12 +5,13 @@
  * those 3 route cards, one row per boat with its capacity and per-route
  * pricing.
  *
- * ⚠️ SAMPLE CONTENT — images are Unsplash stock (reused from speedboats.ts's
- * already-verified set), not real photos of these boats. Swap in real
- * photography before this goes live. Route prices are the figures the
- * operator gave directly; return-trip and harbour-cruising prices were not
- * provided, so both show "On request" and point to WhatsApp rather than a
- * guessed number.
+ * ⚠️ SAMPLE CONTENT — most images below are still Unsplash stock (reused
+ * from speedboats.ts's already-verified set), not real photos of these
+ * boats — swap in real photography before this goes live. Baug Life is the
+ * first to get its own real photo (lightly colour/contrast-enhanced, same
+ * scene). Route prices are the figures the operator gave directly;
+ * return-trip and harbour-cruising prices were not provided, so both show
+ * "On request" and point to WhatsApp rather than a guessed number.
  */
 
 export type SpeedboatFleetEntry = {
@@ -35,8 +36,9 @@ export const speedboatFleet: SpeedboatFleetEntry[] = [
       { route: "Mumbai to Navi Mumbai", price: 25000 },
       { route: "Mumbai to Elephanta", price: 24000 },
     ],
-    image: u("1568476612160-787b6a1d5fb1"),
-    imageAlt: "Speedboat under way on open sea — sample photo, to be replaced",
+    image: "/images/speedboats/baug-life-mahindra-33/baug-life-mahindra-33-speedboat-mumbai-harbour-sunset.jpg",
+    imageAlt:
+      "SB The Baug Life, a Mahindra 33 speedboat, cruising Mumbai harbour at sunset — private speedboat charter for Mandwa, Elephanta and Navi Mumbai transfers",
   },
   {
     slug: "blue-whale-speedboat",
